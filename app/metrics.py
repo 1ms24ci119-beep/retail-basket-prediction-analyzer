@@ -2,11 +2,10 @@ from __future__ import annotations
 
 import math
 from collections import Counter, defaultdict
-from typing import Callable, Iterable
+from collections.abc import Callable, Iterable
 
 from app.data import Session, product_lookup
 from app.vocab import Vocabulary
-
 
 Predictor = Callable[[list[int]], dict[int, float]]
 

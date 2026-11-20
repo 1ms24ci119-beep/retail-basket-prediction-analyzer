@@ -1,20 +1,23 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import pandas as pd
 
-from app.config import ARTIFACTS_DIR, DATA_DIR, RESULTS_DIR
-from app.data import Session, describe_sessions, generate_sessions, save_sessions, split_sessions
 from app.analysis import rare_product_summary
+from app.config import ARTIFACTS_DIR, DATA_DIR, RESULTS_DIR
+from app.data import (
+    Session,
+    describe_sessions,
+    generate_sessions,
+    save_sessions,
+    split_sessions,
+)
 from app.metrics import evaluate_predictor, public_metrics, summarize_errors
-from app.ngram import NGramModel
 from app.training import choose_training_subset, fit_ngram, fit_transformer
-from app.transformer import TransformerConfig
 from app.vocab import Vocabulary
-
 
 DEFAULT_DATA = DATA_DIR
 DEFAULT_ARTIFACTS = ARTIFACTS_DIR
@@ -67,6 +70,9 @@ def train_and_evaluate(
         "transformer": transformer_metadata,
         "parameter_comparison": {
             "ngram_contexts": sum(len(contexts) for contexts in ngram.counts.values()),
+            "ngram_stored_outcomes": sum(
+                len(next_counts) for contexts in ngram.counts.values() for next_counts in contexts.values()
+            ),
             "transformer_parameters": transformer_metadata["parameters"],
         },
     }

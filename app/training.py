@@ -6,7 +6,12 @@ from pathlib import Path
 
 from app.data import Session
 from app.ngram import NGramModel
-from app.transformer import TransformerConfig, load_checkpoint, save_checkpoint, train_transformer
+from app.transformer import (
+    TransformerConfig,
+    load_checkpoint,
+    save_checkpoint,
+    train_transformer,
+)
 from app.vocab import Vocabulary
 
 

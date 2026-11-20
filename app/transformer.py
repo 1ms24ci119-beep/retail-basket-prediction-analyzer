@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import json
+import logging
 import math
 import random
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import torch
@@ -16,6 +17,8 @@ from torch.utils.data import DataLoader
 
 from app.data import Session
 from app.vocab import Vocabulary
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -104,7 +107,7 @@ class RetailTransformer(nn.Module):
     def forward(self, token_ids: torch.Tensor) -> torch.Tensor:
         if token_ids.ndim != 2:
             raise ValueError("token_ids must have shape [batch, time]")
-        batch_size, length = token_ids.shape
+        _batch_size, length = token_ids.shape
         if length > self.config.block_size:
             raise ValueError("input exceeds configured context length")
         positions = torch.arange(length, device=token_ids.device)
@@ -234,6 +237,10 @@ def train_transformer(
             optimizer.step()
         history["train_loss"].append(_loss_for_loader(model, train_loader, device_obj, pad_id))
         history["validation_loss"].append(_loss_for_loader(model, validation_loader, device_obj, pad_id))
+        logger.info(
+            "epoch %d/%d train_loss=%.4f validation_loss=%.4f",
+            len(history["train_loss"]), epochs, history["train_loss"][-1], history["validation_loss"][-1],
+        )
     metadata = {
         "seed": seed,
         "device": str(device_obj),

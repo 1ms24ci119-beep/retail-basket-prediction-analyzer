@@ -2,9 +2,8 @@ from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Sequence
 from pathlib import Path
-from typing import Iterable, Sequence
-
 
 BOS = -1
 
@@ -16,7 +15,7 @@ class NGramModel:
         if alpha <= 0:
             raise ValueError("alpha must be positive")
         self.vocab_size = int(vocab_size)
-        self.product_ids = tuple(sorted(set(int(item) for item in product_ids)))
+        self.product_ids = tuple(sorted({int(item) for item in product_ids}))
         if self.vocab_size <= 0 or not self.product_ids or any(i < 0 or i >= self.vocab_size for i in self.product_ids):
             raise ValueError("product ids must be non-empty indices inside the vocabulary")
         self.order = order
@@ -29,7 +28,7 @@ class NGramModel:
         }
         self.fitted = False
 
-    def fit(self, sequences: Iterable[Sequence[int]]) -> "NGramModel":
+    def fit(self, sequences: Iterable[Sequence[int]]) -> NGramModel:
         seen = 0
         for sequence in sequences:
             products = [int(item) for item in sequence]
@@ -64,8 +63,8 @@ class NGramModel:
         values = [int(item) for item in prefix]
         if any(item not in self.product_ids for item in values):
             raise ValueError("prefix may contain only product token ids")
-        available = min(len(values), self.order - 1)
-        context = tuple(values[-available:]) if available else ()
+        available = self.order - 1 if not values else min(len(values), self.order - 1)
+        context = tuple(values[-available:]) if values else (BOS,) * available
         distributions = []
         for context_length in range(available + 1):
             suffix = tuple(context[-context_length:]) if context_length else ()
@@ -106,7 +105,7 @@ class NGramModel:
         }
 
     @classmethod
-    def from_dict(cls, value: dict[str, object]) -> "NGramModel":
+    def from_dict(cls, value: dict[str, object]) -> NGramModel:
         model = cls(int(value["vocab_size"]), value["product_ids"], int(value["order"]), float(value["alpha"]))
         for order, contexts in value["counts"].items():
             for row in contexts:
@@ -122,5 +121,5 @@ class NGramModel:
         path.write_text(json.dumps(self.to_dict(), separators=(",", ":")), encoding="utf-8")
 
     @classmethod
-    def load(cls, path: Path) -> "NGramModel":
+    def load(cls, path: Path) -> NGramModel:
         return cls.from_dict(json.loads(path.read_text(encoding="utf-8")))

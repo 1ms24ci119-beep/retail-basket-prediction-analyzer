@@ -3,13 +3,27 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import sys
 from pathlib import Path
 
 from app.config import BATCH_SIZE, DEVICE, EPOCHS, SEED, TRANSACTIONS
-from app.data import CATALOGUE, describe_sessions, generate_sessions, load_sessions, save_sessions, split_sessions
-from app.experiment import DEFAULT_ARTIFACTS, DEFAULT_DATA, DEFAULT_RESULTS, run_experiment, write_json
-from app.metrics import evaluate_predictor, public_metrics
+from app.data import (
+    CATALOGUE,
+    describe_sessions,
+    generate_sessions,
+    load_sessions,
+    save_sessions,
+    split_sessions,
+)
+from app.experiment import (
+    DEFAULT_ARTIFACTS,
+    DEFAULT_DATA,
+    DEFAULT_RESULTS,
+    run_experiment,
+    write_json,
+)
+from app.metrics import evaluate_predictor, public_metrics, summarize_errors
 from app.ngram import NGramModel
 from app.training import choose_training_subset, fit_ngram, fit_transformer
 from app.transformer import load_checkpoint
@@ -51,6 +65,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     evaluate = subparsers.add_parser("evaluate", help="evaluate saved models against the common test split")
     _add_path_options(evaluate)
+    evaluate.add_argument("--fraction", type=float, default=1.0)
     evaluate.set_defaults(handler=_evaluate)
 
     compare = subparsers.add_parser("compare", help="print model metrics from the latest experiment")
@@ -60,6 +75,7 @@ def build_parser() -> argparse.ArgumentParser:
     predict = subparsers.add_parser("predict", help="rank next products for a comma-separated basket")
     predict.add_argument("--basket", required=True, help="product IDs or names, for example bread,butter,milk")
     predict.add_argument("--top-k", type=int, default=5)
+    predict.add_argument("--fraction", type=float, default=1.0)
     predict.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
     predict.add_argument("--device", default="cpu")
     predict.set_defaults(handler=_predict)
@@ -78,8 +94,15 @@ def build_parser() -> argparse.ArgumentParser:
 
     visualize = subparsers.add_parser("visualize", help="create figures from the latest saved experiment")
     visualize.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
+    visualize.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
     visualize.set_defaults(handler=_visualize)
     return parser
+
+
+def _scale_label(fraction: float) -> str:
+    if not 0 < fraction <= 1:
+        raise ValueError("fraction must be in (0, 1]")
+    return f"scale_{fraction:.2f}".replace(".", "_")
 
 
 def _add_path_options(parser: argparse.ArgumentParser) -> None:
@@ -125,7 +148,8 @@ def _train_ngram(args: argparse.Namespace) -> int:
     splits = _load_splits(args.data_dir, args.seed)
     vocabulary = Vocabulary.from_catalogue()
     subset = choose_training_subset(splits["train"], args.fraction, args.seed)
-    model, metadata = fit_ngram(subset, vocabulary, args.artifacts_dir / "ngram_scale_1_00.json", args.order, args.alpha)
+    label = _scale_label(args.fraction)
+    model, metadata = fit_ngram(subset, vocabulary, args.artifacts_dir / f"ngram_{label}.json", args.order, args.alpha)
     write_json(args.artifacts_dir / "vocabulary.json", vocabulary.to_dict())
     print(json.dumps({**metadata, "contexts": sum(len(value) for value in model.counts.values())}, indent=2))
     return 0
@@ -136,7 +160,8 @@ def _train_transformer(args: argparse.Namespace) -> int:
     vocabulary = Vocabulary.from_catalogue()
     subset = choose_training_subset(splits["train"], args.fraction, args.seed)
     _, history, metadata = fit_transformer(
-        subset, splits["validation"], vocabulary, args.artifacts_dir / "transformer_scale_1_00.pt",
+        subset, splits["validation"], vocabulary,
+        args.artifacts_dir / f"transformer_{_scale_label(args.fraction)}.pt",
         epochs=args.epochs, batch_size=args.batch_size, seed=args.seed, device=args.device,
     )
     print(json.dumps({"metadata": metadata, "history": history}, indent=2))
@@ -145,8 +170,9 @@ def _train_transformer(args: argparse.Namespace) -> int:
 
 def _evaluate(args: argparse.Namespace) -> int:
     splits = _load_splits(args.data_dir)
-    ngram_path = args.artifacts_dir / "ngram_scale_1_00.json"
-    transformer_path = args.artifacts_dir / "transformer_scale_1_00.pt"
+    label = _scale_label(args.fraction)
+    ngram_path = args.artifacts_dir / f"ngram_{label}.json"
+    transformer_path = args.artifacts_dir / f"transformer_{label}.pt"
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("both trained models are required; run train-ngram and train-transformer first")
     ngram = NGramModel.load(ngram_path)
@@ -156,8 +182,19 @@ def _evaluate(args: argparse.Namespace) -> int:
     transformer_eval = evaluate_predictor(
         lambda prefix: transformer.predict_proba(prefix, vocabulary.product_ids, model_device), splits["test"], vocabulary
     )
-    payload = {"ngram": public_metrics(ngram_eval), "transformer": public_metrics(transformer_eval)}
+    evaluations = {"ngram": ngram_eval, "transformer": transformer_eval}
+    payload = {
+        "ngram": public_metrics(ngram_eval),
+        "transformer": public_metrics(transformer_eval),
+        "error_analysis": summarize_errors(evaluations, vocabulary),
+    }
     write_json(args.results_dir / "metrics.json", payload)
+    import pandas as pd
+    rows = []
+    for metric in ("top_1_accuracy", "top_3_accuracy", "top_5_accuracy", "mrr", "mean_rank", "cross_entropy"):
+        rows.append({"metric": metric, **{name: values[metric] for name, values in payload.items() if name in evaluations}})
+    args.results_dir.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(rows).to_csv(args.results_dir / "model_comparison.csv", index=False)
     print(json.dumps(payload, indent=2))
     return 0
 
@@ -171,8 +208,9 @@ def _compare(args: argparse.Namespace) -> int:
 def _predict(args: argparse.Namespace) -> int:
     if args.top_k <= 0:
         raise ValueError("top-k must be positive")
-    ngram_path = args.artifacts_dir / "ngram_scale_1_00.json"
-    transformer_path = args.artifacts_dir / "transformer_scale_1_00.pt"
+    label = _scale_label(args.fraction)
+    ngram_path = args.artifacts_dir / f"ngram_{label}.json"
+    transformer_path = args.artifacts_dir / f"transformer_{label}.pt"
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("trained model files not found; run `python -m app.cli run-all` first")
     ngram = NGramModel.load(ngram_path)
@@ -212,7 +250,7 @@ def _run_all(args: argparse.Namespace) -> int:
         data_dir=args.data_dir, artifacts_dir=args.artifacts_dir, results_dir=args.results_dir,
         batch_size=args.batch_size, device=args.device,
     )
-    paths = create_visualizations(args.results_dir)
+    paths = create_visualizations(args.results_dir, args.artifacts_dir)
     compact = {
         "split_sizes": report["split_sizes"],
         "training_fractions": list(report["training_sizes"]),
@@ -223,12 +261,13 @@ def _run_all(args: argparse.Namespace) -> int:
 
 
 def _visualize(args: argparse.Namespace) -> int:
-    paths = create_visualizations(args.results_dir)
+    paths = create_visualizations(args.results_dir, args.artifacts_dir)
     print("\n".join(str(path) for path in paths))
     return 0
 
 
 def main(argv: list[str] | None = None) -> int:
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     parser = build_parser()
     args = parser.parse_args(argv)
     try:

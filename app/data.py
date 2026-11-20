@@ -3,10 +3,10 @@ from __future__ import annotations
 import json
 import random
 from collections import Counter
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 from itertools import combinations
 from pathlib import Path
-from typing import Iterable
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -131,8 +131,8 @@ def split_sessions(
     if not 0 < train_fraction < 1 or not 0 < validation_fraction < 1 or train_fraction + validation_fraction >= 1:
         raise DataError("train and validation fractions must be positive and sum to less than one")
     indices = list(range(len(sessions)))
-    train_count = int(round(len(sessions) * train_fraction))
-    validation_count = int(round(len(sessions) * validation_fraction))
+    train_count = round(len(sessions) * train_fraction)
+    validation_count = round(len(sessions) * validation_fraction)
     if min(train_count, validation_count, len(sessions) - train_count - validation_count) < 1:
         raise DataError("split fractions produce an empty partition for this dataset size")
     train_idx, remainder_idx = train_test_split(indices, train_size=train_count, random_state=seed, shuffle=True)
@@ -177,17 +177,23 @@ def describe_sessions(sessions: Iterable[Session]) -> dict[str, object]:
     lengths = Counter(len(session.items) for session in sessions)
     frequencies = Counter(item for session in sessions for item in session.items)
     pairs = Counter(pair for session in sessions for pair in combinations(sorted(set(session.items)), 2))
-    top_pairs = [
-        {"items": list(pair), "count": count}
-        for pair, count in pairs.most_common(10)
-    ]
+    itemsets = Counter(
+        itemset
+        for session in sessions
+        for size in (2, 3)
+        if len(set(session.items)) >= size
+        for itemset in combinations(sorted(set(session.items)), size)
+    )
+    top_pairs = [{"items": list(pair), "count": count} for pair, count in pairs.most_common(10)]
+    top_itemsets = [{"items": list(itemset), "count": count} for itemset, count in itemsets.most_common(15)]
     return {
         "transactions": len(sessions),
-        "unique_products": len(set(item for session in sessions for item in session.items)),
+        "unique_products": len({item for session in sessions for item in session.items}),
         "average_basket_length": round(sum(len(session.items) for session in sessions) / len(sessions), 3) if sessions else 0,
         "basket_length_distribution": dict(sorted(lengths.items())),
         "product_frequency": dict(sorted(frequencies.items())),
         "most_common_pairs": top_pairs,
+        "most_common_itemsets": top_itemsets,
     }
 
 

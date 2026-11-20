@@ -1,15 +1,21 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
+cache_root = Path(".cache").resolve()
+cache_root.mkdir(parents=True, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", str(cache_root / "matplotlib"))
+os.environ.setdefault("XDG_CACHE_HOME", str(cache_root))
+
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from app.experiment import DEFAULT_RESULTS
-
+from app.experiment import DEFAULT_ARTIFACTS, DEFAULT_RESULTS
 
 COLORS = {"ngram": "#31688e", "transformer": "#d1495b"}
 
@@ -20,7 +26,9 @@ def _load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def create_visualizations(results_dir: Path = DEFAULT_RESULTS) -> list[Path]:
+def create_visualizations(
+    results_dir: Path = DEFAULT_RESULTS, artifacts_dir: Path = DEFAULT_ARTIFACTS
+) -> list[Path]:
     report = _load(results_dir / "metrics.json")
     history = _load(results_dir / "training_history.json")
     stats = _load(results_dir / "dataset_stats.json")
@@ -35,7 +43,13 @@ def create_visualizations(results_dir: Path = DEFAULT_RESULTS) -> list[Path]:
             values = [report["training_sizes"][fraction]["metrics"][model][metric] for fraction in fractions]
             axis.plot([float(value) for value in fractions], values, marker="o", linewidth=2,
                       color=COLORS[model], label=model.replace("_", " ").title())
-        axis.set_title(metric.replace("_", " ").title())
+        display_name = {
+            "top_1_accuracy": "Top-1 accuracy",
+            "top_3_accuracy": "Top-3 accuracy",
+            "top_5_accuracy": "Top-5 accuracy",
+            "mrr": "Mean reciprocal rank",
+        }[metric]
+        axis.set_title(display_name)
         axis.set_ylim(0, 1)
         axis.set_xlabel("Share of training transactions")
         axis.set_xticks([float(value) for value in fractions], [f"{float(value):.0%}" for value in fractions])
@@ -98,7 +112,44 @@ def create_visualizations(results_dir: Path = DEFAULT_RESULTS) -> list[Path]:
     fig.savefig(path, dpi=180)
     plt.close(fig)
     output_paths.append(path)
+    output_paths.append(create_prediction_figure(results_dir, artifacts_dir))
     return output_paths
+
+
+def create_prediction_figure(results_dir: Path, artifacts_dir: Path) -> Path:
+    from app.data import product_lookup
+    from app.ngram import NGramModel
+    from app.transformer import load_checkpoint
+
+    ngram_path = artifacts_dir / "ngram_scale_1_00.json"
+    transformer_path = artifacts_dir / "transformer_scale_1_00.pt"
+    if not ngram_path.exists() or not transformer_path.exists():
+        raise FileNotFoundError("trained full-data models are needed to draw a prediction example")
+    ngram = NGramModel.load(ngram_path)
+    transformer, vocabulary, _ = load_checkpoint(transformer_path)
+    basket = ["bakery_bread", "dairy_butter"]
+    prefix = vocabulary.encode(basket)
+    transformer_device = next(transformer.parameters()).device
+    predictions = {
+        "N-gram": ngram.predict_proba(prefix),
+        "Transformer": transformer.predict_proba(prefix, vocabulary.product_ids, transformer_device),
+    }
+    catalogue = product_lookup()
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5), layout="constrained")
+    for axis, (model_name, distribution) in zip(axes, predictions.items()):
+        top = sorted(distribution.items(), key=lambda pair: (-pair[1], pair[0]))[:5]
+        labels = [catalogue[vocabulary.tokens[item]].name for item, _ in top]
+        values = [probability for _, probability in top]
+        color_key = "ngram" if model_name == "N-gram" else "transformer"
+        axis.barh(list(reversed(labels)), list(reversed(values)), color=COLORS[color_key])
+        axis.set_title(model_name)
+        axis.set_xlabel("Probability within product vocabulary")
+        axis.set_xlim(0, max(values) * 1.2 if values else 1)
+    fig.suptitle("Next-item suggestions after Bread and Butter")
+    path = results_dir / "prediction_example.png"
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+    return path
 
 
 def comparison_table(results_dir: Path = DEFAULT_RESULTS) -> pd.DataFrame:

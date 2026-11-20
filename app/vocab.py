@@ -1,7 +1,7 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Iterable
 
 from app.data import CATALOGUE
 
@@ -20,7 +20,7 @@ class Vocabulary:
             raise ValueError("PAD and UNK must be the first two tokens")
 
     @classmethod
-    def from_catalogue(cls) -> "Vocabulary":
+    def from_catalogue(cls) -> Vocabulary:
         return cls((cls.PAD, cls.UNK, *(product.product_id for product in CATALOGUE)))
 
     @property
@@ -64,5 +64,5 @@ class Vocabulary:
         return {"tokens": list(self.tokens)}
 
     @classmethod
-    def from_dict(cls, value: dict[str, object]) -> "Vocabulary":
+    def from_dict(cls, value: dict[str, object]) -> Vocabulary:
         return cls(tuple(str(token) for token in value["tokens"]))
