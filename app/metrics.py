@@ -119,6 +119,17 @@ def summarize_errors(results: dict[str, dict[str, object]], vocabulary: Vocabula
                 "transformer_top1": vocabulary.tokens[transformer_guess],
                 "transformer_rank": transformer_row["rank"],
             })
+    pattern_scores: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
+    for model_name, evaluation in results.items():
+        for row in evaluation["_rows"]:
+            pattern_scores[row["session"].pattern][model_name].append(row["rank"] == 1)
+    pattern_accuracy = {
+        pattern: {
+            model: sum(hits) / len(hits)
+            for model, hits in sorted(models.items())
+        }
+        for pattern, models in sorted(pattern_scores.items())
+    }
     confusions = Counter()
     for model_name, evaluation in results.items():
         for row in evaluation["_rows"]:
@@ -135,6 +146,7 @@ def summarize_errors(results: dict[str, dict[str, object]], vocabulary: Vocabula
         ],
         "representative_cases": cases[:limit],
         "rank_by_product": {key: dict(value) for key, value in sorted(by_item.items())},
+        "accuracy_by_session_pattern": pattern_accuracy,
     }
 
 

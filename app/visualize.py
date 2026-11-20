@@ -29,24 +29,21 @@ def create_visualizations(results_dir: Path = DEFAULT_RESULTS) -> list[Path]:
 
     fractions = sorted(report["training_sizes"], key=float)
     metric_keys = ["top_1_accuracy", "top_3_accuracy", "top_5_accuracy", "mrr"]
-    x = list(range(len(fractions)))
-    width = 0.18
-    fig, ax = plt.subplots(figsize=(9, 5.2), layout="constrained")
-    for offset, metric in enumerate(metric_keys):
-        for model_index, model in enumerate(("ngram", "transformer")):
+    fig, axes = plt.subplots(2, 2, figsize=(10, 7), sharex=True, sharey=True, layout="constrained")
+    for axis, metric in zip(axes.flat, metric_keys):
+        for model in ("ngram", "transformer"):
             values = [report["training_sizes"][fraction]["metrics"][model][metric] for fraction in fractions]
-            positions = [point + (offset * 2 + model_index - 3.5) * width for point in x]
-            ax.bar(positions, values, width=width, color=COLORS[model], alpha=1 - offset * 0.12,
-                   label=f"{model} {metric.replace('_', ' ')}" if len(fractions) == 1 else None)
-    ax.set_xticks(x, [f"{float(value):.0%}" for value in fractions])
-    ax.set_xlabel("Share of training transactions")
-    ax.set_ylabel("Score")
-    ax.set_ylim(0, 1)
-    ax.set_title("Next-item ranking scores by model and training size")
-    if len(fractions) == 1:
-        ax.legend(ncol=2, fontsize=8)
-    else:
-        ax.legend(["N-gram", "Transformer"], loc="upper left")
+            axis.plot([float(value) for value in fractions], values, marker="o", linewidth=2,
+                      color=COLORS[model], label=model.replace("_", " ").title())
+        axis.set_title(metric.replace("_", " ").title())
+        axis.set_ylim(0, 1)
+        axis.set_xlabel("Share of training transactions")
+        axis.set_xticks([float(value) for value in fractions], [f"{float(value):.0%}" for value in fractions])
+        axis.grid(axis="y", alpha=0.25)
+    axes[0, 0].set_ylabel("Score")
+    axes[1, 0].set_ylabel("Score")
+    axes[0, 0].legend()
+    fig.suptitle("Next-item ranking scores by model and training size")
     path = results_dir / "model_performance.png"
     fig.savefig(path, dpi=180)
     plt.close(fig)

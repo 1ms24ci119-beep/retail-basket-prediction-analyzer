@@ -6,11 +6,12 @@ import json
 import sys
 from pathlib import Path
 
-from app.data import describe_sessions, generate_sessions, load_sessions, save_sessions, split_sessions
+from app.config import BATCH_SIZE, DEVICE, EPOCHS, SEED, TRANSACTIONS
+from app.data import CATALOGUE, describe_sessions, generate_sessions, load_sessions, save_sessions, split_sessions
 from app.experiment import DEFAULT_ARTIFACTS, DEFAULT_DATA, DEFAULT_RESULTS, run_experiment, write_json
 from app.metrics import evaluate_predictor, public_metrics
 from app.ngram import NGramModel
-from app.training import choose_training_subset, fit_ngram, fit_transformer, restore_models
+from app.training import choose_training_subset, fit_ngram, fit_transformer
 from app.transformer import load_checkpoint
 from app.visualize import comparison_table, create_visualizations
 from app.vocab import Vocabulary
@@ -26,8 +27,8 @@ def build_parser() -> argparse.ArgumentParser:
     hello.set_defaults(handler=_hello)
 
     generate = subparsers.add_parser("generate-data", help="generate reproducible train, validation, and test sessions")
-    generate.add_argument("--transactions", type=int, default=1200)
-    generate.add_argument("--seed", type=int, default=1729)
+    generate.add_argument("--transactions", type=int, default=TRANSACTIONS)
+    generate.add_argument("--seed", type=int, default=SEED)
     generate.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
     generate.set_defaults(handler=_generate)
 
@@ -43,9 +44,9 @@ def build_parser() -> argparse.ArgumentParser:
 
     train_transformer = subparsers.add_parser("train-transformer", help="fit and save the small PyTorch model")
     _add_train_options(train_transformer)
-    train_transformer.add_argument("--epochs", type=int, default=6)
-    train_transformer.add_argument("--batch-size", type=int, default=64)
-    train_transformer.add_argument("--device", default="auto")
+    train_transformer.add_argument("--epochs", type=int, default=EPOCHS)
+    train_transformer.add_argument("--batch-size", type=int, default=BATCH_SIZE)
+    train_transformer.add_argument("--device", default=DEVICE)
     train_transformer.set_defaults(handler=_train_transformer)
 
     evaluate = subparsers.add_parser("evaluate", help="evaluate saved models against the common test split")
@@ -64,12 +65,12 @@ def build_parser() -> argparse.ArgumentParser:
     predict.set_defaults(handler=_predict)
 
     run_all = subparsers.add_parser("run-all", help="generate data, train models, evaluate, and create plots")
-    run_all.add_argument("--transactions", type=int, default=1200)
-    run_all.add_argument("--seed", type=int, default=1729)
-    run_all.add_argument("--epochs", type=int, default=6)
+    run_all.add_argument("--transactions", type=int, default=TRANSACTIONS)
+    run_all.add_argument("--seed", type=int, default=SEED)
+    run_all.add_argument("--epochs", type=int, default=EPOCHS)
     run_all.add_argument("--fractions", type=float, nargs="+", default=[1.0])
-    run_all.add_argument("--batch-size", type=int, default=64)
-    run_all.add_argument("--device", default="auto")
+    run_all.add_argument("--batch-size", type=int, default=BATCH_SIZE)
+    run_all.add_argument("--device", default=DEVICE)
     run_all.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
     run_all.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
     run_all.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
@@ -91,7 +92,7 @@ def _add_train_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
     parser.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
     parser.add_argument("--fraction", type=float, default=1.0)
-    parser.add_argument("--seed", type=int, default=1729)
+    parser.add_argument("--seed", type=int, default=SEED)
 
 
 def _load_splits(data_dir: Path, seed: int = 1729):
@@ -176,7 +177,7 @@ def _predict(args: argparse.Namespace) -> int:
         raise FileNotFoundError("trained model files not found; run `python -m app.cli run-all` first")
     ngram = NGramModel.load(ngram_path)
     transformer, vocabulary, _ = load_checkpoint(transformer_path, args.device)
-    names = {product.name.casefold(): product.product_id for product in __import__("app.data", fromlist=["CATALOGUE"]).CATALOGUE}
+    names = {product.name.casefold(): product.product_id for product in CATALOGUE}
     ids = set(vocabulary.tokens)
     items = []
     for raw in args.basket.split(","):

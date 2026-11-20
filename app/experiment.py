@@ -6,7 +6,9 @@ from typing import Iterable
 
 import pandas as pd
 
+from app.config import ARTIFACTS_DIR, DATA_DIR, RESULTS_DIR
 from app.data import Session, describe_sessions, generate_sessions, save_sessions, split_sessions
+from app.analysis import rare_product_summary
 from app.metrics import evaluate_predictor, public_metrics, summarize_errors
 from app.ngram import NGramModel
 from app.training import choose_training_subset, fit_ngram, fit_transformer
@@ -14,9 +16,9 @@ from app.transformer import TransformerConfig
 from app.vocab import Vocabulary
 
 
-DEFAULT_DATA = Path("data/generated")
-DEFAULT_ARTIFACTS = Path("artifacts")
-DEFAULT_RESULTS = Path("results")
+DEFAULT_DATA = DATA_DIR
+DEFAULT_ARTIFACTS = ARTIFACTS_DIR
+DEFAULT_RESULTS = RESULTS_DIR
 
 
 def write_json(path: Path, payload: object) -> None:
@@ -58,6 +60,7 @@ def train_and_evaluate(
     )
     evaluations = {"ngram": ngram_eval, "transformer": transformer_eval}
     analysis = summarize_errors(evaluations, vocabulary)
+    analysis["rare_products"] = rare_product_summary(splits["test"], vocabulary, evaluations)
     metadata = {
         "training_fraction": fraction,
         "ngram": ngram_metadata,

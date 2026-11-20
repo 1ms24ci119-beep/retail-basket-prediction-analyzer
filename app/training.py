@@ -34,10 +34,12 @@ def fit_transformer(
     seed: int = 1729,
     device: str = "auto",
     config: TransformerConfig | None = None,
+    cpu_threads: int = 1,
 ) -> tuple[object, dict[str, list[float]], dict[str, object]]:
     model, history, metadata = train_transformer(
         train_sessions, validation_sessions, vocabulary, config=config, epochs=epochs,
         batch_size=batch_size, learning_rate=learning_rate, seed=seed, device=device,
+        cpu_threads=cpu_threads,
     )
     save_checkpoint(model, path, vocabulary, metadata)
     path.with_suffix(".history.json").write_text(json.dumps(history, indent=2) + "\n", encoding="utf-8")
@@ -50,7 +52,8 @@ def choose_training_subset(sessions: list[Session], fraction: float, seed: int) 
     if not sessions:
         raise ValueError("cannot select from an empty training split")
     count = max(1, round(len(sessions) * fraction))
-    return random.Random(seed).sample(sessions, count)
+    ordered = random.Random(seed).sample(sessions, len(sessions))
+    return ordered[:count]
 
 
 def restore_models(ngram_path: Path, transformer_path: Path, device: str = "cpu"):

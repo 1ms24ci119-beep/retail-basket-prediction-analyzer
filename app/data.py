@@ -61,7 +61,7 @@ CATALOGUE = (
 PATTERNS: tuple[tuple[str, tuple[str, ...], float], ...] = (
     ("toast_breakfast", ("bakery_bread", "dairy_butter", "snack_jam"), 0.13),
     ("pasta_night", ("pantry_pasta", "pantry_sauce", "dairy_mozzarella"), 0.13),
-    ("coffee_morning", ("bev_coffee", "dairy_milk", "snack_chocolate"), 0.07),
+    ("coffee_morning", ("bev_coffee", "dairy_milk", "pantry_sugar"), 0.07),
     ("movie_night", ("snack_chips", "bev_soda", "snack_chocolate"), 0.11),
     ("lentil_dinner", ("pantry_rice", "meat_lentils", "pantry_spices"), 0.11),
     ("cereal_breakfast", ("snack_cereal", "dairy_milk", "fruit_banana"), 0.11),
@@ -88,8 +88,8 @@ def product_lookup() -> dict[str, Product]:
 
 
 def generate_sessions(count: int = 2400, seed: int = 1729) -> list[Session]:
-    if count < 3:
-        raise DataError("count must be at least 3 to create train, validation, and test splits")
+    if count < 10:
+        raise DataError("count must be at least 10 to create useful train, validation, and test splits")
     rng = random.Random(seed)
     items = [product.product_id for product in CATALOGUE]
     pattern_names, pattern_items, pattern_weights = zip(*PATTERNS)
@@ -123,14 +123,22 @@ def generate_sessions(count: int = 2400, seed: int = 1729) -> list[Session]:
 def split_sessions(
     sessions: list[Session], seed: int = 1729, train_fraction: float = 0.7, validation_fraction: float = 0.15
 ) -> dict[str, list[Session]]:
-    if len(sessions) < 3:
-        raise DataError("at least three sessions are required for leakage-safe splits")
+    if len(sessions) < 10:
+        raise DataError("at least ten sessions are required for non-empty train, validation, and test splits")
+    session_ids = [session.session_id for session in sessions]
+    if len(set(session_ids)) != len(session_ids):
+        raise DataError("session IDs must be unique to prevent split leakage")
     if not 0 < train_fraction < 1 or not 0 < validation_fraction < 1 or train_fraction + validation_fraction >= 1:
         raise DataError("train and validation fractions must be positive and sum to less than one")
     indices = list(range(len(sessions)))
-    train_idx, remainder_idx = train_test_split(indices, train_size=train_fraction, random_state=seed, shuffle=True)
-    relative_validation = validation_fraction / (1 - train_fraction)
-    val_idx, test_idx = train_test_split(remainder_idx, train_size=relative_validation, random_state=seed + 1, shuffle=True)
+    train_count = int(round(len(sessions) * train_fraction))
+    validation_count = int(round(len(sessions) * validation_fraction))
+    if min(train_count, validation_count, len(sessions) - train_count - validation_count) < 1:
+        raise DataError("split fractions produce an empty partition for this dataset size")
+    train_idx, remainder_idx = train_test_split(indices, train_size=train_count, random_state=seed, shuffle=True)
+    val_idx, test_idx = train_test_split(
+        remainder_idx, train_size=validation_count, random_state=seed + 1, shuffle=True
+    )
     return {
         "train": [sessions[i] for i in train_idx],
         "validation": [sessions[i] for i in val_idx],

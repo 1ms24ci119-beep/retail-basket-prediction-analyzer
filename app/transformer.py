@@ -163,6 +163,12 @@ def _collate(rows: list[torch.Tensor], pad_id: int) -> torch.Tensor:
     return pad_sequence(rows, batch_first=True, padding_value=pad_id)
 
 
+def _product_logits(logits: torch.Tensor) -> torch.Tensor:
+    logits = logits.clone()
+    logits[..., :2] = torch.finfo(logits.dtype).min
+    return logits
+
+
 def _loss_for_loader(model: RetailTransformer, loader: DataLoader, device: torch.device, pad_id: int) -> float:
     model.eval()
     total_loss = 0.0
@@ -170,7 +176,7 @@ def _loss_for_loader(model: RetailTransformer, loader: DataLoader, device: torch
     with torch.no_grad():
         for batch in loader:
             batch = batch.to(device)
-            logits = model(batch[:, :-1])
+            logits = _product_logits(model(batch[:, :-1]))
             targets = batch[:, 1:]
             token_count = int(targets.ne(pad_id).sum().item())
             if token_count == 0:
@@ -191,13 +197,18 @@ def train_transformer(
     learning_rate: float = 0.002,
     seed: int = 1729,
     device: str = "auto",
+    cpu_threads: int = 1,
 ) -> tuple[RetailTransformer, dict[str, list[float]], dict[str, object]]:
     if not train_sessions or not validation_sessions:
         raise ValueError("training and validation sessions must both be non-empty")
     if epochs < 1 or batch_size < 1 or learning_rate <= 0:
         raise ValueError("epochs and batch size must be positive and learning rate must be positive")
+    if cpu_threads < 1:
+        raise ValueError("cpu_threads must be positive")
     set_seed(seed)
     device_obj = choose_device(device)
+    if device_obj.type == "cpu":
+        torch.set_num_threads(cpu_threads)
     config = config or TransformerConfig(vocab_size=len(vocabulary.tokens), block_size=12)
     model = RetailTransformer(config).to(device_obj)
     pad_id = vocabulary.token_to_id[vocabulary.PAD]
@@ -215,7 +226,7 @@ def train_transformer(
         for batch in train_loader:
             batch = batch.to(device_obj)
             optimizer.zero_grad(set_to_none=True)
-            logits = model(batch[:, :-1])
+            logits = _product_logits(model(batch[:, :-1]))
             targets = batch[:, 1:]
             loss = F.cross_entropy(logits.reshape(-1, logits.size(-1)), targets.reshape(-1), ignore_index=pad_id)
             loss.backward()
@@ -232,13 +243,15 @@ def train_transformer(
         "train_sessions": len(train_sessions),
         "validation_sessions": len(validation_sessions),
         "parameters": sum(parameter.numel() for parameter in model.parameters()),
+        "cpu_threads": cpu_threads,
     }
     return model, history, metadata
 
 
 def save_checkpoint(model: RetailTransformer, path: Path, vocabulary: Vocabulary, metadata: dict[str, object] | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save({"config": asdict(model.config), "state_dict": model.state_dict(), "metadata": metadata or {}}, path)
+    state = {name: tensor.detach().cpu() for name, tensor in model.state_dict().items()}
+    torch.save({"config": asdict(model.config), "state_dict": state, "metadata": metadata or {}}, path)
     vocabulary_path = path.with_suffix(".vocab.json")
     vocabulary_path.write_text(json.dumps(vocabulary.to_dict(), indent=2) + "\n", encoding="utf-8")
 
