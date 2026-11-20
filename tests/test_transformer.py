@@ -84,4 +84,5 @@ def test_one_epoch_training_reduces_or_tracks_losses_and_is_predictable():
     assert len(history["train_loss"]) == len(history["validation_loss"]) == 1
     assert all(math.isfinite(value) for values in history.values() for value in values)
     assert metadata["parameters"] > 0
+    assert isinstance(metadata["torch_version"], str)
     assert abs(sum(model.predict_proba([2], vocabulary.product_ids).values()) - 1) < 1e-6

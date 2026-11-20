@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import logging
 import math
+import platform
 import random
 from collections.abc import Iterable
 from dataclasses import asdict, dataclass
@@ -243,6 +244,9 @@ def train_transformer(
         )
     metadata = {
         "seed": seed,
+        "python_version": platform.python_version(),
+        "torch_version": str(torch.__version__),
+        "numpy_version": np.__version__,
         "device": str(device_obj),
         "epochs": epochs,
         "batch_size": batch_size,
