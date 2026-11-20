@@ -26,7 +26,7 @@ from app.experiment import (
 from app.metrics import evaluate_predictor, public_metrics, summarize_errors
 from app.ngram import NGramModel
 from app.training import choose_training_subset, fit_ngram, fit_transformer
-from app.transformer import load_checkpoint
+from app.transformer import choose_device, load_checkpoint
 from app.visualize import comparison_table, create_visualizations
 from app.vocab import Vocabulary
 
@@ -66,6 +66,7 @@ def build_parser() -> argparse.ArgumentParser:
     evaluate = subparsers.add_parser("evaluate", help="evaluate saved models against the common test split")
     _add_path_options(evaluate)
     evaluate.add_argument("--fraction", type=float, default=1.0)
+    evaluate.add_argument("--device", default=DEVICE)
     evaluate.set_defaults(handler=_evaluate)
 
     compare = subparsers.add_parser("compare", help="print model metrics from the latest experiment")
@@ -176,7 +177,7 @@ def _evaluate(args: argparse.Namespace) -> int:
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("both trained models are required; run train-ngram and train-transformer first")
     ngram = NGramModel.load(ngram_path)
-    transformer, vocabulary, _ = load_checkpoint(transformer_path, args.device)
+    transformer, vocabulary, _ = load_checkpoint(transformer_path, choose_device(args.device))
     ngram_eval = evaluate_predictor(ngram.predict_proba, splits["test"], vocabulary)
     model_device = next(transformer.parameters()).device
     transformer_eval = evaluate_predictor(
@@ -214,7 +215,7 @@ def _predict(args: argparse.Namespace) -> int:
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("trained model files not found; run `python -m app.cli run-all` first")
     ngram = NGramModel.load(ngram_path)
-    transformer, vocabulary, _ = load_checkpoint(transformer_path, args.device)
+    transformer, vocabulary, _ = load_checkpoint(transformer_path, choose_device(args.device))
     names = {product.name.casefold(): product.product_id for product in CATALOGUE}
     ids = set(vocabulary.tokens)
     items = []

@@ -30,3 +30,29 @@ def test_cli_generate_data_and_missing_model_handling(tmp_path, capsys):
     result = main(["predict", "--basket", "bread", "--artifacts-dir", str(tmp_path / "empty")])
     assert result == 2
     assert "trained model files not found" in capsys.readouterr().err
+
+
+def test_standalone_cli_training_evaluation_comparison_and_prediction(tmp_path, capsys):
+    data_dir = tmp_path / "sessions"
+    artifacts_dir = tmp_path / "models"
+    results_dir = tmp_path / "reports"
+    assert main(["generate-data", "--transactions", "60", "--data-dir", str(data_dir)]) == 0
+    assert main([
+        "train-ngram", "--data-dir", str(data_dir), "--artifacts-dir", str(artifacts_dir),
+    ]) == 0
+    assert main([
+        "train-transformer", "--data-dir", str(data_dir), "--artifacts-dir", str(artifacts_dir),
+        "--epochs", "1", "--batch-size", "16", "--device", "cpu",
+    ]) == 0
+    assert main([
+        "evaluate", "--data-dir", str(data_dir), "--artifacts-dir", str(artifacts_dir),
+        "--results-dir", str(results_dir),
+    ]) == 0
+    assert main(["compare", "--results-dir", str(results_dir)]) == 0
+    assert main([
+        "predict", "--basket", "bread,butter", "--artifacts-dir", str(artifacts_dir), "--top-k", "2",
+    ]) == 0
+    output = capsys.readouterr().out
+    assert "cross_entropy" in output
+    assert "snack_jam" in output
+    assert (results_dir / "model_comparison.csv").exists()
