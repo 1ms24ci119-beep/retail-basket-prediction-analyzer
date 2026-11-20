@@ -112,19 +112,20 @@ def create_visualizations(
     fig.savefig(path, dpi=180)
     plt.close(fig)
     output_paths.append(path)
-    output_paths.append(create_prediction_figure(results_dir, artifacts_dir))
+    output_paths.append(create_prediction_figure(results_dir, artifacts_dir, float(fraction_for_history)))
     return output_paths
 
 
-def create_prediction_figure(results_dir: Path, artifacts_dir: Path) -> Path:
+def create_prediction_figure(results_dir: Path, artifacts_dir: Path, fraction: float = 1.0) -> Path:
     from app.data import product_lookup
     from app.ngram import NGramModel
     from app.transformer import load_checkpoint
 
-    ngram_path = artifacts_dir / "ngram_scale_1_00.json"
-    transformer_path = artifacts_dir / "transformer_scale_1_00.pt"
+    label = f"scale_{fraction:.2f}".replace(".", "_")
+    ngram_path = artifacts_dir / f"ngram_{label}.json"
+    transformer_path = artifacts_dir / f"transformer_{label}.pt"
     if not ngram_path.exists() or not transformer_path.exists():
-        raise FileNotFoundError("trained full-data models are needed to draw a prediction example")
+        raise FileNotFoundError(f"trained models for {fraction:.0%} data are needed to draw a prediction example")
     ngram = NGramModel.load(ngram_path)
     transformer, vocabulary, _ = load_checkpoint(transformer_path)
     basket = ["bakery_bread", "dairy_butter"]

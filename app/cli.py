@@ -199,25 +199,64 @@ def _evaluate(args: argparse.Namespace) -> int:
     transformer_path = args.artifacts_dir / f"transformer_{label}.pt"
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("both trained models are required; run train-ngram and train-transformer first")
-    ngram, transformer, vocabulary, _ = restore_models(ngram_path, transformer_path, str(choose_device(args.device)))
+    ngram, transformer, vocabulary, transformer_metadata = restore_models(
+        ngram_path, transformer_path, str(choose_device(args.device))
+    )
     ngram_eval = evaluate_predictor(ngram.predict_proba, splits["test"], vocabulary)
     model_device = next(transformer.parameters()).device
     transformer_eval = evaluate_predictor(
-        lambda prefix: transformer.predict_proba(prefix, vocabulary.product_ids, model_device), splits["test"], vocabulary
+        lambda prefix: transformer.predict_proba(prefix, vocabulary.product_ids, model_device),
+        splits["test"], vocabulary,
     )
     evaluations = {"ngram": ngram_eval, "transformer": transformer_eval}
-    payload = {
-        "ngram": public_metrics(ngram_eval),
-        "transformer": public_metrics(transformer_eval),
-        "error_analysis": summarize_errors(evaluations, vocabulary),
+    stats = {name: describe_sessions(rows) for name, rows in splits.items()}
+    write_json(args.results_dir / "dataset_stats.json", stats)
+    ngram_metadata_path = ngram_path.with_suffix(".metadata.json")
+    ngram_metadata = json.loads(ngram_metadata_path.read_text(encoding="utf-8")) if ngram_metadata_path.exists() else {}
+    ngram_contexts = sum(len(contexts) for contexts in ngram.counts.values())
+    ngram_outcomes = sum(len(counts) for contexts in ngram.counts.values() for counts in contexts.values())
+    report = {
+        "seed": transformer_metadata.get("seed"),
+        "transaction_count": sum(len(rows) for rows in splits.values()),
+        "split_sizes": {name: len(rows) for name, rows in splits.items()},
+        "vocabulary_size": len(vocabulary.tokens),
+        "sequence_convention": "Template order for planted sessions, random order for independent and unusual sessions; session IDs are split before prefixes are evaluated.",
+        "training_sizes": {
+            f"{args.fraction:.2f}": {
+                "metrics": {name: public_metrics(value) for name, value in evaluations.items()},
+                "error_analysis": summarize_errors(evaluations, vocabulary),
+                "metadata": {
+                    "training_fraction": args.fraction,
+                    "ngram": ngram_metadata,
+                    "transformer": transformer_metadata,
+                    "parameter_comparison": {
+                        "ngram_contexts": ngram_contexts,
+                        "ngram_stored_outcomes": ngram_outcomes,
+                        "transformer_parameters": transformer_metadata.get("parameters"),
+                    },
+                },
+            }
+        },
+        "limitations": [
+            "Transactions are synthetic and generated from known templates.",
+            "Within-template item order is simulated and does not represent observed checkout timestamps.",
+            "Randomized sessions can make next-item prediction intrinsically uncertain.",
+        ],
     }
-    write_json(args.results_dir / "metrics.json", payload)
+    write_json(args.results_dir / "metrics.json", report)
+    history_path = transformer_path.with_suffix(".history.json")
+    if history_path.exists():
+        write_json(args.results_dir / "training_history.json", {f"{args.fraction:.2f}": json.loads(history_path.read_text(encoding="utf-8"))})
     rows = []
     for metric in ("top_1_accuracy", "top_3_accuracy", "top_5_accuracy", "mrr", "mean_rank", "cross_entropy"):
-        rows.append({"metric": metric, **{name: values[metric] for name, values in payload.items() if name in evaluations}})
+        rows.append({
+            "training_fraction": args.fraction,
+            "metric": metric,
+            **{name: value[metric] for name, value in report["training_sizes"][f"{args.fraction:.2f}"]["metrics"].items()},
+        })
     args.results_dir.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(rows).to_csv(args.results_dir / "model_comparison.csv", index=False)
-    print(json.dumps(payload, indent=2))
+    print(json.dumps(report, indent=2))
     return 0
 
 

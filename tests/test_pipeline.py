@@ -50,6 +50,10 @@ def test_standalone_cli_training_evaluation_comparison_and_prediction(tmp_path, 
     ]) == 0
     assert main(["compare", "--results-dir", str(results_dir)]) == 0
     assert main([
+        "visualize", "--results-dir", str(results_dir), "--artifacts-dir", str(artifacts_dir),
+    ]) == 0
+    assert (results_dir / "prediction_example.png").exists()
+    assert main([
         "predict", "--basket", "bread,butter", "--artifacts-dir", str(artifacts_dir), "--top-k", "2",
     ]) == 0
     output = capsys.readouterr().out
