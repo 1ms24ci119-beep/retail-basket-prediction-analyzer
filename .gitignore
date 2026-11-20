@@ -1,12 +1,74 @@
-# Secrets: never commit your real settings
+# Environment files and credentials
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+id_ecdsa
+id_ecdsa.*
+credentials.json
+credentials.*.json
+client_secret*.json
+service-account*.json
+token.json
+.netrc
+.pypirc
+.aws/
+.ssh/
+.kube/config
+.gcloud/
+.streamlit/secrets.toml
+.streamlit/credentials.toml
 
-# Python
-__pycache__/
-*.pyc
+# Python environments, bytecode, builds, and test caches
 .venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
 .pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
 
-# Local data
-data/
+# Local application state and model artifacts
+data/app.json
+artifacts/
+checkpoints/
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.gguf
+*.log
+*.sqlite3
 *.db
+wandb/
+mlruns/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

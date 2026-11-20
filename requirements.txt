@@ -1,5 +1,6 @@
-httpx
-pytest
-thilimarketbasket @ git+https://github.com/thili-ai/thilimarketbasket.git
-numpy
-pandas
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scikit-learn>=1.3
+torch>=2.2
+pytest>=8
