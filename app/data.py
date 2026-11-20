@@ -8,7 +8,6 @@ from dataclasses import asdict, dataclass
 from itertools import combinations
 from pathlib import Path
 
-import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
@@ -196,6 +195,3 @@ def describe_sessions(sessions: Iterable[Session]) -> dict[str, object]:
         "most_common_itemsets": top_itemsets,
     }
 
-
-def statistics_frame(sessions: Iterable[Session]) -> pd.DataFrame:
-    return pd.DataFrame([asdict(session) | {"items": ",".join(session.items), "basket_length": len(session.items)} for session in sessions])

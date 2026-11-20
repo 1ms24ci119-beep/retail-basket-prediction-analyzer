@@ -23,9 +23,6 @@ class NGramModel:
         self.counts: dict[int, dict[tuple[int, ...], Counter[int]]] = {
             n: defaultdict(Counter) for n in range(1, order + 1)
         }
-        self.context_counts: dict[int, Counter[tuple[int, ...]]] = {
-            n: Counter() for n in range(1, order + 1)
-        }
         self.fitted = False
 
     def fit(self, sequences: Iterable[Sequence[int]]) -> NGramModel:
@@ -43,7 +40,6 @@ class NGramModel:
                     n = context_length + 1
                     context = tuple(history[-context_length:]) if context_length else ()
                     self.counts[n][context][token] += 1
-                    self.context_counts[n][context] += 1
                 history.append(token)
         if not seen:
             raise ValueError("at least one non-empty sequence is required")
@@ -112,7 +108,6 @@ class NGramModel:
                 context = tuple(int(item) for item in row["context"])
                 next_counts = Counter({int(item): int(count) for item, count in row["next"].items()})
                 model.counts[int(order)][context] = next_counts
-                model.context_counts[int(order)][context] = sum(next_counts.values())
         model.fitted = bool(value["fitted"])
         return model
 

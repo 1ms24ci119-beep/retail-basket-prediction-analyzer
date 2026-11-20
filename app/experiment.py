@@ -17,6 +17,7 @@ from app.data import (
 )
 from app.metrics import evaluate_predictor, public_metrics, summarize_errors
 from app.training import choose_training_subset, fit_ngram, fit_transformer
+from app.transformer import TransformerConfig
 from app.vocab import Vocabulary
 
 DEFAULT_DATA = DATA_DIR
@@ -43,16 +44,16 @@ def train_and_evaluate(
     seed: int = 1729,
     batch_size: int = 64,
     device: str = "auto",
-    save_models: bool = True,
+    config: TransformerConfig | None = None,
 ) -> tuple[dict[str, dict[str, object]], dict[str, object], dict[str, list[float]]]:
     train_subset = choose_training_subset(splits["train"], fraction, seed)
     artifact_label = f"scale_{fraction:.2f}".replace(".", "_")
     ngram_path = artifacts_dir / f"ngram_{artifact_label}.json"
     transformer_path = artifacts_dir / f"transformer_{artifact_label}.pt"
-    ngram, ngram_metadata = fit_ngram(train_subset, vocabulary, ngram_path if save_models else Path("/tmp/retail-ngram.json"))
+    ngram, ngram_metadata = fit_ngram(train_subset, vocabulary, ngram_path)
     model, history, transformer_metadata = fit_transformer(
         train_subset, splits["validation"], vocabulary,
-        transformer_path if save_models else Path("/tmp/retail-transformer.pt"),
+        transformer_path,
         epochs=epochs, batch_size=batch_size, seed=seed, device=device,
     )
     model_device = next(model.parameters()).device
@@ -89,6 +90,7 @@ def run_experiment(
     results_dir: Path = DEFAULT_RESULTS,
     batch_size: int = 64,
     device: str = "auto",
+    config: TransformerConfig | None = None,
 ) -> dict[str, object]:
     sessions = generate_sessions(count=count, seed=seed)
     splits = split_sessions(sessions, seed=seed)
@@ -109,7 +111,7 @@ def run_experiment(
             raise ValueError("training fractions must be in (0, 1]")
         evaluations, auxiliary, history = train_and_evaluate(
             splits, vocabulary, artifacts_dir, fraction=fraction, epochs=epochs,
-            seed=seed, batch_size=batch_size, device=device,
+            seed=seed, batch_size=batch_size, device=device, config=config,
         )
         key = f"{fraction:.2f}"
         all_scale_results[key] = {
@@ -139,8 +141,3 @@ def run_experiment(
     pd.DataFrame(table_rows).to_csv(results_dir / "model_comparison.csv", index=False)
     return report
 
-
-def load_report(path: Path = DEFAULT_RESULTS / "metrics.json") -> dict[str, object]:
-    if not path.exists():
-        raise FileNotFoundError(f"No evaluation report found at {path}; run `python -m app.cli run-all` first")
-    return json.loads(path.read_text(encoding="utf-8"))

@@ -7,6 +7,8 @@ import logging
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 from app.config import BATCH_SIZE, DEVICE, EPOCHS, SEED, TRANSACTIONS
 from app.data import (
     CATALOGUE,
@@ -24,9 +26,13 @@ from app.experiment import (
     write_json,
 )
 from app.metrics import evaluate_predictor, public_metrics, summarize_errors
-from app.ngram import NGramModel
-from app.training import choose_training_subset, fit_ngram, fit_transformer
-from app.transformer import choose_device, load_checkpoint
+from app.training import (
+    choose_training_subset,
+    fit_ngram,
+    fit_transformer,
+    restore_models,
+)
+from app.transformer import TransformerConfig, choose_device
 from app.visualize import comparison_table, create_visualizations
 from app.vocab import Vocabulary
 
@@ -61,6 +67,12 @@ def build_parser() -> argparse.ArgumentParser:
     train_transformer.add_argument("--epochs", type=int, default=EPOCHS)
     train_transformer.add_argument("--batch-size", type=int, default=BATCH_SIZE)
     train_transformer.add_argument("--device", default=DEVICE)
+    train_transformer.add_argument("--d-model", type=int, default=64)
+    train_transformer.add_argument("--n-heads", type=int, default=4)
+    train_transformer.add_argument("--n-layers", type=int, default=2)
+    train_transformer.add_argument("--block-size", type=int, default=12)
+    train_transformer.add_argument("--dropout", type=float, default=0.1)
+    train_transformer.add_argument("--learning-rate", type=float, default=0.002)
     train_transformer.set_defaults(handler=_train_transformer)
 
     evaluate = subparsers.add_parser("evaluate", help="evaluate saved models against the common test split")
@@ -88,6 +100,12 @@ def build_parser() -> argparse.ArgumentParser:
     run_all.add_argument("--fractions", type=float, nargs="+", default=[1.0])
     run_all.add_argument("--batch-size", type=int, default=BATCH_SIZE)
     run_all.add_argument("--device", default=DEVICE)
+    run_all.add_argument("--d-model", type=int, default=64)
+    run_all.add_argument("--n-heads", type=int, default=4)
+    run_all.add_argument("--n-layers", type=int, default=2)
+    run_all.add_argument("--block-size", type=int, default=12)
+    run_all.add_argument("--dropout", type=float, default=0.1)
+    run_all.add_argument("--learning-rate", type=float, default=0.002)
     run_all.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
     run_all.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
     run_all.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
@@ -119,7 +137,7 @@ def _add_train_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--seed", type=int, default=SEED)
 
 
-def _load_splits(data_dir: Path, seed: int = 1729):
+def _load_splits(data_dir: Path):
     expected = [data_dir / f"{name}.jsonl" for name in ("train", "validation", "test")]
     if not all(path.exists() for path in expected):
         raise FileNotFoundError("dataset splits are missing; run `python -m app.cli generate-data` first")
@@ -146,7 +164,7 @@ def _stats(args: argparse.Namespace) -> int:
 
 
 def _train_ngram(args: argparse.Namespace) -> int:
-    splits = _load_splits(args.data_dir, args.seed)
+    splits = _load_splits(args.data_dir)
     vocabulary = Vocabulary.from_catalogue()
     subset = choose_training_subset(splits["train"], args.fraction, args.seed)
     label = _scale_label(args.fraction)
@@ -157,13 +175,18 @@ def _train_ngram(args: argparse.Namespace) -> int:
 
 
 def _train_transformer(args: argparse.Namespace) -> int:
-    splits = _load_splits(args.data_dir, args.seed)
+    splits = _load_splits(args.data_dir)
     vocabulary = Vocabulary.from_catalogue()
     subset = choose_training_subset(splits["train"], args.fraction, args.seed)
+    model_config = TransformerConfig(
+        vocab_size=len(vocabulary.tokens), block_size=args.block_size, d_model=args.d_model,
+        n_heads=args.n_heads, n_layers=args.n_layers, dropout=args.dropout,
+    )
     _, history, metadata = fit_transformer(
         subset, splits["validation"], vocabulary,
         args.artifacts_dir / f"transformer_{_scale_label(args.fraction)}.pt",
         epochs=args.epochs, batch_size=args.batch_size, seed=args.seed, device=args.device,
+        learning_rate=args.learning_rate, config=model_config,
     )
     print(json.dumps({"metadata": metadata, "history": history}, indent=2))
     return 0
@@ -176,8 +199,7 @@ def _evaluate(args: argparse.Namespace) -> int:
     transformer_path = args.artifacts_dir / f"transformer_{label}.pt"
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("both trained models are required; run train-ngram and train-transformer first")
-    ngram = NGramModel.load(ngram_path)
-    transformer, vocabulary, _ = load_checkpoint(transformer_path, choose_device(args.device))
+    ngram, transformer, vocabulary, _ = restore_models(ngram_path, transformer_path, str(choose_device(args.device)))
     ngram_eval = evaluate_predictor(ngram.predict_proba, splits["test"], vocabulary)
     model_device = next(transformer.parameters()).device
     transformer_eval = evaluate_predictor(
@@ -190,7 +212,6 @@ def _evaluate(args: argparse.Namespace) -> int:
         "error_analysis": summarize_errors(evaluations, vocabulary),
     }
     write_json(args.results_dir / "metrics.json", payload)
-    import pandas as pd
     rows = []
     for metric in ("top_1_accuracy", "top_3_accuracy", "top_5_accuracy", "mrr", "mean_rank", "cross_entropy"):
         rows.append({"metric": metric, **{name: values[metric] for name, values in payload.items() if name in evaluations}})
@@ -214,8 +235,7 @@ def _predict(args: argparse.Namespace) -> int:
     transformer_path = args.artifacts_dir / f"transformer_{label}.pt"
     if not ngram_path.exists() or not transformer_path.exists():
         raise FileNotFoundError("trained model files not found; run `python -m app.cli run-all` first")
-    ngram = NGramModel.load(ngram_path)
-    transformer, vocabulary, _ = load_checkpoint(transformer_path, choose_device(args.device))
+    ngram, transformer, vocabulary, _ = restore_models(ngram_path, transformer_path, str(choose_device(args.device)))
     names = {product.name.casefold(): product.product_id for product in CATALOGUE}
     ids = set(vocabulary.tokens)
     items = []
@@ -246,10 +266,15 @@ def _predict(args: argparse.Namespace) -> int:
 
 
 def _run_all(args: argparse.Namespace) -> int:
+    vocabulary = Vocabulary.from_catalogue()
+    model_config = TransformerConfig(
+        vocab_size=len(vocabulary.tokens), block_size=args.block_size, d_model=args.d_model,
+        n_heads=args.n_heads, n_layers=args.n_layers, dropout=args.dropout,
+    )
     report = run_experiment(
         count=args.transactions, seed=args.seed, epochs=args.epochs, fractions=args.fractions,
         data_dir=args.data_dir, artifacts_dir=args.artifacts_dir, results_dir=args.results_dir,
-        batch_size=args.batch_size, device=args.device,
+        batch_size=args.batch_size, device=args.device, config=model_config,
     )
     paths = create_visualizations(args.results_dir, args.artifacts_dir)
     compact = {

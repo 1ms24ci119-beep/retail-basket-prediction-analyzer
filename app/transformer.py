@@ -250,6 +250,7 @@ def train_transformer(
         "train_sessions": len(train_sessions),
         "validation_sessions": len(validation_sessions),
         "parameters": sum(parameter.numel() for parameter in model.parameters()),
+        "model_config": asdict(config),
         "cpu_threads": cpu_threads,
     }
     return model, history, metadata
