@@ -7,6 +7,11 @@
 *.p12
 *.pfx
 *.keystore
+*.ppk
+*.asc
+.envrc
+.netrc
+.git-credentials
 id_rsa
 id_rsa.*
 id_ed25519
@@ -15,12 +20,25 @@ id_ecdsa
 id_ecdsa.*
 credentials.json
 credentials.*.json
+credentials*.json
 client_secret*.json
 service-account*.json
 token.json
-.netrc
+secrets.json
+secrets.yaml
+secrets.yml
+secrets.toml
+.secrets/
 .pypirc
 .aws/
+.azure/
+.config/gcloud/
+.config/gh/
+.docker/config.json
+.terraform/
+*.tfstate
+*.tfstate.*
+local.settings.json
 .ssh/
 .kube/config
 .gcloud/
@@ -48,7 +66,8 @@ htmlcov/
 .ruff_cache/
 .hypothesis/
 
-# Local application state and model artifacts
+# Local application state, caches, and model artifacts
+.cache/
 data/app.json
 artifacts/
 checkpoints/
