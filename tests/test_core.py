@@ -2,7 +2,16 @@ import json
 
 import pytest
 
-from app.data import CATALOGUE, DataError, Session, describe_sessions, generate_sessions, load_sessions, save_sessions, split_sessions
+from app.data import (
+    CATALOGUE,
+    DataError,
+    Session,
+    describe_sessions,
+    generate_sessions,
+    load_sessions,
+    save_sessions,
+    split_sessions,
+)
 from app.ngram import NGramModel
 from app.vocab import Vocabulary
 
@@ -59,6 +68,7 @@ def test_dataset_stats_report_products_lengths_and_pairs():
     assert 40 <= summary["unique_products"] <= 60
     assert 2 <= summary["average_basket_length"] <= 8
     assert summary["most_common_pairs"]
+    assert summary["most_common_itemsets"]
 
 
 def test_small_invalid_datasets_are_rejected():
@@ -110,8 +120,10 @@ def test_ngram_distribution_is_normalized_and_top_item_follows_context():
     assert model.predict([2, 3], top_k=2)[0][0] == 4
 
 
-def test_ngram_smoothing_handles_unseen_contexts():
+def test_ngram_smoothing_handles_unseen_contexts_and_empty_prefix():
     model = NGramModel(5, [2, 3, 4], order=3, alpha=0.5).fit([[2, 3, 4]])
+    start_probabilities = model.predict_proba([])
+    assert sum(start_probabilities.values()) == pytest.approx(1.0)
     probabilities = model.predict_proba([4, 2])
     assert all(probability > 0 for probability in probabilities.values())
     assert sum(probabilities.values()) == pytest.approx(1.0)
