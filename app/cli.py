@@ -1,16 +1,241 @@
-"""Command-line entry point: `python -m app.cli --help`."""
+"""Command-line workflows for generating and comparing retail next-item models."""
+from __future__ import annotations
+
 import argparse
+import json
+import sys
+from pathlib import Path
+
+from app.data import describe_sessions, generate_sessions, load_sessions, save_sessions, split_sessions
+from app.experiment import DEFAULT_ARTIFACTS, DEFAULT_DATA, DEFAULT_RESULTS, run_experiment, write_json
+from app.metrics import evaluate_predictor, public_metrics
+from app.ngram import NGramModel
+from app.training import choose_training_subset, fit_ngram, fit_transformer, restore_models
+from app.transformer import load_checkpoint
+from app.visualize import comparison_table, create_visualizations
+from app.vocab import Vocabulary
 
 
-def main(argv: list[str] | None = None) -> None:
-    parser = argparse.ArgumentParser(prog="retail-basket-prediction-analyzer", description="Retail analysts use this to compare next-item prediction accuracy between an n-gram model and a small LM, both trained on simulated shopping baskets data.")
-    sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("hello", help="check that everything is wired up")
-    # TODO: add your own commands here as you work through the milestones.
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="retail-basket-prediction-analyzer",
+        description="Compare a from-scratch n-gram model with a small causal Transformer on synthetic purchase sessions.",
+    )
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    hello = subparsers.add_parser("hello", help="check that the starter interfaces still work")
+    hello.set_defaults(handler=_hello)
+
+    generate = subparsers.add_parser("generate-data", help="generate reproducible train, validation, and test sessions")
+    generate.add_argument("--transactions", type=int, default=1200)
+    generate.add_argument("--seed", type=int, default=1729)
+    generate.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
+    generate.set_defaults(handler=_generate)
+
+    stats = subparsers.add_parser("stats", help="summarize the saved dataset splits")
+    stats.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
+    stats.set_defaults(handler=_stats)
+
+    train_ngram = subparsers.add_parser("train-ngram", help="fit and save the statistical model")
+    _add_train_options(train_ngram)
+    train_ngram.add_argument("--order", type=int, choices=range(1, 5), default=3)
+    train_ngram.add_argument("--alpha", type=float, default=0.2)
+    train_ngram.set_defaults(handler=_train_ngram)
+
+    train_transformer = subparsers.add_parser("train-transformer", help="fit and save the small PyTorch model")
+    _add_train_options(train_transformer)
+    train_transformer.add_argument("--epochs", type=int, default=6)
+    train_transformer.add_argument("--batch-size", type=int, default=64)
+    train_transformer.add_argument("--device", default="auto")
+    train_transformer.set_defaults(handler=_train_transformer)
+
+    evaluate = subparsers.add_parser("evaluate", help="evaluate saved models against the common test split")
+    _add_path_options(evaluate)
+    evaluate.set_defaults(handler=_evaluate)
+
+    compare = subparsers.add_parser("compare", help="print model metrics from the latest experiment")
+    compare.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
+    compare.set_defaults(handler=_compare)
+
+    predict = subparsers.add_parser("predict", help="rank next products for a comma-separated basket")
+    predict.add_argument("--basket", required=True, help="product IDs or names, for example bread,butter,milk")
+    predict.add_argument("--top-k", type=int, default=5)
+    predict.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
+    predict.add_argument("--device", default="cpu")
+    predict.set_defaults(handler=_predict)
+
+    run_all = subparsers.add_parser("run-all", help="generate data, train models, evaluate, and create plots")
+    run_all.add_argument("--transactions", type=int, default=1200)
+    run_all.add_argument("--seed", type=int, default=1729)
+    run_all.add_argument("--epochs", type=int, default=6)
+    run_all.add_argument("--fractions", type=float, nargs="+", default=[1.0])
+    run_all.add_argument("--batch-size", type=int, default=64)
+    run_all.add_argument("--device", default="auto")
+    run_all.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
+    run_all.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
+    run_all.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
+    run_all.set_defaults(handler=_run_all)
+
+    visualize = subparsers.add_parser("visualize", help="create figures from the latest saved experiment")
+    visualize.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
+    visualize.set_defaults(handler=_visualize)
+    return parser
+
+
+def _add_path_options(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
+    parser.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
+    parser.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS)
+
+
+def _add_train_options(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA)
+    parser.add_argument("--artifacts-dir", type=Path, default=DEFAULT_ARTIFACTS)
+    parser.add_argument("--fraction", type=float, default=1.0)
+    parser.add_argument("--seed", type=int, default=1729)
+
+
+def _load_splits(data_dir: Path, seed: int = 1729):
+    expected = [data_dir / f"{name}.jsonl" for name in ("train", "validation", "test")]
+    if not all(path.exists() for path in expected):
+        raise FileNotFoundError("dataset splits are missing; run `python -m app.cli generate-data` first")
+    return {name: load_sessions(data_dir / f"{name}.jsonl") for name in ("train", "validation", "test")}
+
+
+def _hello(args: argparse.Namespace) -> int:
+    print("Retail Basket Prediction Analyzer is ready. Run `python -m app.cli --help` to see the experiment commands.")
+    return 0
+
+
+def _generate(args: argparse.Namespace) -> int:
+    splits = split_sessions(generate_sessions(args.transactions, args.seed), seed=args.seed)
+    save_sessions(splits, args.data_dir)
+    print(json.dumps({name: len(rows) for name, rows in splits.items()}, indent=2))
+    return 0
+
+
+def _stats(args: argparse.Namespace) -> int:
+    splits = _load_splits(args.data_dir)
+    summary = {name: describe_sessions(rows) for name, rows in splits.items()}
+    print(json.dumps(summary, indent=2))
+    return 0
+
+
+def _train_ngram(args: argparse.Namespace) -> int:
+    splits = _load_splits(args.data_dir, args.seed)
+    vocabulary = Vocabulary.from_catalogue()
+    subset = choose_training_subset(splits["train"], args.fraction, args.seed)
+    model, metadata = fit_ngram(subset, vocabulary, args.artifacts_dir / "ngram_scale_1_00.json", args.order, args.alpha)
+    write_json(args.artifacts_dir / "vocabulary.json", vocabulary.to_dict())
+    print(json.dumps({**metadata, "contexts": sum(len(value) for value in model.counts.values())}, indent=2))
+    return 0
+
+
+def _train_transformer(args: argparse.Namespace) -> int:
+    splits = _load_splits(args.data_dir, args.seed)
+    vocabulary = Vocabulary.from_catalogue()
+    subset = choose_training_subset(splits["train"], args.fraction, args.seed)
+    _, history, metadata = fit_transformer(
+        subset, splits["validation"], vocabulary, args.artifacts_dir / "transformer_scale_1_00.pt",
+        epochs=args.epochs, batch_size=args.batch_size, seed=args.seed, device=args.device,
+    )
+    print(json.dumps({"metadata": metadata, "history": history}, indent=2))
+    return 0
+
+
+def _evaluate(args: argparse.Namespace) -> int:
+    splits = _load_splits(args.data_dir)
+    ngram_path = args.artifacts_dir / "ngram_scale_1_00.json"
+    transformer_path = args.artifacts_dir / "transformer_scale_1_00.pt"
+    if not ngram_path.exists() or not transformer_path.exists():
+        raise FileNotFoundError("both trained models are required; run train-ngram and train-transformer first")
+    ngram = NGramModel.load(ngram_path)
+    transformer, vocabulary, _ = load_checkpoint(transformer_path, args.device)
+    ngram_eval = evaluate_predictor(ngram.predict_proba, splits["test"], vocabulary)
+    model_device = next(transformer.parameters()).device
+    transformer_eval = evaluate_predictor(
+        lambda prefix: transformer.predict_proba(prefix, vocabulary.product_ids, model_device), splits["test"], vocabulary
+    )
+    payload = {"ngram": public_metrics(ngram_eval), "transformer": public_metrics(transformer_eval)}
+    write_json(args.results_dir / "metrics.json", payload)
+    print(json.dumps(payload, indent=2))
+    return 0
+
+
+def _compare(args: argparse.Namespace) -> int:
+    table = comparison_table(args.results_dir)
+    print(table.to_string(index=False, float_format=lambda value: f"{value:.4f}"))
+    return 0
+
+
+def _predict(args: argparse.Namespace) -> int:
+    if args.top_k <= 0:
+        raise ValueError("top-k must be positive")
+    ngram_path = args.artifacts_dir / "ngram_scale_1_00.json"
+    transformer_path = args.artifacts_dir / "transformer_scale_1_00.pt"
+    if not ngram_path.exists() or not transformer_path.exists():
+        raise FileNotFoundError("trained model files not found; run `python -m app.cli run-all` first")
+    ngram = NGramModel.load(ngram_path)
+    transformer, vocabulary, _ = load_checkpoint(transformer_path, args.device)
+    names = {product.name.casefold(): product.product_id for product in __import__("app.data", fromlist=["CATALOGUE"]).CATALOGUE}
+    ids = set(vocabulary.tokens)
+    items = []
+    for raw in args.basket.split(","):
+        value = raw.strip()
+        product_id = value if value in ids else names.get(value.casefold())
+        if product_id is None:
+            raise ValueError(f"unknown product '{value}'; use a catalogue name or product ID")
+        if product_id in (vocabulary.PAD, vocabulary.UNK):
+            raise ValueError("special vocabulary tokens are not products")
+        items.append(vocabulary.token_to_id[product_id])
+    if not items:
+        raise ValueError("basket must contain at least one product")
+    transformer_device = next(transformer.parameters()).device
+    rows = {}
+    for model_name, predictor in (
+        ("ngram", ngram.predict_proba),
+        ("transformer", lambda prefix: transformer.predict_proba(prefix, vocabulary.product_ids, transformer_device)),
+    ):
+        top = predictor(items)
+        ranked = sorted(top.items(), key=lambda pair: (-pair[1], pair[0]))[:args.top_k]
+        rows[model_name] = [
+            {"product_id": vocabulary.tokens[token_id], "probability": round(probability, 4)}
+            for token_id, probability in ranked
+        ]
+    print(json.dumps({"basket": [vocabulary.tokens[item] for item in items], "predictions": rows}, indent=2))
+    return 0
+
+
+def _run_all(args: argparse.Namespace) -> int:
+    report = run_experiment(
+        count=args.transactions, seed=args.seed, epochs=args.epochs, fractions=args.fractions,
+        data_dir=args.data_dir, artifacts_dir=args.artifacts_dir, results_dir=args.results_dir,
+        batch_size=args.batch_size, device=args.device,
+    )
+    paths = create_visualizations(args.results_dir)
+    compact = {
+        "split_sizes": report["split_sizes"],
+        "training_fractions": list(report["training_sizes"]),
+        "figures": [str(path) for path in paths],
+    }
+    print(json.dumps(compact, indent=2))
+    return 0
+
+
+def _visualize(args: argparse.Namespace) -> int:
+    paths = create_visualizations(args.results_dir)
+    print("\n".join(str(path) for path in paths))
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
     args = parser.parse_args(argv)
-    if args.command == "hello":
-        print("Retail Basket Prediction Analyzer is ready. Open README.md for your milestones.")
+    try:
+        return args.handler(args)
+    except (ValueError, FileNotFoundError, RuntimeError) as error:
+        print(f"error: {error}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
