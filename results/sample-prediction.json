@@ -1,0 +1,52 @@
+{
+  "basket": [
+    "bakery_bread",
+    "dairy_butter"
+  ],
+  "predictions": {
+    "ngram": [
+      {
+        "product_id": "snack_jam",
+        "probability": 0.6052
+      },
+      {
+        "product_id": "bev_tea",
+        "probability": 0.0239
+      },
+      {
+        "product_id": "bev_soda",
+        "probability": 0.0165
+      },
+      {
+        "product_id": "bakery_baguette",
+        "probability": 0.0159
+      },
+      {
+        "product_id": "snack_cereal",
+        "probability": 0.0128
+      }
+    ],
+    "transformer": [
+      {
+        "product_id": "snack_jam",
+        "probability": 0.9063
+      },
+      {
+        "product_id": "veg_onion",
+        "probability": 0.0108
+      },
+      {
+        "product_id": "dairy_butter",
+        "probability": 0.0107
+      },
+      {
+        "product_id": "meat_turkey",
+        "probability": 0.0039
+      },
+      {
+        "product_id": "fruit_lemon",
+        "probability": 0.0034
+      }
+    ]
+  }
+}

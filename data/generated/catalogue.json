@@ -1,0 +1,287 @@
+[
+  {
+    "product_id": "dairy_milk",
+    "name": "Milk",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_butter",
+    "name": "Butter",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_cheddar",
+    "name": "Cheddar Cheese",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_yogurt",
+    "name": "Yogurt",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_eggs",
+    "name": "Eggs",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_cream",
+    "name": "Cream",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_mozzarella",
+    "name": "Mozzarella",
+    "category": "dairy"
+  },
+  {
+    "product_id": "dairy_cottage",
+    "name": "Cottage Cheese",
+    "category": "dairy"
+  },
+  {
+    "product_id": "bakery_bread",
+    "name": "Bread",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_buns",
+    "name": "Burger Buns",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_bagel",
+    "name": "Bagels",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_croissant",
+    "name": "Croissants",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_pita",
+    "name": "Pita Bread",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_tortilla",
+    "name": "Tortillas",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_baguette",
+    "name": "Baguette",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bakery_rolls",
+    "name": "Dinner Rolls",
+    "category": "bakery"
+  },
+  {
+    "product_id": "bev_coffee",
+    "name": "Coffee",
+    "category": "beverages"
+  },
+  {
+    "product_id": "bev_tea",
+    "name": "Tea",
+    "category": "beverages"
+  },
+  {
+    "product_id": "bev_orange",
+    "name": "Orange Juice",
+    "category": "beverages"
+  },
+  {
+    "product_id": "bev_soda",
+    "name": "Soft Drinks",
+    "category": "beverages"
+  },
+  {
+    "product_id": "bev_water",
+    "name": "Sparkling Water",
+    "category": "beverages"
+  },
+  {
+    "product_id": "bev_juice",
+    "name": "Apple Juice",
+    "category": "beverages"
+  },
+  {
+    "product_id": "fruit_banana",
+    "name": "Bananas",
+    "category": "fruit"
+  },
+  {
+    "product_id": "fruit_apple",
+    "name": "Apples",
+    "category": "fruit"
+  },
+  {
+    "product_id": "fruit_berries",
+    "name": "Mixed Berries",
+    "category": "fruit"
+  },
+  {
+    "product_id": "fruit_lemon",
+    "name": "Lemons",
+    "category": "fruit"
+  },
+  {
+    "product_id": "fruit_grapes",
+    "name": "Grapes",
+    "category": "fruit"
+  },
+  {
+    "product_id": "fruit_avocado",
+    "name": "Avocados",
+    "category": "fruit"
+  },
+  {
+    "product_id": "veg_tomato",
+    "name": "Tomatoes",
+    "category": "vegetables"
+  },
+  {
+    "product_id": "veg_onion",
+    "name": "Onions",
+    "category": "vegetables"
+  },
+  {
+    "product_id": "veg_spinach",
+    "name": "Spinach",
+    "category": "vegetables"
+  },
+  {
+    "product_id": "veg_pepper",
+    "name": "Bell Peppers",
+    "category": "vegetables"
+  },
+  {
+    "product_id": "veg_carrot",
+    "name": "Carrots",
+    "category": "vegetables"
+  },
+  {
+    "product_id": "veg_potato",
+    "name": "Potatoes",
+    "category": "vegetables"
+  },
+  {
+    "product_id": "snack_chips",
+    "name": "Chips",
+    "category": "snacks"
+  },
+  {
+    "product_id": "snack_crackers",
+    "name": "Crackers",
+    "category": "snacks"
+  },
+  {
+    "product_id": "snack_chocolate",
+    "name": "Chocolate",
+    "category": "snacks"
+  },
+  {
+    "product_id": "snack_nuts",
+    "name": "Mixed Nuts",
+    "category": "snacks"
+  },
+  {
+    "product_id": "snack_cereal",
+    "name": "Cereal",
+    "category": "snacks"
+  },
+  {
+    "product_id": "snack_jam",
+    "name": "Jam",
+    "category": "snacks"
+  },
+  {
+    "product_id": "pantry_sugar",
+    "name": "Sugar",
+    "category": "pantry"
+  },
+  {
+    "product_id": "meat_patties",
+    "name": "Burger Patties",
+    "category": "meat_alternatives"
+  },
+  {
+    "product_id": "meat_chicken",
+    "name": "Chicken Breast",
+    "category": "meat_alternatives"
+  },
+  {
+    "product_id": "meat_tofu",
+    "name": "Tofu",
+    "category": "meat_alternatives"
+  },
+  {
+    "product_id": "meat_lentils",
+    "name": "Lentils",
+    "category": "meat_alternatives"
+  },
+  {
+    "product_id": "meat_turkey",
+    "name": "Turkey Slices",
+    "category": "meat_alternatives"
+  },
+  {
+    "product_id": "meat_sausage",
+    "name": "Sausages",
+    "category": "meat_alternatives"
+  },
+  {
+    "product_id": "pantry_pasta",
+    "name": "Pasta",
+    "category": "pantry"
+  },
+  {
+    "product_id": "pantry_sauce",
+    "name": "Pasta Sauce",
+    "category": "pantry"
+  },
+  {
+    "product_id": "pantry_rice",
+    "name": "Rice",
+    "category": "pantry"
+  },
+  {
+    "product_id": "pantry_spices",
+    "name": "Spices",
+    "category": "pantry"
+  },
+  {
+    "product_id": "home_toothpaste",
+    "name": "Toothpaste",
+    "category": "personal_care"
+  },
+  {
+    "product_id": "home_toothbrush",
+    "name": "Toothbrush",
+    "category": "personal_care"
+  },
+  {
+    "product_id": "home_detergent",
+    "name": "Laundry Detergent",
+    "category": "household"
+  },
+  {
+    "product_id": "home_towels",
+    "name": "Paper Towels",
+    "category": "household"
+  },
+  {
+    "product_id": "frozen_peas",
+    "name": "Frozen Peas",
+    "category": "frozen"
+  },
+  {
+    "product_id": "frozen_pizza",
+    "name": "Frozen Pizza",
+    "category": "frozen"
+  }
+]

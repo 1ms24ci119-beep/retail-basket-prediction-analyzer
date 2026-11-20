@@ -1,0 +1,3617 @@
+{
+  "limitations": [
+    "Transactions are synthetic and generated from known templates.",
+    "Within-template item order is simulated and does not represent observed checkout timestamps.",
+    "Randomized sessions can make next-item prediction intrinsically uncertain."
+  ],
+  "seed": 1729,
+  "sequence_convention": "Template order for planted sessions, random order for independent and unusual sessions; all session IDs are split before prefixes are evaluated.",
+  "split_sizes": {
+    "test": 180,
+    "train": 840,
+    "validation": 180
+  },
+  "training_sizes": {
+    "0.25": {
+      "error_analysis": {
+        "accuracy_by_session_pattern": {
+          "burger_meal": {
+            "ngram": 0.4423076923076923,
+            "transformer": 0.0
+          },
+          "cereal_breakfast": {
+            "ngram": 0.4888888888888889,
+            "transformer": 0.0
+          },
+          "coffee_morning": {
+            "ngram": 0.5277777777777778,
+            "transformer": 0.25
+          },
+          "independent": {
+            "ngram": 0.02074688796680498,
+            "transformer": 0.004149377593360996
+          },
+          "lentil_dinner": {
+            "ngram": 0.36666666666666664,
+            "transformer": 0.016666666666666666
+          },
+          "movie_night": {
+            "ngram": 0.5370370370370371,
+            "transformer": 0.018518518518518517
+          },
+          "oral_care": {
+            "ngram": 0.3,
+            "transformer": 0.05
+          },
+          "pasta_night": {
+            "ngram": 0.42,
+            "transformer": 0.2
+          },
+          "salad_lunch": {
+            "ngram": 0.4444444444444444,
+            "transformer": 0.0
+          },
+          "snack_board": {
+            "ngram": 0.5909090909090909,
+            "transformer": 0.045454545454545456
+          },
+          "toast_breakfast": {
+            "ngram": 0.47692307692307695,
+            "transformer": 0.26153846153846155
+          },
+          "unusual": {
+            "ngram": 0.0,
+            "transformer": 0.0
+          }
+        },
+        "different_rank_examples": 659,
+        "ngram_better_examples": 392,
+        "rank_by_product": {
+          "bakery_bagel": {
+            "ngram_rank_47": 3,
+            "ngram_rank_48": 3,
+            "ngram_rank_49": 3,
+            "ngram_rank_5": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_9": 1
+          },
+          "bakery_baguette": {
+            "ngram_rank_2": 2,
+            "ngram_rank_24": 2,
+            "ngram_rank_25": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_7": 3
+          },
+          "bakery_bread": {
+            "ngram_rank_15": 2,
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 4,
+            "ngram_rank_19": 1,
+            "ngram_rank_7": 1
+          },
+          "bakery_buns": {
+            "ngram_rank_11": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_26": 4,
+            "ngram_rank_27": 1,
+            "ngram_rank_3": 1
+          },
+          "bakery_croissant": {
+            "ngram_rank_52": 5,
+            "ngram_rank_53": 3,
+            "ngram_rank_54": 1
+          },
+          "bakery_pita": {
+            "ngram_rank_11": 1,
+            "ngram_rank_50": 3,
+            "ngram_rank_51": 2
+          },
+          "bakery_rolls": {
+            "ngram_rank_33": 3,
+            "ngram_rank_34": 2,
+            "ngram_rank_35": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_38": 2,
+            "ngram_rank_39": 1
+          },
+          "bakery_tortilla": {
+            "ngram_rank_38": 1,
+            "ngram_rank_39": 2,
+            "ngram_rank_40": 4,
+            "ngram_rank_41": 1,
+            "ngram_rank_9": 1
+          },
+          "bev_coffee": {
+            "ngram_rank_10": 3,
+            "ngram_rank_12": 2,
+            "ngram_rank_22": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_9": 2
+          },
+          "bev_juice": {
+            "ngram_rank_12": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_54": 5,
+            "ngram_rank_55": 3
+          },
+          "bev_orange": {
+            "ngram_rank_11": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_42": 3,
+            "ngram_rank_43": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_9": 1
+          },
+          "bev_soda": {
+            "ngram_rank_1": 15,
+            "ngram_rank_22": 2,
+            "ngram_rank_23": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_6": 1
+          },
+          "bev_tea": {
+            "ngram_rank_1": 1,
+            "ngram_rank_53": 2,
+            "ngram_rank_54": 5,
+            "ngram_rank_55": 1
+          },
+          "bev_water": {
+            "ngram_rank_2": 2,
+            "ngram_rank_27": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_30": 2,
+            "ngram_rank_32": 2,
+            "ngram_rank_33": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_4": 2,
+            "ngram_rank_6": 1
+          },
+          "dairy_butter": {
+            "ngram_rank_1": 16,
+            "ngram_rank_13": 2,
+            "ngram_rank_14": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_4": 3,
+            "ngram_rank_5": 1
+          },
+          "dairy_cheddar": {
+            "ngram_rank_1": 17,
+            "ngram_rank_10": 1,
+            "ngram_rank_15": 1,
+            "ngram_rank_2": 2,
+            "ngram_rank_24": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_9": 1
+          },
+          "dairy_cottage": {
+            "ngram_rank_3": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_33": 2,
+            "ngram_rank_34": 1,
+            "ngram_rank_38": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_8": 1
+          },
+          "dairy_cream": {
+            "ngram_rank_56": 6,
+            "ngram_rank_57": 3
+          },
+          "dairy_eggs": {
+            "ngram_rank_10": 1,
+            "ngram_rank_38": 2,
+            "ngram_rank_39": 3,
+            "ngram_rank_40": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_42": 2,
+            "ngram_rank_44": 1,
+            "ngram_rank_8": 1,
+            "ngram_rank_9": 1
+          },
+          "dairy_milk": {
+            "ngram_rank_1": 22,
+            "ngram_rank_10": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_7": 1,
+            "ngram_rank_8": 1,
+            "ngram_rank_9": 1
+          },
+          "dairy_mozzarella": {
+            "ngram_rank_1": 11,
+            "ngram_rank_10": 1,
+            "ngram_rank_11": 2,
+            "ngram_rank_12": 1,
+            "ngram_rank_13": 1,
+            "ngram_rank_14": 2,
+            "ngram_rank_2": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_3": 1
+          },
+          "dairy_yogurt": {
+            "ngram_rank_37": 4,
+            "ngram_rank_38": 3,
+            "ngram_rank_39": 2,
+            "ngram_rank_41": 1,
+            "ngram_rank_43": 2
+          },
+          "frozen_peas": {
+            "ngram_rank_44": 3,
+            "ngram_rank_45": 5,
+            "ngram_rank_46": 3
+          },
+          "frozen_pizza": {
+            "ngram_rank_15": 1,
+            "ngram_rank_35": 2,
+            "ngram_rank_37": 1,
+            "ngram_rank_38": 3,
+            "ngram_rank_39": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_8": 1
+          },
+          "fruit_apple": {
+            "ngram_rank_45": 2,
+            "ngram_rank_46": 3,
+            "ngram_rank_47": 1,
+            "ngram_rank_48": 4,
+            "ngram_rank_49": 1,
+            "ngram_rank_7": 1
+          },
+          "fruit_avocado": {
+            "ngram_rank_1": 8,
+            "ngram_rank_29": 2,
+            "ngram_rank_31": 2,
+            "ngram_rank_32": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_6": 1
+          },
+          "fruit_banana": {
+            "ngram_rank_1": 12,
+            "ngram_rank_12": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_8": 1
+          },
+          "fruit_berries": {
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 2,
+            "ngram_rank_36": 3,
+            "ngram_rank_40": 2,
+            "ngram_rank_7": 1
+          },
+          "fruit_grapes": {
+            "ngram_rank_1": 6,
+            "ngram_rank_26": 1,
+            "ngram_rank_27": 3,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_6": 2,
+            "ngram_rank_7": 1
+          },
+          "fruit_lemon": {
+            "ngram_rank_1": 2,
+            "ngram_rank_25": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_27": 2,
+            "ngram_rank_28": 2,
+            "ngram_rank_29": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_8": 1
+          },
+          "home_detergent": {
+            "ngram_rank_10": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_43": 3,
+            "ngram_rank_44": 3,
+            "ngram_rank_45": 2,
+            "ngram_rank_46": 1,
+            "ngram_rank_47": 1
+          },
+          "home_toothbrush": {
+            "ngram_rank_1": 6,
+            "ngram_rank_28": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 3,
+            "ngram_rank_39": 1,
+            "ngram_rank_9": 1
+          },
+          "home_toothpaste": {
+            "ngram_rank_10": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_44": 2,
+            "ngram_rank_45": 1
+          },
+          "home_towels": {
+            "ngram_rank_30": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_35": 1
+          },
+          "meat_chicken": {
+            "ngram_rank_42": 1,
+            "ngram_rank_44": 1,
+            "ngram_rank_46": 1
+          },
+          "meat_lentils": {
+            "ngram_rank_1": 11,
+            "ngram_rank_15": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 2,
+            "ngram_rank_20": 4,
+            "ngram_rank_22": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_8": 1
+          },
+          "meat_patties": {
+            "ngram_rank_1": 11,
+            "ngram_rank_12": 1,
+            "ngram_rank_15": 2,
+            "ngram_rank_19": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1
+          },
+          "meat_sausage": {
+            "ngram_rank_10": 3,
+            "ngram_rank_55": 1
+          },
+          "meat_tofu": {
+            "ngram_rank_48": 4,
+            "ngram_rank_49": 3,
+            "ngram_rank_50": 2,
+            "ngram_rank_51": 1
+          },
+          "meat_turkey": {
+            "ngram_rank_49": 6,
+            "ngram_rank_51": 1
+          },
+          "pantry_pasta": {
+            "ngram_rank_18": 2,
+            "ngram_rank_19": 2,
+            "ngram_rank_22": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_3": 3,
+            "ngram_rank_30": 1
+          },
+          "pantry_rice": {
+            "ngram_rank_13": 1,
+            "ngram_rank_20": 2,
+            "ngram_rank_22": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_26": 3,
+            "ngram_rank_28": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_5": 1
+          },
+          "pantry_sauce": {
+            "ngram_rank_1": 10,
+            "ngram_rank_12": 1,
+            "ngram_rank_13": 1,
+            "ngram_rank_15": 2,
+            "ngram_rank_16": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_20": 1
+          },
+          "pantry_spices": {
+            "ngram_rank_1": 12,
+            "ngram_rank_23": 1,
+            "ngram_rank_25": 2,
+            "ngram_rank_26": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_5": 1
+          },
+          "pantry_sugar": {
+            "ngram_rank_1": 9,
+            "ngram_rank_19": 1,
+            "ngram_rank_21": 3,
+            "ngram_rank_22": 1,
+            "ngram_rank_23": 2,
+            "ngram_rank_30": 1,
+            "ngram_rank_34": 2,
+            "ngram_rank_4": 2
+          },
+          "snack_cereal": {
+            "ngram_rank_10": 1,
+            "ngram_rank_11": 1,
+            "ngram_rank_13": 2,
+            "ngram_rank_23": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_9": 1
+          },
+          "snack_chips": {
+            "ngram_rank_14": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_8": 1
+          },
+          "snack_chocolate": {
+            "ngram_rank_1": 15,
+            "ngram_rank_19": 2,
+            "ngram_rank_20": 1,
+            "ngram_rank_21": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_33": 1
+          },
+          "snack_crackers": {
+            "ngram_rank_51": 5,
+            "ngram_rank_53": 1
+          },
+          "snack_jam": {
+            "ngram_rank_1": 15,
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_21": 1,
+            "ngram_rank_5": 2
+          },
+          "snack_nuts": {
+            "ngram_rank_57": 5
+          },
+          "veg_carrot": {
+            "ngram_rank_15": 1,
+            "ngram_rank_46": 3,
+            "ngram_rank_47": 1,
+            "ngram_rank_48": 1,
+            "ngram_rank_49": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_9": 1
+          },
+          "veg_onion": {
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_39": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_41": 2,
+            "ngram_rank_9": 1
+          },
+          "veg_pepper": {
+            "ngram_rank_11": 2,
+            "ngram_rank_14": 1,
+            "ngram_rank_2": 2,
+            "ngram_rank_39": 1,
+            "ngram_rank_41": 2,
+            "ngram_rank_44": 1
+          },
+          "veg_potato": {
+            "ngram_rank_36": 2,
+            "ngram_rank_37": 3,
+            "ngram_rank_39": 1,
+            "ngram_rank_42": 1
+          },
+          "veg_spinach": {
+            "ngram_rank_27": 2,
+            "ngram_rank_29": 5,
+            "ngram_rank_30": 1,
+            "ngram_rank_31": 3,
+            "ngram_rank_34": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_6": 1
+          },
+          "veg_tomato": {
+            "ngram_rank_1": 8,
+            "ngram_rank_2": 2,
+            "ngram_rank_27": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_31": 2,
+            "ngram_rank_35": 1
+          }
+        },
+        "rare_products": [
+          {
+            "model_ranks": {
+              "ngram": 44.0,
+              "transformer": 22.666666666666668
+            },
+            "product": "meat_chicken",
+            "test_frequency": 4
+          },
+          {
+            "model_ranks": {
+              "ngram": 57.0,
+              "transformer": 33.4
+            },
+            "product": "snack_nuts",
+            "test_frequency": 5
+          },
+          {
+            "model_ranks": {
+              "ngram": 32.2,
+              "transformer": 48.4
+            },
+            "product": "home_towels",
+            "test_frequency": 6
+          },
+          {
+            "model_ranks": {
+              "ngram": 21.25,
+              "transformer": 33.0
+            },
+            "product": "meat_sausage",
+            "test_frequency": 6
+          },
+          {
+            "model_ranks": {
+              "ngram": 43.833333333333336,
+              "transformer": 28.666666666666668
+            },
+            "product": "bakery_pita",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 49.285714285714285,
+              "transformer": 29.857142857142858
+            },
+            "product": "meat_turkey",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 37.714285714285715,
+              "transformer": 53.285714285714285
+            },
+            "product": "veg_potato",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 34.142857142857146,
+              "transformer": 44.57142857142857
+            },
+            "product": "veg_onion",
+            "test_frequency": 8
+          },
+          {
+            "model_ranks": {
+              "ngram": 52.55555555555556,
+              "transformer": 44.111111111111114
+            },
+            "product": "bakery_croissant",
+            "test_frequency": 9
+          },
+          {
+            "model_ranks": {
+              "ngram": 36.22222222222222,
+              "transformer": 14.444444444444445
+            },
+            "product": "bakery_tortilla",
+            "test_frequency": 9
+          },
+          {
+            "model_ranks": {
+              "ngram": 48.0,
+              "transformer": 29.77777777777778
+            },
+            "product": "bev_tea",
+            "test_frequency": 9
+          }
+        ],
+        "representative_cases": [
+          {
+            "actual": "fruit_avocado",
+            "ngram_rank": 31,
+            "ngram_top1": "fruit_apple",
+            "prefix": [
+              "bev_orange"
+            ],
+            "session_id": "session_000194",
+            "transformer_rank": 48,
+            "transformer_top1": "bev_orange"
+          },
+          {
+            "actual": "bakery_tortilla",
+            "ngram_rank": 40,
+            "ngram_top1": "veg_tomato",
+            "prefix": [
+              "bev_orange",
+              "fruit_avocado"
+            ],
+            "session_id": "session_000194",
+            "transformer_rank": 19,
+            "transformer_top1": "bakery_baguette"
+          },
+          {
+            "actual": "frozen_peas",
+            "ngram_rank": 45,
+            "ngram_top1": "dairy_cheddar",
+            "prefix": [
+              "bakery_baguette"
+            ],
+            "session_id": "session_000851",
+            "transformer_rank": 22,
+            "transformer_top1": "bakery_baguette"
+          },
+          {
+            "actual": "bakery_bagel",
+            "ngram_rank": 49,
+            "ngram_top1": "snack_jam",
+            "prefix": [
+              "bakery_bread",
+              "dairy_butter"
+            ],
+            "session_id": "session_000995",
+            "transformer_rank": 23,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "pantry_sauce",
+            "ngram_rank": 1,
+            "ngram_top1": "pantry_sauce",
+            "prefix": [
+              "pantry_pasta"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 4,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "bev_tea",
+            "ngram_rank": 55,
+            "ngram_top1": "bakery_bagel",
+            "prefix": [
+              "pantry_pasta",
+              "pantry_sauce",
+              "dairy_mozzarella"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 27,
+            "transformer_top1": "dairy_mozzarella"
+          },
+          {
+            "actual": "home_detergent",
+            "ngram_rank": 43,
+            "ngram_top1": "dairy_milk",
+            "prefix": [
+              "pantry_pasta",
+              "pantry_sauce",
+              "dairy_mozzarella",
+              "bev_tea"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 37,
+            "transformer_top1": "bev_tea"
+          },
+          {
+            "actual": "bakery_rolls",
+            "ngram_rank": 33,
+            "ngram_top1": "meat_lentils",
+            "prefix": [
+              "bakery_bagel"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 27,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "bev_soda",
+            "ngram_rank": 4,
+            "ngram_top1": "pantry_sauce",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 5,
+            "transformer_top1": "bakery_rolls"
+          },
+          {
+            "actual": "dairy_mozzarella",
+            "ngram_rank": 11,
+            "ngram_top1": "snack_chocolate",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 30,
+            "transformer_top1": "bev_soda"
+          },
+          {
+            "actual": "meat_tofu",
+            "ngram_rank": 51,
+            "ngram_top1": "pantry_spices",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda",
+              "dairy_mozzarella"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 31,
+            "transformer_top1": "dairy_mozzarella"
+          },
+          {
+            "actual": "pantry_spices",
+            "ngram_rank": 23,
+            "ngram_top1": "dairy_milk",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda",
+              "dairy_mozzarella",
+              "meat_tofu"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 13,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "fruit_lemon",
+            "ngram_rank": 29,
+            "ngram_top1": "fruit_apple",
+            "prefix": [
+              "fruit_grapes"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 15,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "pantry_sauce",
+            "ngram_rank": 20,
+            "ngram_top1": "snack_jam",
+            "prefix": [
+              "fruit_grapes",
+              "fruit_lemon"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 32,
+            "transformer_top1": "fruit_lemon"
+          },
+          {
+            "actual": "bakery_bagel",
+            "ngram_rank": 5,
+            "ngram_top1": "dairy_mozzarella",
+            "prefix": [
+              "fruit_grapes",
+              "fruit_lemon",
+              "pantry_sauce"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 19,
+            "transformer_top1": "pantry_sauce"
+          },
+          {
+            "actual": "dairy_cottage",
+            "ngram_rank": 8,
+            "ngram_top1": "snack_jam",
+            "prefix": [
+              "dairy_butter"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 3,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "veg_onion",
+            "ngram_rank": 40,
+            "ngram_top1": "bev_orange",
+            "prefix": [
+              "dairy_butter",
+              "dairy_cottage"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 46,
+            "transformer_top1": "dairy_cottage"
+          },
+          {
+            "actual": "pantry_sugar",
+            "ngram_rank": 4,
+            "ngram_top1": "bev_water",
+            "prefix": [
+              "dairy_butter",
+              "dairy_cottage",
+              "veg_onion"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 17,
+            "transformer_top1": "pantry_rice"
+          },
+          {
+            "actual": "home_toothbrush",
+            "ngram_rank": 1,
+            "ngram_top1": "home_toothbrush",
+            "prefix": [
+              "home_toothpaste"
+            ],
+            "session_id": "session_000023",
+            "transformer_rank": 15,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "meat_patties",
+            "ngram_rank": 19,
+            "ngram_top1": "fruit_lemon",
+            "prefix": [
+              "home_toothpaste",
+              "home_toothbrush"
+            ],
+            "session_id": "session_000023",
+            "transformer_rank": 40,
+            "transformer_top1": "home_toothbrush"
+          }
+        ],
+        "top_confusions": [
+          {
+            "actual": "dairy_milk",
+            "count": 22,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "bev_soda",
+            "count": 17,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "snack_jam",
+            "count": 17,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "snack_chocolate",
+            "count": 14,
+            "predicted": "bev_soda"
+          },
+          {
+            "actual": "pantry_spices",
+            "count": 12,
+            "predicted": "meat_lentils"
+          },
+          {
+            "actual": "pantry_sauce",
+            "count": 11,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "meat_lentils",
+            "count": 11,
+            "predicted": "pantry_rice"
+          },
+          {
+            "actual": "fruit_banana",
+            "count": 11,
+            "predicted": "pantry_sugar"
+          },
+          {
+            "actual": "meat_patties",
+            "count": 11,
+            "predicted": "bakery_buns"
+          },
+          {
+            "actual": "dairy_cheddar",
+            "count": 11,
+            "predicted": "bev_water"
+          },
+          {
+            "actual": "fruit_avocado",
+            "count": 9,
+            "predicted": "veg_pepper"
+          },
+          {
+            "actual": "home_toothbrush",
+            "count": 8,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "veg_tomato",
+            "count": 8,
+            "predicted": "bakery_baguette"
+          },
+          {
+            "actual": "dairy_cheddar",
+            "count": 7,
+            "predicted": "bakery_baguette"
+          },
+          {
+            "actual": "dairy_eggs",
+            "count": 6,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "fruit_grapes",
+            "count": 6,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "pantry_sugar",
+            "count": 4,
+            "predicted": "bev_water"
+          },
+          {
+            "actual": "dairy_yogurt",
+            "count": 4,
+            "predicted": "bev_coffee"
+          },
+          {
+            "actual": "veg_tomato",
+            "count": 4,
+            "predicted": "dairy_butter"
+          },
+          {
+            "actual": "dairy_eggs",
+            "count": 4,
+            "predicted": "snack_jam"
+          }
+        ],
+        "transformer_better_examples": 267
+      },
+      "metadata": {
+        "ngram": {
+          "alpha": 0.2,
+          "order": 3,
+          "train_sessions": 210,
+          "vocabulary_size": 59
+        },
+        "parameter_comparison": {
+          "ngram_contexts": 492,
+          "ngram_stored_outcomes": 1272,
+          "transformer_parameters": 104640
+        },
+        "training_fraction": 0.25,
+        "transformer": {
+          "batch_size": 64,
+          "cpu_threads": 1,
+          "device": "cpu",
+          "epochs": 6,
+          "learning_rate": 0.002,
+          "model_config": {
+            "block_size": 12,
+            "d_model": 64,
+            "dropout": 0.1,
+            "n_heads": 4,
+            "n_layers": 2,
+            "pad_id": 0,
+            "vocab_size": 59
+          },
+          "numpy_version": "2.5.5",
+          "parameters": 104640,
+          "python_version": "3.15.2",
+          "seed": 1729,
+          "torch_version": "2.15.0",
+          "train_sessions": 210,
+          "validation_sessions": 180
+        }
+      },
+      "metrics": {
+        "ngram": {
+          "accuracy_by_prefix_size": {
+            "1-2": 0.5751445086705202,
+            "3-4": 0.02531645569620253,
+            "5+": 0.01680672268907563
+          },
+          "cross_entropy": 3.358314264379938,
+          "examples": 702,
+          "mean_rank": 20.55128205128205,
+          "mrr": 0.34693280143247207,
+          "per_category_accuracy": {
+            "bakery": 0.0,
+            "beverages": 0.21621621621621623,
+            "dairy": 0.46153846153846156,
+            "frozen": 0.0,
+            "fruit": 0.35,
+            "household": 0.0,
+            "meat_alternatives": 0.3384615384615385,
+            "pantry": 0.3924050632911392,
+            "personal_care": 0.3157894736842105,
+            "snacks": 0.44776119402985076,
+            "vegetables": 0.12698412698412698
+          },
+          "per_product_mean_rank": {
+            "bakery_bagel": 37.666666666666664,
+            "bakery_baguette": 11.333333333333334,
+            "bakery_bread": 16.11111111111111,
+            "bakery_buns": 20.5,
+            "bakery_croissant": 52.55555555555556,
+            "bakery_pita": 43.833333333333336,
+            "bakery_rolls": 35.3,
+            "bakery_tortilla": 36.22222222222222,
+            "bev_coffee": 10.777777777777779,
+            "bev_juice": 46.4,
+            "bev_orange": 28.22222222222222,
+            "bev_soda": 5.7727272727272725,
+            "bev_tea": 48.0,
+            "bev_water": 20.4,
+            "dairy_butter": 4.24,
+            "dairy_cheddar": 4.24,
+            "dairy_cottage": 27.625,
+            "dairy_cream": 56.333333333333336,
+            "dairy_eggs": 33.0,
+            "dairy_milk": 2.7586206896551726,
+            "dairy_mozzarella": 6.545454545454546,
+            "dairy_yogurt": 38.916666666666664,
+            "frozen_peas": 45.0,
+            "frozen_pizza": 33.18181818181818,
+            "fruit_apple": 43.583333333333336,
+            "fruit_avocado": 13.466666666666667,
+            "fruit_banana": 3.0588235294117645,
+            "fruit_berries": 33.22222222222222,
+            "fruit_grapes": 9.4,
+            "fruit_lemon": 19.833333333333332,
+            "home_detergent": 36.69230769230769,
+            "home_toothbrush": 18.0,
+            "home_toothpaste": 37.0,
+            "home_towels": 32.2,
+            "meat_chicken": 44.0,
+            "meat_lentils": 9.173913043478262,
+            "meat_patties": 5.833333333333333,
+            "meat_sausage": 21.25,
+            "meat_tofu": 49.0,
+            "meat_turkey": 49.285714285714285,
+            "pantry_pasta": 17.5,
+            "pantry_rice": 22.09090909090909,
+            "pantry_sauce": 6.9411764705882355,
+            "pantry_spices": 7.944444444444445,
+            "pantry_sugar": 12.619047619047619,
+            "snack_cereal": 11.857142857142858,
+            "snack_chips": 12.6,
+            "snack_chocolate": 9.666666666666666,
+            "snack_crackers": 51.333333333333336,
+            "snack_jam": 4.05,
+            "snack_nuts": 57.0,
+            "veg_carrot": 34.55555555555556,
+            "veg_onion": 34.142857142857146,
+            "veg_pepper": 22.77777777777778,
+            "veg_potato": 37.714285714285715,
+            "veg_spinach": 29.0,
+            "veg_tomato": 10.375
+          },
+          "top_1_accuracy": 0.2948717948717949,
+          "top_3_accuracy": 0.3319088319088319,
+          "top_5_accuracy": 0.36752136752136755
+        },
+        "transformer": {
+          "accuracy_by_prefix_size": {
+            "1-2": 0.10115606936416185,
+            "3-4": 0.016877637130801686,
+            "5+": 0.01680672268907563
+          },
+          "cross_entropy": 5.107406185873239,
+          "examples": 702,
+          "mean_rank": 23.565527065527064,
+          "mrr": 0.15761554005234954,
+          "per_category_accuracy": {
+            "bakery": 0.0,
+            "beverages": 0.013513513513513514,
+            "dairy": 0.1958041958041958,
+            "frozen": 0.0,
+            "fruit": 0.0125,
+            "household": 0.0,
+            "meat_alternatives": 0.0,
+            "pantry": 0.13924050632911392,
+            "personal_care": 0.0,
+            "snacks": 0.0,
+            "vegetables": 0.0
+          },
+          "per_product_mean_rank": {
+            "bakery_bagel": 19.833333333333332,
+            "bakery_baguette": 21.333333333333332,
+            "bakery_bread": 46.55555555555556,
+            "bakery_buns": 36.0,
+            "bakery_croissant": 44.111111111111114,
+            "bakery_pita": 28.666666666666668,
+            "bakery_rolls": 19.7,
+            "bakery_tortilla": 14.444444444444445,
+            "bev_coffee": 52.44444444444444,
+            "bev_juice": 24.4,
+            "bev_orange": 36.44444444444444,
+            "bev_soda": 6.454545454545454,
+            "bev_tea": 29.77777777777778,
+            "bev_water": 6.4,
+            "dairy_butter": 1.44,
+            "dairy_cheddar": 22.68,
+            "dairy_cottage": 18.375,
+            "dairy_cream": 15.11111111111111,
+            "dairy_eggs": 40.38461538461539,
+            "dairy_milk": 6.0,
+            "dairy_mozzarella": 10.636363636363637,
+            "dairy_yogurt": 33.25,
+            "frozen_peas": 14.727272727272727,
+            "frozen_pizza": 56.0,
+            "fruit_apple": 16.25,
+            "fruit_avocado": 47.46666666666667,
+            "fruit_banana": 13.0,
+            "fruit_berries": 36.55555555555556,
+            "fruit_grapes": 51.733333333333334,
+            "fruit_lemon": 13.75,
+            "home_detergent": 25.923076923076923,
+            "home_toothbrush": 17.285714285714285,
+            "home_toothpaste": 31.8,
+            "home_towels": 48.4,
+            "meat_chicken": 22.666666666666668,
+            "meat_lentils": 10.478260869565217,
+            "meat_patties": 40.55555555555556,
+            "meat_sausage": 33.0,
+            "meat_tofu": 31.5,
+            "meat_turkey": 29.857142857142858,
+            "pantry_pasta": 15.5,
+            "pantry_rice": 6.2727272727272725,
+            "pantry_sauce": 11.411764705882353,
+            "pantry_spices": 8.333333333333334,
+            "pantry_sugar": 6.571428571428571,
+            "snack_cereal": 50.285714285714285,
+            "snack_chips": 57.0,
+            "snack_chocolate": 7.25,
+            "snack_crackers": 45.333333333333336,
+            "snack_jam": 20.85,
+            "snack_nuts": 33.4,
+            "veg_carrot": 19.22222222222222,
+            "veg_onion": 44.57142857142857,
+            "veg_pepper": 6.777777777777778,
+            "veg_potato": 53.285714285714285,
+            "veg_spinach": 48.53333333333333,
+            "veg_tomato": 52.5
+          },
+          "top_1_accuracy": 0.0584045584045584,
+          "top_3_accuracy": 0.1752136752136752,
+          "top_5_accuracy": 0.2336182336182336
+        }
+      }
+    },
+    "0.50": {
+      "error_analysis": {
+        "accuracy_by_session_pattern": {
+          "burger_meal": {
+            "ngram": 0.4230769230769231,
+            "transformer": 0.21153846153846154
+          },
+          "cereal_breakfast": {
+            "ngram": 0.4888888888888889,
+            "transformer": 0.4888888888888889
+          },
+          "coffee_morning": {
+            "ngram": 0.5277777777777778,
+            "transformer": 0.25
+          },
+          "independent": {
+            "ngram": 0.024896265560165973,
+            "transformer": 0.008298755186721992
+          },
+          "lentil_dinner": {
+            "ngram": 0.38333333333333336,
+            "transformer": 0.16666666666666666
+          },
+          "movie_night": {
+            "ngram": 0.5370370370370371,
+            "transformer": 0.5370370370370371
+          },
+          "oral_care": {
+            "ngram": 0.3,
+            "transformer": 0.0
+          },
+          "pasta_night": {
+            "ngram": 0.42,
+            "transformer": 0.42
+          },
+          "salad_lunch": {
+            "ngram": 0.4444444444444444,
+            "transformer": 0.4444444444444444
+          },
+          "snack_board": {
+            "ngram": 0.5909090909090909,
+            "transformer": 0.3181818181818182
+          },
+          "toast_breakfast": {
+            "ngram": 0.47692307692307695,
+            "transformer": 0.47692307692307695
+          },
+          "unusual": {
+            "ngram": 0.0,
+            "transformer": 0.0
+          }
+        },
+        "different_rank_examples": 541,
+        "ngram_better_examples": 310,
+        "rank_by_product": {
+          "bakery_bagel": {
+            "ngram_rank_14": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_51": 4,
+            "ngram_rank_52": 2,
+            "ngram_rank_53": 3
+          },
+          "bakery_baguette": {
+            "ngram_rank_10": 1,
+            "ngram_rank_13": 2,
+            "ngram_rank_20": 1,
+            "ngram_rank_30": 3,
+            "ngram_rank_9": 2
+          },
+          "bakery_bread": {
+            "ngram_rank_14": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_28": 3
+          },
+          "bakery_buns": {
+            "ngram_rank_24": 1,
+            "ngram_rank_25": 3,
+            "ngram_rank_30": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_7": 1
+          },
+          "bakery_croissant": {
+            "ngram_rank_20": 1,
+            "ngram_rank_52": 4,
+            "ngram_rank_53": 1,
+            "ngram_rank_54": 1,
+            "ngram_rank_55": 2
+          },
+          "bakery_pita": {
+            "ngram_rank_18": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_48": 1,
+            "ngram_rank_49": 2,
+            "ngram_rank_50": 1
+          },
+          "bakery_rolls": {
+            "ngram_rank_19": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_32": 3,
+            "ngram_rank_35": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_43": 2,
+            "ngram_rank_9": 1
+          },
+          "bakery_tortilla": {
+            "ngram_rank_36": 1,
+            "ngram_rank_37": 2,
+            "ngram_rank_38": 1,
+            "ngram_rank_39": 3,
+            "ngram_rank_41": 1,
+            "ngram_rank_5": 1
+          },
+          "bev_coffee": {
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_19": 3,
+            "ngram_rank_21": 1,
+            "ngram_rank_23": 2,
+            "ngram_rank_3": 1
+          },
+          "bev_juice": {
+            "ngram_rank_15": 2,
+            "ngram_rank_16": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_49": 2,
+            "ngram_rank_50": 2,
+            "ngram_rank_51": 1,
+            "ngram_rank_9": 1
+          },
+          "bev_orange": {
+            "ngram_rank_15": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_47": 2,
+            "ngram_rank_50": 1
+          },
+          "bev_soda": {
+            "ngram_rank_1": 15,
+            "ngram_rank_12": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_6": 1
+          },
+          "bev_tea": {
+            "ngram_rank_1": 1,
+            "ngram_rank_57": 8
+          },
+          "bev_water": {
+            "ngram_rank_1": 1,
+            "ngram_rank_11": 2,
+            "ngram_rank_16": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_33": 2,
+            "ngram_rank_34": 1,
+            "ngram_rank_38": 1,
+            "ngram_rank_5": 2,
+            "ngram_rank_6": 1,
+            "ngram_rank_9": 2
+          },
+          "dairy_butter": {
+            "ngram_rank_1": 16,
+            "ngram_rank_15": 1,
+            "ngram_rank_18": 2,
+            "ngram_rank_20": 1,
+            "ngram_rank_24": 2,
+            "ngram_rank_26": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_7": 1
+          },
+          "dairy_cheddar": {
+            "ngram_rank_1": 17,
+            "ngram_rank_12": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_7": 2
+          },
+          "dairy_cottage": {
+            "ngram_rank_12": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_38": 1,
+            "ngram_rank_39": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_47": 1
+          },
+          "dairy_cream": {
+            "ngram_rank_56": 7,
+            "ngram_rank_57": 2
+          },
+          "dairy_eggs": {
+            "ngram_rank_10": 2,
+            "ngram_rank_13": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_40": 2,
+            "ngram_rank_41": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_46": 3,
+            "ngram_rank_6": 1,
+            "ngram_rank_7": 1
+          },
+          "dairy_milk": {
+            "ngram_rank_1": 22,
+            "ngram_rank_12": 2,
+            "ngram_rank_13": 1,
+            "ngram_rank_15": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_6": 1
+          },
+          "dairy_mozzarella": {
+            "ngram_rank_1": 11,
+            "ngram_rank_12": 1,
+            "ngram_rank_18": 2,
+            "ngram_rank_20": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_4": 2,
+            "ngram_rank_5": 1,
+            "ngram_rank_7": 1
+          },
+          "dairy_yogurt": {
+            "ngram_rank_43": 2,
+            "ngram_rank_44": 1,
+            "ngram_rank_45": 2,
+            "ngram_rank_46": 2,
+            "ngram_rank_47": 3,
+            "ngram_rank_48": 1,
+            "ngram_rank_51": 1
+          },
+          "frozen_peas": {
+            "ngram_rank_54": 10,
+            "ngram_rank_56": 1
+          },
+          "frozen_pizza": {
+            "ngram_rank_10": 1,
+            "ngram_rank_13": 2,
+            "ngram_rank_22": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_37": 2,
+            "ngram_rank_38": 1
+          },
+          "fruit_apple": {
+            "ngram_rank_11": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_44": 2,
+            "ngram_rank_45": 3,
+            "ngram_rank_47": 1,
+            "ngram_rank_49": 1,
+            "ngram_rank_8": 1
+          },
+          "fruit_avocado": {
+            "ngram_rank_1": 8,
+            "ngram_rank_10": 1,
+            "ngram_rank_30": 2,
+            "ngram_rank_31": 2,
+            "ngram_rank_36": 1,
+            "ngram_rank_7": 1
+          },
+          "fruit_banana": {
+            "ngram_rank_1": 12,
+            "ngram_rank_10": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_7": 1
+          },
+          "fruit_berries": {
+            "ngram_rank_39": 1,
+            "ngram_rank_40": 3,
+            "ngram_rank_41": 1,
+            "ngram_rank_42": 2,
+            "ngram_rank_45": 1,
+            "ngram_rank_9": 1
+          },
+          "fruit_grapes": {
+            "ngram_rank_1": 6,
+            "ngram_rank_10": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_36": 2,
+            "ngram_rank_7": 2,
+            "ngram_rank_8": 1
+          },
+          "fruit_lemon": {
+            "ngram_rank_1": 2,
+            "ngram_rank_11": 2,
+            "ngram_rank_36": 2,
+            "ngram_rank_37": 2,
+            "ngram_rank_38": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_9": 1
+          },
+          "home_detergent": {
+            "ngram_rank_11": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_42": 2,
+            "ngram_rank_44": 1,
+            "ngram_rank_45": 2,
+            "ngram_rank_46": 3,
+            "ngram_rank_47": 1,
+            "ngram_rank_51": 1,
+            "ngram_rank_8": 1
+          },
+          "home_toothbrush": {
+            "ngram_rank_1": 6,
+            "ngram_rank_24": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_32": 2,
+            "ngram_rank_5": 1,
+            "ngram_rank_6": 1
+          },
+          "home_toothpaste": {
+            "ngram_rank_10": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_38": 1
+          },
+          "home_towels": {
+            "ngram_rank_10": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_37": 3
+          },
+          "meat_chicken": {
+            "ngram_rank_44": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_47": 1
+          },
+          "meat_lentils": {
+            "ngram_rank_1": 11,
+            "ngram_rank_17": 1,
+            "ngram_rank_21": 2,
+            "ngram_rank_24": 3,
+            "ngram_rank_25": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_8": 1,
+            "ngram_rank_9": 1
+          },
+          "meat_patties": {
+            "ngram_rank_1": 11,
+            "ngram_rank_15": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_7": 1,
+            "ngram_rank_8": 1
+          },
+          "meat_sausage": {
+            "ngram_rank_14": 3,
+            "ngram_rank_53": 1
+          },
+          "meat_tofu": {
+            "ngram_rank_16": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_48": 3,
+            "ngram_rank_49": 2,
+            "ngram_rank_50": 1,
+            "ngram_rank_9": 1
+          },
+          "meat_turkey": {
+            "ngram_rank_14": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_44": 1,
+            "ngram_rank_46": 1
+          },
+          "pantry_pasta": {
+            "ngram_rank_1": 1,
+            "ngram_rank_10": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_23": 2,
+            "ngram_rank_27": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_39": 1,
+            "ngram_rank_6": 2
+          },
+          "pantry_rice": {
+            "ngram_rank_23": 1,
+            "ngram_rank_24": 2,
+            "ngram_rank_25": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_31": 3,
+            "ngram_rank_40": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_8": 1
+          },
+          "pantry_sauce": {
+            "ngram_rank_1": 10,
+            "ngram_rank_13": 1,
+            "ngram_rank_15": 1,
+            "ngram_rank_16": 2,
+            "ngram_rank_23": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_27": 1
+          },
+          "pantry_spices": {
+            "ngram_rank_1": 12,
+            "ngram_rank_25": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_28": 2,
+            "ngram_rank_31": 1,
+            "ngram_rank_9": 1
+          },
+          "pantry_sugar": {
+            "ngram_rank_1": 9,
+            "ngram_rank_12": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_42": 2,
+            "ngram_rank_6": 3,
+            "ngram_rank_8": 2
+          },
+          "snack_cereal": {
+            "ngram_rank_11": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_6": 1
+          },
+          "snack_chips": {
+            "ngram_rank_15": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_7": 1
+          },
+          "snack_chocolate": {
+            "ngram_rank_1": 14,
+            "ngram_rank_10": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_36": 2,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_6": 1
+          },
+          "snack_crackers": {
+            "ngram_rank_50": 2,
+            "ngram_rank_51": 3,
+            "ngram_rank_52": 1
+          },
+          "snack_jam": {
+            "ngram_rank_1": 15,
+            "ngram_rank_2": 1,
+            "ngram_rank_24": 2,
+            "ngram_rank_6": 1,
+            "ngram_rank_8": 1
+          },
+          "snack_nuts": {
+            "ngram_rank_55": 5
+          },
+          "veg_carrot": {
+            "ngram_rank_12": 1,
+            "ngram_rank_15": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_47": 2,
+            "ngram_rank_48": 1,
+            "ngram_rank_8": 1,
+            "ngram_rank_9": 1
+          },
+          "veg_onion": {
+            "ngram_rank_20": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_48": 2,
+            "ngram_rank_49": 1,
+            "ngram_rank_50": 2
+          },
+          "veg_pepper": {
+            "ngram_rank_17": 2,
+            "ngram_rank_2": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_47": 2
+          },
+          "veg_potato": {
+            "ngram_rank_13": 1,
+            "ngram_rank_41": 3,
+            "ngram_rank_42": 2,
+            "ngram_rank_44": 1
+          },
+          "veg_spinach": {
+            "ngram_rank_13": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_29": 5,
+            "ngram_rank_30": 3,
+            "ngram_rank_31": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_8": 2
+          },
+          "veg_tomato": {
+            "ngram_rank_1": 8,
+            "ngram_rank_2": 2,
+            "ngram_rank_20": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_33": 2,
+            "ngram_rank_36": 1,
+            "ngram_rank_9": 1
+          }
+        },
+        "rare_products": [
+          {
+            "model_ranks": {
+              "ngram": 45.666666666666664,
+              "transformer": 13.0
+            },
+            "product": "meat_chicken",
+            "test_frequency": 4
+          },
+          {
+            "model_ranks": {
+              "ngram": 55.0,
+              "transformer": 25.8
+            },
+            "product": "snack_nuts",
+            "test_frequency": 5
+          },
+          {
+            "model_ranks": {
+              "ngram": 30.8,
+              "transformer": 39.2
+            },
+            "product": "home_towels",
+            "test_frequency": 6
+          },
+          {
+            "model_ranks": {
+              "ngram": 23.75,
+              "transformer": 43.5
+            },
+            "product": "meat_sausage",
+            "test_frequency": 6
+          },
+          {
+            "model_ranks": {
+              "ngram": 43.333333333333336,
+              "transformer": 31.333333333333332
+            },
+            "product": "bakery_pita",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 35.714285714285715,
+              "transformer": 15.142857142857142
+            },
+            "product": "meat_turkey",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 37.714285714285715,
+              "transformer": 31.428571428571427
+            },
+            "product": "veg_potato",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 44.57142857142857,
+              "transformer": 36.142857142857146
+            },
+            "product": "veg_onion",
+            "test_frequency": 8
+          },
+          {
+            "model_ranks": {
+              "ngram": 49.44444444444444,
+              "transformer": 52.0
+            },
+            "product": "bakery_croissant",
+            "test_frequency": 9
+          },
+          {
+            "model_ranks": {
+              "ngram": 34.55555555555556,
+              "transformer": 9.666666666666666
+            },
+            "product": "bakery_tortilla",
+            "test_frequency": 9
+          },
+          {
+            "model_ranks": {
+              "ngram": 50.77777777777778,
+              "transformer": 40.333333333333336
+            },
+            "product": "bev_tea",
+            "test_frequency": 9
+          }
+        ],
+        "representative_cases": [
+          {
+            "actual": "fruit_avocado",
+            "ngram_rank": 31,
+            "ngram_top1": "pantry_pasta",
+            "prefix": [
+              "bev_orange"
+            ],
+            "session_id": "session_000194",
+            "transformer_rank": 19,
+            "transformer_top1": "bev_soda"
+          },
+          {
+            "actual": "bakery_tortilla",
+            "ngram_rank": 37,
+            "ngram_top1": "veg_tomato",
+            "prefix": [
+              "bev_orange",
+              "fruit_avocado"
+            ],
+            "session_id": "session_000194",
+            "transformer_rank": 14,
+            "transformer_top1": "veg_tomato"
+          },
+          {
+            "actual": "frozen_peas",
+            "ngram_rank": 54,
+            "ngram_top1": "dairy_cheddar",
+            "prefix": [
+              "bakery_baguette"
+            ],
+            "session_id": "session_000851",
+            "transformer_rank": 46,
+            "transformer_top1": "dairy_cheddar"
+          },
+          {
+            "actual": "bakery_bagel",
+            "ngram_rank": 53,
+            "ngram_top1": "snack_jam",
+            "prefix": [
+              "bakery_bread",
+              "dairy_butter"
+            ],
+            "session_id": "session_000995",
+            "transformer_rank": 20,
+            "transformer_top1": "snack_jam"
+          },
+          {
+            "actual": "bev_tea",
+            "ngram_rank": 57,
+            "ngram_top1": "dairy_cream",
+            "prefix": [
+              "pantry_pasta",
+              "pantry_sauce",
+              "dairy_mozzarella"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 39,
+            "transformer_top1": "dairy_mozzarella"
+          },
+          {
+            "actual": "home_detergent",
+            "ngram_rank": 42,
+            "ngram_top1": "dairy_milk",
+            "prefix": [
+              "pantry_pasta",
+              "pantry_sauce",
+              "dairy_mozzarella",
+              "bev_tea"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 45,
+            "transformer_top1": "bev_tea"
+          },
+          {
+            "actual": "bakery_rolls",
+            "ngram_rank": 30,
+            "ngram_top1": "meat_lentils",
+            "prefix": [
+              "bakery_bagel"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 35,
+            "transformer_top1": "dairy_cheddar"
+          },
+          {
+            "actual": "bev_soda",
+            "ngram_rank": 5,
+            "ngram_top1": "fruit_banana",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 9,
+            "transformer_top1": "fruit_banana"
+          },
+          {
+            "actual": "dairy_mozzarella",
+            "ngram_rank": 20,
+            "ngram_top1": "snack_chocolate",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 29,
+            "transformer_top1": "bev_soda"
+          },
+          {
+            "actual": "meat_tofu",
+            "ngram_rank": 30,
+            "ngram_top1": "dairy_cream",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda",
+              "dairy_mozzarella"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 29,
+            "transformer_top1": "fruit_banana"
+          },
+          {
+            "actual": "pantry_spices",
+            "ngram_rank": 31,
+            "ngram_top1": "home_toothpaste",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda",
+              "dairy_mozzarella",
+              "meat_tofu"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 11,
+            "transformer_top1": "meat_tofu"
+          },
+          {
+            "actual": "fruit_lemon",
+            "ngram_rank": 40,
+            "ngram_top1": "snack_chips",
+            "prefix": [
+              "fruit_grapes"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 37,
+            "transformer_top1": "dairy_milk"
+          },
+          {
+            "actual": "pantry_sauce",
+            "ngram_rank": 23,
+            "ngram_top1": "home_towels",
+            "prefix": [
+              "fruit_grapes",
+              "fruit_lemon"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 33,
+            "transformer_top1": "snack_chocolate"
+          },
+          {
+            "actual": "bakery_bagel",
+            "ngram_rank": 16,
+            "ngram_top1": "dairy_mozzarella",
+            "prefix": [
+              "fruit_grapes",
+              "fruit_lemon",
+              "pantry_sauce"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 19,
+            "transformer_top1": "dairy_mozzarella"
+          },
+          {
+            "actual": "dairy_cottage",
+            "ngram_rank": 12,
+            "ngram_top1": "snack_jam",
+            "prefix": [
+              "dairy_butter"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 7,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "veg_onion",
+            "ngram_rank": 48,
+            "ngram_top1": "bev_orange",
+            "prefix": [
+              "dairy_butter",
+              "dairy_cottage"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 38,
+            "transformer_top1": "snack_chocolate"
+          },
+          {
+            "actual": "pantry_sugar",
+            "ngram_rank": 6,
+            "ngram_top1": "meat_turkey",
+            "prefix": [
+              "dairy_butter",
+              "dairy_cottage",
+              "veg_onion"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 50,
+            "transformer_top1": "veg_onion"
+          },
+          {
+            "actual": "home_toothbrush",
+            "ngram_rank": 1,
+            "ngram_top1": "home_toothbrush",
+            "prefix": [
+              "home_toothpaste"
+            ],
+            "session_id": "session_000023",
+            "transformer_rank": 4,
+            "transformer_top1": "dairy_cheddar"
+          },
+          {
+            "actual": "meat_patties",
+            "ngram_rank": 4,
+            "ngram_top1": "fruit_lemon",
+            "prefix": [
+              "home_toothpaste",
+              "home_toothbrush"
+            ],
+            "session_id": "session_000023",
+            "transformer_rank": 15,
+            "transformer_top1": "home_toothbrush"
+          },
+          {
+            "actual": "fruit_lemon",
+            "ngram_rank": 6,
+            "ngram_top1": "dairy_cheddar",
+            "prefix": [
+              "bakery_baguette"
+            ],
+            "session_id": "session_000671",
+            "transformer_rank": 31,
+            "transformer_top1": "dairy_cheddar"
+          }
+        ],
+        "top_confusions": [
+          {
+            "actual": "meat_lentils",
+            "count": 12,
+            "predicted": "bev_soda"
+          },
+          {
+            "actual": "meat_patties",
+            "count": 11,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "pantry_sugar",
+            "count": 10,
+            "predicted": "fruit_banana"
+          },
+          {
+            "actual": "fruit_grapes",
+            "count": 8,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "dairy_eggs",
+            "count": 7,
+            "predicted": "fruit_banana"
+          },
+          {
+            "actual": "home_toothbrush",
+            "count": 7,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "veg_spinach",
+            "count": 6,
+            "predicted": "fruit_banana"
+          },
+          {
+            "actual": "pantry_rice",
+            "count": 6,
+            "predicted": "dairy_milk"
+          },
+          {
+            "actual": "bev_tea",
+            "count": 5,
+            "predicted": "dairy_mozzarella"
+          },
+          {
+            "actual": "frozen_peas",
+            "count": 4,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "meat_sausage",
+            "count": 4,
+            "predicted": "veg_potato"
+          },
+          {
+            "actual": "bev_juice",
+            "count": 4,
+            "predicted": "pantry_spices"
+          },
+          {
+            "actual": "bev_orange",
+            "count": 4,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "dairy_butter",
+            "count": 4,
+            "predicted": "dairy_milk"
+          },
+          {
+            "actual": "fruit_berries",
+            "count": 4,
+            "predicted": "snack_jam"
+          },
+          {
+            "actual": "bakery_bagel",
+            "count": 3,
+            "predicted": "snack_jam"
+          },
+          {
+            "actual": "bev_soda",
+            "count": 3,
+            "predicted": "fruit_banana"
+          },
+          {
+            "actual": "dairy_cottage",
+            "count": 3,
+            "predicted": "snack_jam"
+          },
+          {
+            "actual": "pantry_sugar",
+            "count": 3,
+            "predicted": "meat_turkey"
+          },
+          {
+            "actual": "fruit_lemon",
+            "count": 3,
+            "predicted": "dairy_cheddar"
+          }
+        ],
+        "transformer_better_examples": 231
+      },
+      "metadata": {
+        "ngram": {
+          "alpha": 0.2,
+          "order": 3,
+          "train_sessions": 420,
+          "vocabulary_size": 59
+        },
+        "parameter_comparison": {
+          "ngram_contexts": 745,
+          "ngram_stored_outcomes": 2114,
+          "transformer_parameters": 104640
+        },
+        "training_fraction": 0.5,
+        "transformer": {
+          "batch_size": 64,
+          "cpu_threads": 1,
+          "device": "cpu",
+          "epochs": 6,
+          "learning_rate": 0.002,
+          "model_config": {
+            "block_size": 12,
+            "d_model": 64,
+            "dropout": 0.1,
+            "n_heads": 4,
+            "n_layers": 2,
+            "pad_id": 0,
+            "vocab_size": 59
+          },
+          "numpy_version": "2.5.5",
+          "parameters": 104640,
+          "python_version": "3.15.2",
+          "seed": 1729,
+          "torch_version": "2.15.0",
+          "train_sessions": 420,
+          "validation_sessions": 180
+        }
+      },
+      "metrics": {
+        "ngram": {
+          "accuracy_by_prefix_size": {
+            "1-2": 0.5751445086705202,
+            "3-4": 0.029535864978902954,
+            "5+": 0.01680672268907563
+          },
+          "cross_entropy": 3.329412630102804,
+          "examples": 702,
+          "mean_rank": 20.54700854700855,
+          "mrr": 0.3438689900261565,
+          "per_category_accuracy": {
+            "bakery": 0.0,
+            "beverages": 0.22972972972972974,
+            "dairy": 0.46153846153846156,
+            "frozen": 0.0,
+            "fruit": 0.35,
+            "household": 0.0,
+            "meat_alternatives": 0.3384615384615385,
+            "pantry": 0.4050632911392405,
+            "personal_care": 0.3157894736842105,
+            "snacks": 0.43283582089552236,
+            "vegetables": 0.12698412698412698
+          },
+          "per_product_mean_rank": {
+            "bakery_bagel": 41.666666666666664,
+            "bakery_baguette": 18.22222222222222,
+            "bakery_bread": 23.444444444444443,
+            "bakery_buns": 18.25,
+            "bakery_croissant": 49.44444444444444,
+            "bakery_pita": 43.333333333333336,
+            "bakery_rolls": 31.1,
+            "bakery_tortilla": 34.55555555555556,
+            "bev_coffee": 18.0,
+            "bev_juice": 33.3,
+            "bev_orange": 32.888888888888886,
+            "bev_soda": 5.090909090909091,
+            "bev_tea": 50.77777777777778,
+            "bev_water": 18.066666666666666,
+            "dairy_butter": 6.84,
+            "dairy_cheddar": 3.56,
+            "dairy_cottage": 30.375,
+            "dairy_cream": 56.22222222222222,
+            "dairy_eggs": 29.153846153846153,
+            "dairy_milk": 3.8620689655172415,
+            "dairy_mozzarella": 7.136363636363637,
+            "dairy_yogurt": 46.0,
+            "frozen_peas": 54.18181818181818,
+            "frozen_pizza": 27.181818181818183,
+            "fruit_apple": 38.583333333333336,
+            "fruit_avocado": 12.2,
+            "fruit_banana": 3.8823529411764706,
+            "fruit_berries": 37.55555555555556,
+            "fruit_grapes": 12.0,
+            "fruit_lemon": 21.916666666666668,
+            "home_detergent": 37.46153846153846,
+            "home_toothbrush": 13.285714285714286,
+            "home_toothpaste": 29.6,
+            "home_towels": 30.8,
+            "meat_chicken": 45.666666666666664,
+            "meat_lentils": 9.565217391304348,
+            "meat_patties": 5.722222222222222,
+            "meat_sausage": 23.75,
+            "meat_tofu": 36.6,
+            "meat_turkey": 35.714285714285715,
+            "pantry_pasta": 18.666666666666668,
+            "pantry_rice": 24.818181818181817,
+            "pantry_sauce": 8.529411764705882,
+            "pantry_spices": 8.88888888888889,
+            "pantry_sugar": 11.619047619047619,
+            "snack_cereal": 14.571428571428571,
+            "snack_chips": 16.8,
+            "snack_chocolate": 8.708333333333334,
+            "snack_crackers": 50.833333333333336,
+            "snack_jam": 3.95,
+            "snack_nuts": 55.0,
+            "veg_carrot": 28.77777777777778,
+            "veg_onion": 44.57142857142857,
+            "veg_pepper": 24.0,
+            "veg_potato": 37.714285714285715,
+            "veg_spinach": 25.066666666666666,
+            "veg_tomato": 10.9375
+          },
+          "top_1_accuracy": 0.2962962962962963,
+          "top_3_accuracy": 0.3190883190883191,
+          "top_5_accuracy": 0.3433048433048433
+        },
+        "transformer": {
+          "accuracy_by_prefix_size": {
+            "1-2": 0.4508670520231214,
+            "3-4": 0.004219409282700422,
+            "5+": 0.008403361344537815
+          },
+          "cross_entropy": 3.8294927613951892,
+          "examples": 702,
+          "mean_rank": 22.387464387464387,
+          "mrr": 0.2845481390787583,
+          "per_category_accuracy": {
+            "bakery": 0.0,
+            "beverages": 0.21621621621621623,
+            "dairy": 0.44755244755244755,
+            "frozen": 0.0,
+            "fruit": 0.2625,
+            "household": 0.0,
+            "meat_alternatives": 0.015384615384615385,
+            "pantry": 0.25316455696202533,
+            "personal_care": 0.0,
+            "snacks": 0.417910447761194,
+            "vegetables": 0.12698412698412698
+          },
+          "per_product_mean_rank": {
+            "bakery_bagel": 19.0,
+            "bakery_baguette": 29.666666666666668,
+            "bakery_bread": 27.11111111111111,
+            "bakery_buns": 39.875,
+            "bakery_croissant": 52.0,
+            "bakery_pita": 31.333333333333332,
+            "bakery_rolls": 23.8,
+            "bakery_tortilla": 9.666666666666666,
+            "bev_coffee": 48.111111111111114,
+            "bev_juice": 49.2,
+            "bev_orange": 51.333333333333336,
+            "bev_soda": 6.590909090909091,
+            "bev_tea": 40.333333333333336,
+            "bev_water": 21.0,
+            "dairy_butter": 3.44,
+            "dairy_cheddar": 9.0,
+            "dairy_cottage": 28.0,
+            "dairy_cream": 47.55555555555556,
+            "dairy_eggs": 25.153846153846153,
+            "dairy_milk": 5.655172413793103,
+            "dairy_mozzarella": 13.136363636363637,
+            "dairy_yogurt": 35.166666666666664,
+            "frozen_peas": 42.63636363636363,
+            "frozen_pizza": 12.090909090909092,
+            "fruit_apple": 28.666666666666668,
+            "fruit_avocado": 12.333333333333334,
+            "fruit_banana": 3.5294117647058822,
+            "fruit_berries": 37.0,
+            "fruit_grapes": 48.2,
+            "fruit_lemon": 41.583333333333336,
+            "home_detergent": 37.69230769230769,
+            "home_toothbrush": 7.0,
+            "home_toothpaste": 46.4,
+            "home_towels": 39.2,
+            "meat_chicken": 13.0,
+            "meat_lentils": 20.608695652173914,
+            "meat_patties": 7.888888888888889,
+            "meat_sausage": 43.5,
+            "meat_tofu": 24.4,
+            "meat_turkey": 15.142857142857142,
+            "pantry_pasta": 35.583333333333336,
+            "pantry_rice": 22.181818181818183,
+            "pantry_sauce": 7.411764705882353,
+            "pantry_spices": 7.055555555555555,
+            "pantry_sugar": 22.904761904761905,
+            "snack_cereal": 17.285714285714285,
+            "snack_chips": 57.0,
+            "snack_chocolate": 14.291666666666666,
+            "snack_crackers": 29.5,
+            "snack_jam": 3.0,
+            "snack_nuts": 25.8,
+            "veg_carrot": 19.0,
+            "veg_onion": 36.142857142857146,
+            "veg_pepper": 31.0,
+            "veg_potato": 31.428571428571427,
+            "veg_spinach": 41.13333333333333,
+            "veg_tomato": 18.8125
+          },
+          "top_1_accuracy": 0.22507122507122507,
+          "top_3_accuracy": 0.2720797720797721,
+          "top_5_accuracy": 0.29772079772079774
+        }
+      }
+    },
+    "1.00": {
+      "error_analysis": {
+        "accuracy_by_session_pattern": {
+          "burger_meal": {
+            "ngram": 0.40384615384615385,
+            "transformer": 0.40384615384615385
+          },
+          "cereal_breakfast": {
+            "ngram": 0.4888888888888889,
+            "transformer": 0.4888888888888889
+          },
+          "coffee_morning": {
+            "ngram": 0.5,
+            "transformer": 0.5
+          },
+          "independent": {
+            "ngram": 0.012448132780082987,
+            "transformer": 0.016597510373443983
+          },
+          "lentil_dinner": {
+            "ngram": 0.36666666666666664,
+            "transformer": 0.35
+          },
+          "movie_night": {
+            "ngram": 0.5370370370370371,
+            "transformer": 0.5370370370370371
+          },
+          "oral_care": {
+            "ngram": 0.3,
+            "transformer": 0.3
+          },
+          "pasta_night": {
+            "ngram": 0.42,
+            "transformer": 0.4
+          },
+          "salad_lunch": {
+            "ngram": 0.4444444444444444,
+            "transformer": 0.4444444444444444
+          },
+          "snack_board": {
+            "ngram": 0.5909090909090909,
+            "transformer": 0.6363636363636364
+          },
+          "toast_breakfast": {
+            "ngram": 0.47692307692307695,
+            "transformer": 0.47692307692307695
+          },
+          "unusual": {
+            "ngram": 0.0,
+            "transformer": 0.0
+          }
+        },
+        "different_rank_examples": 489,
+        "ngram_better_examples": 253,
+        "rank_by_product": {
+          "bakery_bagel": {
+            "ngram_rank_21": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_52": 4,
+            "ngram_rank_53": 2,
+            "ngram_rank_54": 1
+          },
+          "bakery_baguette": {
+            "ngram_rank_17": 3,
+            "ngram_rank_18": 1,
+            "ngram_rank_21": 2,
+            "ngram_rank_33": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_4": 1
+          },
+          "bakery_bread": {
+            "ngram_rank_10": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_40": 3,
+            "ngram_rank_9": 1
+          },
+          "bakery_buns": {
+            "ngram_rank_15": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_32": 2,
+            "ngram_rank_35": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_7": 1,
+            "ngram_rank_8": 1
+          },
+          "bakery_croissant": {
+            "ngram_rank_29": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_56": 4,
+            "ngram_rank_57": 3
+          },
+          "bakery_pita": {
+            "ngram_rank_24": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_53": 1,
+            "ngram_rank_9": 1
+          },
+          "bakery_rolls": {
+            "ngram_rank_14": 2,
+            "ngram_rank_17": 2,
+            "ngram_rank_18": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_42": 1
+          },
+          "bakery_tortilla": {
+            "ngram_rank_52": 4,
+            "ngram_rank_53": 1,
+            "ngram_rank_54": 2,
+            "ngram_rank_55": 1,
+            "ngram_rank_7": 1
+          },
+          "bev_coffee": {
+            "ngram_rank_16": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_34": 3,
+            "ngram_rank_9": 2
+          },
+          "bev_juice": {
+            "ngram_rank_24": 1,
+            "ngram_rank_25": 2,
+            "ngram_rank_26": 1,
+            "ngram_rank_48": 1,
+            "ngram_rank_49": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_50": 2,
+            "ngram_rank_52": 1
+          },
+          "bev_orange": {
+            "ngram_rank_11": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_38": 1,
+            "ngram_rank_48": 2,
+            "ngram_rank_53": 1,
+            "ngram_rank_7": 1
+          },
+          "bev_soda": {
+            "ngram_rank_1": 15,
+            "ngram_rank_11": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_5": 1
+          },
+          "bev_tea": {
+            "ngram_rank_18": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 2,
+            "ngram_rank_55": 2,
+            "ngram_rank_56": 2
+          },
+          "bev_water": {
+            "ngram_rank_15": 3,
+            "ngram_rank_20": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_40": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_49": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_8": 1
+          },
+          "dairy_butter": {
+            "ngram_rank_1": 16,
+            "ngram_rank_22": 1,
+            "ngram_rank_24": 2,
+            "ngram_rank_27": 2,
+            "ngram_rank_28": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_9": 1
+          },
+          "dairy_cheddar": {
+            "ngram_rank_1": 17,
+            "ngram_rank_16": 1,
+            "ngram_rank_2": 3,
+            "ngram_rank_20": 2,
+            "ngram_rank_4": 1,
+            "ngram_rank_8": 1
+          },
+          "dairy_cottage": {
+            "ngram_rank_15": 1,
+            "ngram_rank_19": 1,
+            "ngram_rank_21": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_44": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_53": 1,
+            "ngram_rank_7": 1
+          },
+          "dairy_cream": {
+            "ngram_rank_22": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_55": 1,
+            "ngram_rank_56": 3,
+            "ngram_rank_57": 2
+          },
+          "dairy_eggs": {
+            "ngram_rank_11": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_52": 2,
+            "ngram_rank_54": 2,
+            "ngram_rank_55": 2,
+            "ngram_rank_6": 1,
+            "ngram_rank_7": 1
+          },
+          "dairy_milk": {
+            "ngram_rank_1": 21,
+            "ngram_rank_13": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_8": 2
+          },
+          "dairy_mozzarella": {
+            "ngram_rank_1": 11,
+            "ngram_rank_2": 1,
+            "ngram_rank_26": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_48": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_7": 1,
+            "ngram_rank_8": 1
+          },
+          "dairy_yogurt": {
+            "ngram_rank_15": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_49": 1,
+            "ngram_rank_51": 1,
+            "ngram_rank_52": 3,
+            "ngram_rank_53": 2,
+            "ngram_rank_54": 2
+          },
+          "frozen_peas": {
+            "ngram_rank_20": 2,
+            "ngram_rank_32": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_48": 3,
+            "ngram_rank_49": 1,
+            "ngram_rank_51": 1,
+            "ngram_rank_6": 2
+          },
+          "frozen_pizza": {
+            "ngram_rank_10": 1,
+            "ngram_rank_19": 3,
+            "ngram_rank_23": 1,
+            "ngram_rank_38": 3,
+            "ngram_rank_41": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_44": 1
+          },
+          "fruit_apple": {
+            "ngram_rank_10": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_44": 2,
+            "ngram_rank_46": 1,
+            "ngram_rank_50": 1
+          },
+          "fruit_avocado": {
+            "ngram_rank_1": 8,
+            "ngram_rank_13": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_36": 2,
+            "ngram_rank_37": 1,
+            "ngram_rank_47": 1
+          },
+          "fruit_banana": {
+            "ngram_rank_1": 11,
+            "ngram_rank_12": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_8": 1,
+            "ngram_rank_9": 1
+          },
+          "fruit_berries": {
+            "ngram_rank_16": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_41": 2,
+            "ngram_rank_42": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_7": 1
+          },
+          "fruit_grapes": {
+            "ngram_rank_1": 6,
+            "ngram_rank_11": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_3": 2,
+            "ngram_rank_36": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_39": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_6": 1
+          },
+          "fruit_lemon": {
+            "ngram_rank_11": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_21": 1,
+            "ngram_rank_22": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_38": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_7": 2
+          },
+          "home_detergent": {
+            "ngram_rank_17": 2,
+            "ngram_rank_18": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_27": 2,
+            "ngram_rank_30": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_48": 1,
+            "ngram_rank_50": 2,
+            "ngram_rank_51": 1
+          },
+          "home_toothbrush": {
+            "ngram_rank_1": 6,
+            "ngram_rank_13": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_38": 1,
+            "ngram_rank_39": 3,
+            "ngram_rank_6": 1
+          },
+          "home_toothpaste": {
+            "ngram_rank_16": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_36": 1,
+            "ngram_rank_37": 1,
+            "ngram_rank_38": 1
+          },
+          "home_towels": {
+            "ngram_rank_19": 2,
+            "ngram_rank_40": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_43": 1
+          },
+          "meat_chicken": {
+            "ngram_rank_15": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_52": 1
+          },
+          "meat_lentils": {
+            "ngram_rank_1": 11,
+            "ngram_rank_13": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_17": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_28": 1,
+            "ngram_rank_29": 3,
+            "ngram_rank_30": 2,
+            "ngram_rank_31": 1,
+            "ngram_rank_33": 1
+          },
+          "meat_patties": {
+            "ngram_rank_1": 11,
+            "ngram_rank_13": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_31": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_8": 1
+          },
+          "meat_sausage": {
+            "ngram_rank_30": 3,
+            "ngram_rank_57": 1
+          },
+          "meat_tofu": {
+            "ngram_rank_16": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_52": 2,
+            "ngram_rank_53": 2,
+            "ngram_rank_55": 1
+          },
+          "meat_turkey": {
+            "ngram_rank_18": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_21": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_43": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_51": 1
+          },
+          "pantry_pasta": {
+            "ngram_rank_11": 1,
+            "ngram_rank_12": 2,
+            "ngram_rank_2": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_29": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_5": 1
+          },
+          "pantry_rice": {
+            "ngram_rank_13": 1,
+            "ngram_rank_15": 2,
+            "ngram_rank_18": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_37": 2,
+            "ngram_rank_8": 1
+          },
+          "pantry_sauce": {
+            "ngram_rank_1": 10,
+            "ngram_rank_10": 1,
+            "ngram_rank_12": 1,
+            "ngram_rank_24": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_26": 1,
+            "ngram_rank_30": 1,
+            "ngram_rank_41": 1
+          },
+          "pantry_spices": {
+            "ngram_rank_1": 12,
+            "ngram_rank_13": 1,
+            "ngram_rank_3": 1,
+            "ngram_rank_32": 1,
+            "ngram_rank_33": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_36": 1
+          },
+          "pantry_sugar": {
+            "ngram_rank_1": 9,
+            "ngram_rank_12": 2,
+            "ngram_rank_17": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_19": 2,
+            "ngram_rank_20": 1,
+            "ngram_rank_3": 2,
+            "ngram_rank_33": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_40": 1
+          },
+          "snack_cereal": {
+            "ngram_rank_10": 2,
+            "ngram_rank_17": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_5": 1
+          },
+          "snack_chips": {
+            "ngram_rank_12": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_25": 1,
+            "ngram_rank_27": 1,
+            "ngram_rank_3": 1
+          },
+          "snack_chocolate": {
+            "ngram_rank_1": 14,
+            "ngram_rank_16": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_27": 2,
+            "ngram_rank_4": 1,
+            "ngram_rank_42": 1,
+            "ngram_rank_45": 1,
+            "ngram_rank_5": 1,
+            "ngram_rank_8": 1,
+            "ngram_rank_9": 1
+          },
+          "snack_crackers": {
+            "ngram_rank_20": 1,
+            "ngram_rank_41": 1,
+            "ngram_rank_44": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_47": 2
+          },
+          "snack_jam": {
+            "ngram_rank_1": 15,
+            "ngram_rank_12": 1,
+            "ngram_rank_16": 1,
+            "ngram_rank_2": 1,
+            "ngram_rank_30": 2
+          },
+          "snack_nuts": {
+            "ngram_rank_54": 1,
+            "ngram_rank_55": 4
+          },
+          "veg_carrot": {
+            "ngram_rank_13": 1,
+            "ngram_rank_21": 1,
+            "ngram_rank_23": 1,
+            "ngram_rank_44": 2,
+            "ngram_rank_46": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_6": 1,
+            "ngram_rank_9": 1
+          },
+          "veg_onion": {
+            "ngram_rank_1": 1,
+            "ngram_rank_12": 1,
+            "ngram_rank_14": 1,
+            "ngram_rank_29": 1,
+            "ngram_rank_47": 1,
+            "ngram_rank_48": 1,
+            "ngram_rank_49": 1
+          },
+          "veg_pepper": {
+            "ngram_rank_14": 2,
+            "ngram_rank_2": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_4": 1,
+            "ngram_rank_46": 1,
+            "ngram_rank_51": 1,
+            "ngram_rank_53": 1,
+            "ngram_rank_6": 1
+          },
+          "veg_potato": {
+            "ngram_rank_35": 1,
+            "ngram_rank_49": 1,
+            "ngram_rank_50": 1,
+            "ngram_rank_51": 2,
+            "ngram_rank_52": 1,
+            "ngram_rank_53": 1
+          },
+          "veg_spinach": {
+            "ngram_rank_12": 2,
+            "ngram_rank_14": 1,
+            "ngram_rank_15": 1,
+            "ngram_rank_18": 1,
+            "ngram_rank_20": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_37": 3,
+            "ngram_rank_38": 2,
+            "ngram_rank_39": 1,
+            "ngram_rank_6": 2
+          },
+          "veg_tomato": {
+            "ngram_rank_1": 8,
+            "ngram_rank_17": 2,
+            "ngram_rank_2": 2,
+            "ngram_rank_3": 1,
+            "ngram_rank_34": 1,
+            "ngram_rank_35": 1,
+            "ngram_rank_40": 1
+          }
+        },
+        "rare_products": [
+          {
+            "model_ranks": {
+              "ngram": 32.666666666666664,
+              "transformer": 11.333333333333334
+            },
+            "product": "meat_chicken",
+            "test_frequency": 4
+          },
+          {
+            "model_ranks": {
+              "ngram": 54.8,
+              "transformer": 48.0
+            },
+            "product": "snack_nuts",
+            "test_frequency": 5
+          },
+          {
+            "model_ranks": {
+              "ngram": 32.4,
+              "transformer": 36.6
+            },
+            "product": "home_towels",
+            "test_frequency": 6
+          },
+          {
+            "model_ranks": {
+              "ngram": 36.75,
+              "transformer": 36.75
+            },
+            "product": "meat_sausage",
+            "test_frequency": 6
+          },
+          {
+            "model_ranks": {
+              "ngram": 34.666666666666664,
+              "transformer": 17.0
+            },
+            "product": "bakery_pita",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 30.285714285714285,
+              "transformer": 14.285714285714286
+            },
+            "product": "meat_turkey",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 48.714285714285715,
+              "transformer": 47.57142857142857
+            },
+            "product": "veg_potato",
+            "test_frequency": 7
+          },
+          {
+            "model_ranks": {
+              "ngram": 28.571428571428573,
+              "transformer": 26.714285714285715
+            },
+            "product": "veg_onion",
+            "test_frequency": 8
+          },
+          {
+            "model_ranks": {
+              "ngram": 51.22222222222222,
+              "transformer": 33.55555555555556
+            },
+            "product": "bakery_croissant",
+            "test_frequency": 9
+          },
+          {
+            "model_ranks": {
+              "ngram": 47.888888888888886,
+              "transformer": 22.555555555555557
+            },
+            "product": "bakery_tortilla",
+            "test_frequency": 9
+          },
+          {
+            "model_ranks": {
+              "ngram": 38.44444444444444,
+              "transformer": 38.22222222222222
+            },
+            "product": "bev_tea",
+            "test_frequency": 9
+          }
+        ],
+        "representative_cases": [
+          {
+            "actual": "fruit_avocado",
+            "ngram_rank": 36,
+            "ngram_top1": "bakery_rolls",
+            "prefix": [
+              "bev_orange"
+            ],
+            "session_id": "session_000194",
+            "transformer_rank": 53,
+            "transformer_top1": "home_toothbrush"
+          },
+          {
+            "actual": "bakery_tortilla",
+            "ngram_rank": 52,
+            "ngram_top1": "veg_tomato",
+            "prefix": [
+              "bev_orange",
+              "fruit_avocado"
+            ],
+            "session_id": "session_000194",
+            "transformer_rank": 32,
+            "transformer_top1": "veg_tomato"
+          },
+          {
+            "actual": "frozen_peas",
+            "ngram_rank": 48,
+            "ngram_top1": "dairy_cheddar",
+            "prefix": [
+              "bakery_baguette"
+            ],
+            "session_id": "session_000851",
+            "transformer_rank": 29,
+            "transformer_top1": "dairy_cheddar"
+          },
+          {
+            "actual": "bev_tea",
+            "ngram_rank": 34,
+            "ngram_top1": "frozen_pizza",
+            "prefix": [
+              "pantry_pasta",
+              "pantry_sauce",
+              "dairy_mozzarella"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 31,
+            "transformer_top1": "veg_spinach"
+          },
+          {
+            "actual": "home_detergent",
+            "ngram_rank": 47,
+            "ngram_top1": "bev_orange",
+            "prefix": [
+              "pantry_pasta",
+              "pantry_sauce",
+              "dairy_mozzarella",
+              "bev_tea"
+            ],
+            "session_id": "session_000255",
+            "transformer_rank": 19,
+            "transformer_top1": "bev_tea"
+          },
+          {
+            "actual": "bev_soda",
+            "ngram_rank": 16,
+            "ngram_top1": "fruit_banana",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 43,
+            "transformer_top1": "snack_chocolate"
+          },
+          {
+            "actual": "dairy_mozzarella",
+            "ngram_rank": 26,
+            "ngram_top1": "snack_chocolate",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 57,
+            "transformer_top1": "snack_chocolate"
+          },
+          {
+            "actual": "meat_tofu",
+            "ngram_rank": 41,
+            "ngram_top1": "frozen_pizza",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda",
+              "dairy_mozzarella"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 44,
+            "transformer_top1": "home_detergent"
+          },
+          {
+            "actual": "pantry_spices",
+            "ngram_rank": 33,
+            "ngram_top1": "home_toothpaste",
+            "prefix": [
+              "bakery_bagel",
+              "bakery_rolls",
+              "bev_soda",
+              "dairy_mozzarella",
+              "meat_tofu"
+            ],
+            "session_id": "session_000751",
+            "transformer_rank": 32,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "fruit_lemon",
+            "ngram_rank": 22,
+            "ngram_top1": "fruit_apple",
+            "prefix": [
+              "fruit_grapes"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 15,
+            "transformer_top1": "meat_lentils"
+          },
+          {
+            "actual": "pantry_sauce",
+            "ngram_rank": 12,
+            "ngram_top1": "fruit_apple",
+            "prefix": [
+              "fruit_grapes",
+              "fruit_lemon"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 42,
+            "transformer_top1": "pantry_spices"
+          },
+          {
+            "actual": "bakery_bagel",
+            "ngram_rank": 34,
+            "ngram_top1": "dairy_mozzarella",
+            "prefix": [
+              "fruit_grapes",
+              "fruit_lemon",
+              "pantry_sauce"
+            ],
+            "session_id": "session_001170",
+            "transformer_rank": 55,
+            "transformer_top1": "dairy_mozzarella"
+          },
+          {
+            "actual": "dairy_cottage",
+            "ngram_rank": 21,
+            "ngram_top1": "snack_jam",
+            "prefix": [
+              "dairy_butter"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 8,
+            "transformer_top1": "dairy_butter"
+          },
+          {
+            "actual": "veg_onion",
+            "ngram_rank": 48,
+            "ngram_top1": "bev_orange",
+            "prefix": [
+              "dairy_butter",
+              "dairy_cottage"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 17,
+            "transformer_top1": "snack_chocolate"
+          },
+          {
+            "actual": "pantry_sugar",
+            "ngram_rank": 19,
+            "ngram_top1": "meat_turkey",
+            "prefix": [
+              "dairy_butter",
+              "dairy_cottage",
+              "veg_onion"
+            ],
+            "session_id": "session_001017",
+            "transformer_rank": 49,
+            "transformer_top1": "veg_onion"
+          },
+          {
+            "actual": "meat_patties",
+            "ngram_rank": 13,
+            "ngram_top1": "frozen_pizza",
+            "prefix": [
+              "home_toothpaste",
+              "home_toothbrush"
+            ],
+            "session_id": "session_000023",
+            "transformer_rank": 34,
+            "transformer_top1": "home_toothbrush"
+          },
+          {
+            "actual": "fruit_lemon",
+            "ngram_rank": 3,
+            "ngram_top1": "dairy_cheddar",
+            "prefix": [
+              "bakery_baguette"
+            ],
+            "session_id": "session_000671",
+            "transformer_rank": 20,
+            "transformer_top1": "dairy_cheddar"
+          },
+          {
+            "actual": "meat_lentils",
+            "ngram_rank": 17,
+            "ngram_top1": "bev_soda",
+            "prefix": [
+              "bev_coffee",
+              "dairy_milk",
+              "pantry_sugar"
+            ],
+            "session_id": "session_000808",
+            "transformer_rank": 55,
+            "transformer_top1": "home_toothbrush"
+          },
+          {
+            "actual": "veg_pepper",
+            "ngram_rank": 2,
+            "ngram_top1": "pantry_spices",
+            "prefix": [
+              "bev_coffee",
+              "dairy_milk",
+              "pantry_sugar",
+              "meat_lentils"
+            ],
+            "session_id": "session_000808",
+            "transformer_rank": 29,
+            "transformer_top1": "pantry_spices"
+          },
+          {
+            "actual": "frozen_pizza",
+            "ngram_rank": 41,
+            "ngram_top1": "snack_crackers",
+            "prefix": [
+              "bev_coffee",
+              "dairy_milk",
+              "pantry_sugar",
+              "meat_lentils",
+              "veg_pepper"
+            ],
+            "session_id": "session_000808",
+            "transformer_rank": 6,
+            "transformer_top1": "veg_pepper"
+          }
+        ],
+        "top_confusions": [
+          {
+            "actual": "pantry_rice",
+            "count": 6,
+            "predicted": "dairy_milk"
+          },
+          {
+            "actual": "frozen_peas",
+            "count": 4,
+            "predicted": "dairy_cheddar"
+          },
+          {
+            "actual": "snack_chocolate",
+            "count": 4,
+            "predicted": "veg_tomato"
+          },
+          {
+            "actual": "dairy_eggs",
+            "count": 4,
+            "predicted": "fruit_banana"
+          },
+          {
+            "actual": "veg_spinach",
+            "count": 4,
+            "predicted": "bev_soda"
+          },
+          {
+            "actual": "bakery_croissant",
+            "count": 4,
+            "predicted": "snack_chocolate"
+          },
+          {
+            "actual": "home_detergent",
+            "count": 4,
+            "predicted": "pantry_sauce"
+          },
+          {
+            "actual": "meat_lentils",
+            "count": 4,
+            "predicted": "snack_jam"
+          },
+          {
+            "actual": "fruit_berries",
+            "count": 4,
+            "predicted": "snack_jam"
+          },
+          {
+            "actual": "bev_juice",
+            "count": 4,
+            "predicted": "meat_turkey"
+          },
+          {
+            "actual": "bakery_bagel",
+            "count": 3,
+            "predicted": "snack_jam"
+          },
+          {
+            "actual": "dairy_mozzarella",
+            "count": 3,
+            "predicted": "snack_chocolate"
+          },
+          {
+            "actual": "meat_patties",
+            "count": 3,
+            "predicted": "home_toothbrush"
+          },
+          {
+            "actual": "dairy_cottage",
+            "count": 3,
+            "predicted": "meat_lentils"
+          },
+          {
+            "actual": "meat_tofu",
+            "count": 3,
+            "predicted": "meat_turkey"
+          },
+          {
+            "actual": "veg_tomato",
+            "count": 3,
+            "predicted": "fruit_grapes"
+          },
+          {
+            "actual": "meat_sausage",
+            "count": 3,
+            "predicted": "fruit_berries"
+          },
+          {
+            "actual": "veg_spinach",
+            "count": 3,
+            "predicted": "bakery_rolls"
+          },
+          {
+            "actual": "pantry_pasta",
+            "count": 3,
+            "predicted": "bev_coffee"
+          },
+          {
+            "actual": "dairy_cream",
+            "count": 3,
+            "predicted": "bev_water"
+          }
+        ],
+        "transformer_better_examples": 236
+      },
+      "metadata": {
+        "ngram": {
+          "alpha": 0.2,
+          "order": 3,
+          "train_sessions": 840,
+          "vocabulary_size": 59
+        },
+        "parameter_comparison": {
+          "ngram_contexts": 1238,
+          "ngram_stored_outcomes": 3712,
+          "transformer_parameters": 104640
+        },
+        "training_fraction": 1.0,
+        "transformer": {
+          "batch_size": 64,
+          "cpu_threads": 1,
+          "device": "cpu",
+          "epochs": 6,
+          "learning_rate": 0.002,
+          "model_config": {
+            "block_size": 12,
+            "d_model": 64,
+            "dropout": 0.1,
+            "n_heads": 4,
+            "n_layers": 2,
+            "pad_id": 0,
+            "vocab_size": 59
+          },
+          "numpy_version": "2.5.5",
+          "parameters": 104640,
+          "python_version": "3.15.2",
+          "seed": 1729,
+          "torch_version": "2.15.0",
+          "train_sessions": 840,
+          "validation_sessions": 180
+        }
+      },
+      "metrics": {
+        "ngram": {
+          "accuracy_by_prefix_size": {
+            "1-2": 0.5751445086705202,
+            "3-4": 0.012658227848101266,
+            "5+": 0.0
+          },
+          "cross_entropy": 3.2795729685767046,
+          "examples": 702,
+          "mean_rank": 20.434472934472936,
+          "mrr": 0.34040095867494313,
+          "per_category_accuracy": {
+            "bakery": 0.0,
+            "beverages": 0.20270270270270271,
+            "dairy": 0.45454545454545453,
+            "frozen": 0.0,
+            "fruit": 0.3125,
+            "household": 0.0,
+            "meat_alternatives": 0.3384615384615385,
+            "pantry": 0.3924050632911392,
+            "personal_care": 0.3157894736842105,
+            "snacks": 0.43283582089552236,
+            "vegetables": 0.14285714285714285
+          },
+          "per_product_mean_rank": {
+            "bakery_bagel": 37.916666666666664,
+            "bakery_baguette": 20.444444444444443,
+            "bakery_bread": 26.77777777777778,
+            "bakery_buns": 20.5,
+            "bakery_croissant": 51.22222222222222,
+            "bakery_pita": 34.666666666666664,
+            "bakery_rolls": 25.4,
+            "bakery_tortilla": 47.888888888888886,
+            "bev_coffee": 21.666666666666668,
+            "bev_juice": 35.4,
+            "bev_orange": 30.77777777777778,
+            "bev_soda": 8.681818181818182,
+            "bev_tea": 38.44444444444444,
+            "bev_water": 21.8,
+            "dairy_butter": 7.44,
+            "dairy_cheddar": 3.64,
+            "dairy_cottage": 30.875,
+            "dairy_cream": 45.888888888888886,
+            "dairy_eggs": 35.84615384615385,
+            "dairy_milk": 4.620689655172414,
+            "dairy_mozzarella": 10.636363636363637,
+            "dairy_yogurt": 44.25,
+            "frozen_peas": 34.09090909090909,
+            "frozen_pizza": 30.09090909090909,
+            "fruit_apple": 29.75,
+            "fruit_avocado": 15.266666666666667,
+            "fruit_banana": 5.235294117647059,
+            "fruit_berries": 33.111111111111114,
+            "fruit_grapes": 10.733333333333333,
+            "fruit_lemon": 20.166666666666668,
+            "home_detergent": 31.692307692307693,
+            "home_toothbrush": 15.571428571428571,
+            "home_toothpaste": 28.8,
+            "home_towels": 32.4,
+            "meat_chicken": 32.666666666666664,
+            "meat_lentils": 12.869565217391305,
+            "meat_patties": 9.166666666666666,
+            "meat_sausage": 36.75,
+            "meat_tofu": 40.7,
+            "meat_turkey": 30.285714285714285,
+            "pantry_pasta": 20.083333333333332,
+            "pantry_rice": 23.545454545454547,
+            "pantry_sauce": 10.470588235294118,
+            "pantry_spices": 9.11111111111111,
+            "pantry_sugar": 11.428571428571429,
+            "snack_cereal": 10.142857142857142,
+            "snack_chips": 18.0,
+            "snack_chocolate": 9.166666666666666,
+            "snack_crackers": 40.833333333333336,
+            "snack_jam": 5.25,
+            "snack_nuts": 54.8,
+            "veg_carrot": 28.11111111111111,
+            "veg_onion": 28.571428571428573,
+            "veg_pepper": 23.333333333333332,
+            "veg_potato": 48.714285714285715,
+            "veg_spinach": 24.2,
+            "veg_tomato": 9.875
+          },
+          "top_1_accuracy": 0.28774928774928776,
+          "top_3_accuracy": 0.32905982905982906,
+          "top_5_accuracy": 0.35327635327635326
+        },
+        "transformer": {
+          "accuracy_by_prefix_size": {
+            "1-2": 0.5722543352601156,
+            "3-4": 0.012658227848101266,
+            "5+": 0.008403361344537815
+          },
+          "cross_entropy": 3.3627709789191935,
+          "examples": 702,
+          "mean_rank": 21.814814814814813,
+          "mrr": 0.3316050162954647,
+          "per_category_accuracy": {
+            "bakery": 0.0,
+            "beverages": 0.20270270270270271,
+            "dairy": 0.45454545454545453,
+            "frozen": 0.0,
+            "fruit": 0.3125,
+            "household": 0.05555555555555555,
+            "meat_alternatives": 0.3384615384615385,
+            "pantry": 0.3924050632911392,
+            "personal_care": 0.3157894736842105,
+            "snacks": 0.43283582089552236,
+            "vegetables": 0.12698412698412698
+          },
+          "per_product_mean_rank": {
+            "bakery_bagel": 52.833333333333336,
+            "bakery_baguette": 7.333333333333333,
+            "bakery_bread": 21.0,
+            "bakery_buns": 26.5,
+            "bakery_croissant": 33.55555555555556,
+            "bakery_pita": 17.0,
+            "bakery_rolls": 29.7,
+            "bakery_tortilla": 22.555555555555557,
+            "bev_coffee": 25.555555555555557,
+            "bev_juice": 27.0,
+            "bev_orange": 43.666666666666664,
+            "bev_soda": 14.181818181818182,
+            "bev_tea": 38.22222222222222,
+            "bev_water": 19.8,
+            "dairy_butter": 7.32,
+            "dairy_cheddar": 8.68,
+            "dairy_cottage": 36.0,
+            "dairy_cream": 42.111111111111114,
+            "dairy_eggs": 34.0,
+            "dairy_milk": 7.862068965517241,
+            "dairy_mozzarella": 27.318181818181817,
+            "dairy_yogurt": 44.083333333333336,
+            "frozen_peas": 29.09090909090909,
+            "frozen_pizza": 19.454545454545453,
+            "fruit_apple": 49.416666666666664,
+            "fruit_avocado": 18.2,
+            "fruit_banana": 5.235294117647059,
+            "fruit_berries": 27.11111111111111,
+            "fruit_grapes": 11.933333333333334,
+            "fruit_lemon": 16.083333333333332,
+            "home_detergent": 23.23076923076923,
+            "home_toothbrush": 10.071428571428571,
+            "home_toothpaste": 39.8,
+            "home_towels": 36.6,
+            "meat_chicken": 11.333333333333334,
+            "meat_lentils": 21.0,
+            "meat_patties": 13.055555555555555,
+            "meat_sausage": 36.75,
+            "meat_tofu": 35.7,
+            "meat_turkey": 14.285714285714286,
+            "pantry_pasta": 31.0,
+            "pantry_rice": 25.727272727272727,
+            "pantry_sauce": 10.588235294117647,
+            "pantry_spices": 10.38888888888889,
+            "pantry_sugar": 23.095238095238095,
+            "snack_cereal": 16.428571428571427,
+            "snack_chips": 40.2,
+            "snack_chocolate": 11.75,
+            "snack_crackers": 40.833333333333336,
+            "snack_jam": 5.25,
+            "snack_nuts": 48.0,
+            "veg_carrot": 28.555555555555557,
+            "veg_onion": 26.714285714285715,
+            "veg_pepper": 32.333333333333336,
+            "veg_potato": 47.57142857142857,
+            "veg_spinach": 22.333333333333332,
+            "veg_tomato": 13.25
+          },
+          "top_1_accuracy": 0.28774928774928776,
+          "top_3_accuracy": 0.3176638176638177,
+          "top_5_accuracy": 0.3247863247863248
+        }
+      }
+    }
+  },
+  "transaction_count": 1200,
+  "vocabulary_size": 59
+}

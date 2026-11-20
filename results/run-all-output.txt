@@ -1,0 +1,38 @@
+INFO epoch 1/6 train_loss=26.1713 validation_loss=26.4347
+INFO epoch 2/6 train_loss=15.6721 validation_loss=16.0855
+INFO epoch 3/6 train_loss=10.1559 validation_loss=10.5755
+INFO epoch 4/6 train_loss=7.4965 validation_loss=7.8405
+INFO epoch 5/6 train_loss=5.8007 validation_loss=6.0810
+INFO epoch 6/6 train_loss=5.0251 validation_loss=5.3078
+INFO epoch 1/6 train_loss=17.5031 validation_loss=17.7743
+INFO epoch 2/6 train_loss=8.2968 validation_loss=8.6213
+INFO epoch 3/6 train_loss=5.4881 validation_loss=5.7563
+INFO epoch 4/6 train_loss=4.4461 validation_loss=4.6843
+INFO epoch 5/6 train_loss=3.9310 validation_loss=4.2365
+INFO epoch 6/6 train_loss=3.5792 validation_loss=3.8131
+INFO epoch 1/6 train_loss=8.2232 validation_loss=8.5146
+INFO epoch 2/6 train_loss=4.4869 validation_loss=4.7129
+INFO epoch 3/6 train_loss=3.6690 validation_loss=3.7871
+INFO epoch 4/6 train_loss=3.3172 validation_loss=3.4893
+INFO epoch 5/6 train_loss=3.1222 validation_loss=3.3037
+INFO epoch 6/6 train_loss=3.0292 validation_loss=3.2652
+{
+  "split_sizes": {
+    "train": 840,
+    "validation": 180,
+    "test": 180
+  },
+  "training_fractions": [
+    "0.25",
+    "0.50",
+    "1.00"
+  ],
+  "figures": [
+    "results/model_performance.png",
+    "results/training_curves.png",
+    "results/product_frequency.png",
+    "results/basket_lengths.png",
+    "results/prediction_confusions.png",
+    "results/prediction_example.png"
+  ]
+}

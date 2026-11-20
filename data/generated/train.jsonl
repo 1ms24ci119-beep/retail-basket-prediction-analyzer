@@ -1,0 +1,840 @@
+{"session_id": "session_001038", "items": ["veg_carrot", "fruit_lemon"], "pattern": "unusual"}
+{"session_id": "session_000879", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bakery_buns"], "pattern": "pasta_night"}
+{"session_id": "session_000540", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000412", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000934", "items": ["bakery_rolls", "dairy_mozzarella", "fruit_apple", "snack_jam"], "pattern": "independent"}
+{"session_id": "session_000653", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "snack_cereal", "bev_water"], "pattern": "coffee_morning"}
+{"session_id": "session_000741", "items": ["bev_coffee", "snack_crackers", "frozen_peas", "bev_water", "meat_patties"], "pattern": "independent"}
+{"session_id": "session_001023", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "snack_jam", "meat_patties"], "pattern": "pasta_night"}
+{"session_id": "session_000827", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000840", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "pantry_sauce", "dairy_cream", "dairy_cottage"], "pattern": "lentil_dinner"}
+{"session_id": "session_000715", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "veg_onion", "home_detergent", "veg_spinach"], "pattern": "lentil_dinner"}
+{"session_id": "session_001196", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "fruit_grapes"], "pattern": "burger_meal"}
+{"session_id": "session_001136", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000227", "items": ["home_toothpaste", "home_toothbrush", "meat_sausage"], "pattern": "oral_care"}
+{"session_id": "session_001114", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000530", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_nuts", "dairy_cream", "bakery_rolls"], "pattern": "burger_meal"}
+{"session_id": "session_000589", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_cheddar", "meat_sausage", "fruit_berries", "pantry_sugar"], "pattern": "movie_night"}
+{"session_id": "session_000740", "items": ["snack_chips", "bev_soda", "snack_chocolate", "frozen_pizza"], "pattern": "movie_night"}
+{"session_id": "session_000606", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_001144", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "snack_jam", "bakery_baguette", "dairy_yogurt", "meat_tofu"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000085", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "home_toothbrush"], "pattern": "coffee_morning"}
+{"session_id": "session_000966", "items": ["veg_spinach", "pantry_sugar", "bev_water", "fruit_berries", "pantry_pasta"], "pattern": "independent"}
+{"session_id": "session_000179", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_001035", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "meat_patties", "bev_water", "home_toothpaste", "snack_chocolate"], "pattern": "coffee_morning"}
+{"session_id": "session_001197", "items": ["frozen_pizza", "pantry_pasta", "fruit_berries", "dairy_cottage", "dairy_cheddar", "pantry_sugar", "fruit_avocado"], "pattern": "independent"}
+{"session_id": "session_000312", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "pantry_sugar", "pantry_pasta", "veg_carrot", "meat_sausage"], "pattern": "burger_meal"}
+{"session_id": "session_001070", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "snack_chocolate", "home_toothbrush"], "pattern": "snack_board"}
+{"session_id": "session_000610", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "snack_crackers", "veg_carrot", "dairy_cheddar", "dairy_butter"], "pattern": "salad_lunch"}
+{"session_id": "session_001040", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_pepper", "veg_tomato"], "pattern": "pasta_night"}
+{"session_id": "session_000361", "items": ["bakery_croissant", "bakery_bread", "dairy_cream", "fruit_apple", "bakery_rolls", "fruit_avocado", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_000231", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_jam", "bev_orange"], "pattern": "movie_night"}
+{"session_id": "session_000676", "items": ["snack_chocolate", "pantry_pasta"], "pattern": "independent"}
+{"session_id": "session_000022", "items": ["veg_spinach", "veg_tomato", "pantry_spices"], "pattern": "salad_lunch"}
+{"session_id": "session_001057", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "snack_cereal", "dairy_eggs"], "pattern": "pasta_night"}
+{"session_id": "session_000927", "items": ["meat_patties", "dairy_milk", "bev_soda", "bev_orange", "fruit_grapes", "bakery_tortilla"], "pattern": "independent"}
+{"session_id": "session_000314", "items": ["bakery_bread", "dairy_butter", "snack_jam", "dairy_milk", "bakery_rolls", "snack_cereal"], "pattern": "toast_breakfast"}
+{"session_id": "session_000398", "items": ["fruit_berries", "fruit_lemon", "bakery_baguette"], "pattern": "independent"}
+{"session_id": "session_000221", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_crackers", "meat_chicken", "fruit_lemon"], "pattern": "movie_night"}
+{"session_id": "session_000622", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000035", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "veg_tomato", "frozen_pizza", "dairy_butter"], "pattern": "burger_meal"}
+{"session_id": "session_001048", "items": ["bakery_baguette", "fruit_banana", "fruit_berries", "pantry_spices", "snack_nuts"], "pattern": "unusual"}
+{"session_id": "session_001155", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_000770", "items": ["pantry_rice", "meat_lentils"], "pattern": "independent"}
+{"session_id": "session_000675", "items": ["veg_onion", "bakery_baguette", "bev_orange", "meat_turkey", "pantry_spices"], "pattern": "independent"}
+{"session_id": "session_001087", "items": ["bakery_baguette", "frozen_pizza"], "pattern": "unusual"}
+{"session_id": "session_000140", "items": ["snack_jam", "fruit_banana", "veg_carrot", "meat_chicken", "dairy_cheddar", "snack_chocolate", "bakery_pita"], "pattern": "independent"}
+{"session_id": "session_000993", "items": ["dairy_cream", "meat_chicken", "veg_onion", "bev_water", "fruit_banana", "meat_lentils", "bakery_baguette", "veg_spinach"], "pattern": "independent"}
+{"session_id": "session_000494", "items": ["dairy_butter", "fruit_banana", "home_toothbrush"], "pattern": "independent"}
+{"session_id": "session_000345", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000163", "items": ["bakery_bread", "dairy_butter", "snack_jam", "fruit_lemon", "fruit_apple"], "pattern": "toast_breakfast"}
+{"session_id": "session_000071", "items": ["bakery_pita", "dairy_yogurt", "pantry_pasta"], "pattern": "unusual"}
+{"session_id": "session_000463", "items": ["bakery_pita", "snack_cereal", "meat_lentils"], "pattern": "independent"}
+{"session_id": "session_000612", "items": ["bakery_bread", "dairy_butter", "snack_jam", "fruit_banana", "pantry_pasta", "dairy_eggs", "bev_coffee"], "pattern": "toast_breakfast"}
+{"session_id": "session_000784", "items": ["fruit_lemon", "home_toothpaste"], "pattern": "independent"}
+{"session_id": "session_000980", "items": ["frozen_peas", "bev_water"], "pattern": "independent"}
+{"session_id": "session_000774", "items": ["home_toothpaste", "home_toothbrush", "meat_chicken", "meat_patties", "bakery_baguette", "bev_juice", "veg_carrot"], "pattern": "oral_care"}
+{"session_id": "session_000596", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000958", "items": ["bakery_baguette", "snack_jam", "meat_patties", "pantry_sugar", "home_toothbrush", "veg_pepper"], "pattern": "independent"}
+{"session_id": "session_000858", "items": ["veg_pepper", "bakery_baguette", "pantry_rice", "bakery_rolls", "snack_chocolate", "snack_nuts", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_001177", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_001192", "items": ["snack_cereal", "dairy_milk"], "pattern": "cereal_breakfast"}
+{"session_id": "session_001183", "items": ["bakery_bread", "dairy_butter", "snack_jam", "dairy_cream", "dairy_milk", "bakery_tortilla"], "pattern": "toast_breakfast"}
+{"session_id": "session_000918", "items": ["snack_jam", "meat_patties", "home_toothbrush"], "pattern": "unusual"}
+{"session_id": "session_000456", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bev_tea", "bev_orange", "dairy_cheddar", "bev_soda"], "pattern": "pasta_night"}
+{"session_id": "session_000062", "items": ["fruit_berries", "bakery_rolls", "fruit_apple", "dairy_cottage", "veg_pepper"], "pattern": "independent"}
+{"session_id": "session_000922", "items": ["snack_chips", "dairy_cheddar", "meat_tofu", "bev_water", "fruit_avocado", "dairy_eggs"], "pattern": "independent"}
+{"session_id": "session_001008", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_000967", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bev_coffee", "dairy_cheddar", "frozen_pizza"], "pattern": "salad_lunch"}
+{"session_id": "session_000084", "items": ["bev_coffee", "dairy_cheddar", "frozen_peas", "fruit_berries", "pantry_spices"], "pattern": "independent"}
+{"session_id": "session_000216", "items": ["bev_water", "fruit_lemon", "fruit_apple", "frozen_pizza", "pantry_spices"], "pattern": "independent"}
+{"session_id": "session_000405", "items": ["pantry_rice", "pantry_spices", "meat_chicken", "snack_chips", "bakery_tortilla", "bakery_croissant", "veg_pepper"], "pattern": "lentil_dinner"}
+{"session_id": "session_000973", "items": ["fruit_avocado", "bakery_baguette", "snack_crackers", "veg_potato", "fruit_lemon", "home_towels", "bakery_bread"], "pattern": "independent"}
+{"session_id": "session_000654", "items": ["pantry_pasta", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000372", "items": ["bev_water", "bakery_bread"], "pattern": "independent"}
+{"session_id": "session_001083", "items": ["pantry_rice", "meat_lentils", "dairy_eggs", "meat_chicken", "home_towels", "fruit_lemon"], "pattern": "lentil_dinner"}
+{"session_id": "session_000341", "items": ["snack_crackers", "bakery_baguette", "bakery_croissant"], "pattern": "unusual"}
+{"session_id": "session_000169", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "home_toothpaste", "bev_soda"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000776", "items": ["dairy_cottage", "bakery_croissant", "veg_pepper", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_000321", "items": ["bakery_bread", "dairy_butter"], "pattern": "toast_breakfast"}
+{"session_id": "session_000503", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_potato", "veg_tomato", "bev_orange"], "pattern": "pasta_night"}
+{"session_id": "session_001184", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "dairy_cheddar", "veg_spinach", "fruit_banana"], "pattern": "lentil_dinner"}
+{"session_id": "session_000577", "items": ["pantry_rice", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000409", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_001064", "items": ["frozen_pizza", "home_detergent", "snack_chocolate", "bakery_buns", "meat_turkey", "bev_orange", "bev_juice", "bev_water"], "pattern": "independent"}
+{"session_id": "session_000729", "items": ["bakery_pita", "bev_tea", "snack_chips", "bakery_tortilla", "pantry_pasta"], "pattern": "independent"}
+{"session_id": "session_001135", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000907", "items": ["frozen_peas", "bev_soda", "veg_spinach", "bev_tea", "bev_coffee", "dairy_yogurt", "pantry_spices", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_000936", "items": ["bakery_baguette", "bev_coffee"], "pattern": "independent"}
+{"session_id": "session_000892", "items": ["meat_lentils", "pantry_spices", "veg_potato"], "pattern": "lentil_dinner"}
+{"session_id": "session_000413", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bev_tea"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000145", "items": ["bakery_baguette", "fruit_lemon", "veg_potato", "bakery_rolls", "dairy_butter", "home_towels", "veg_onion"], "pattern": "independent"}
+{"session_id": "session_000313", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000177", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "bev_orange", "dairy_milk", "dairy_butter", "snack_cereal"], "pattern": "snack_board"}
+{"session_id": "session_000479", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_soda", "bakery_bagel", "meat_lentils"], "pattern": "toast_breakfast"}
+{"session_id": "session_000125", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "veg_tomato", "meat_tofu"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000191", "items": ["home_toothpaste", "home_toothbrush", "meat_patties"], "pattern": "oral_care"}
+{"session_id": "session_000195", "items": ["bakery_bread", "dairy_butter", "snack_jam", "snack_nuts"], "pattern": "toast_breakfast"}
+{"session_id": "session_001055", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_pita", "meat_sausage", "fruit_avocado", "veg_potato"], "pattern": "movie_night"}
+{"session_id": "session_000219", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "home_detergent"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000703", "items": ["bakery_bread", "meat_sausage", "home_towels", "pantry_pasta", "snack_crackers", "bev_water", "veg_pepper"], "pattern": "independent"}
+{"session_id": "session_000935", "items": ["home_toothbrush", "home_toothpaste"], "pattern": "unusual"}
+{"session_id": "session_000780", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "snack_jam", "veg_tomato"], "pattern": "lentil_dinner"}
+{"session_id": "session_000357", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "veg_spinach", "bakery_rolls"], "pattern": "coffee_morning"}
+{"session_id": "session_000567", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "dairy_cottage"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000688", "items": ["fruit_lemon", "snack_jam", "bakery_bread", "bev_coffee", "frozen_peas"], "pattern": "independent"}
+{"session_id": "session_001044", "items": ["pantry_rice", "pantry_spices", "pantry_sauce", "fruit_lemon", "meat_lentils"], "pattern": "lentil_dinner"}
+{"session_id": "session_000126", "items": ["snack_nuts", "home_towels", "bev_coffee", "bakery_rolls", "fruit_lemon"], "pattern": "unusual"}
+{"session_id": "session_000767", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "pantry_pasta", "meat_tofu"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000117", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "fruit_lemon", "fruit_avocado"], "pattern": "burger_meal"}
+{"session_id": "session_000705", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bakery_baguette"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000962", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_bread", "veg_tomato", "bev_tea", "veg_pepper"], "pattern": "burger_meal"}
+{"session_id": "session_000536", "items": ["bakery_bread", "dairy_butter", "snack_jam", "frozen_pizza", "veg_pepper"], "pattern": "toast_breakfast"}
+{"session_id": "session_000389", "items": ["home_toothpaste", "home_toothbrush", "bakery_bread", "bakery_croissant", "pantry_spices", "snack_crackers", "bakery_buns"], "pattern": "oral_care"}
+{"session_id": "session_000439", "items": ["pantry_pasta", "meat_turkey", "pantry_sauce", "bev_coffee", "snack_jam", "bakery_bagel"], "pattern": "independent"}
+{"session_id": "session_000164", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "meat_patties", "bakery_tortilla", "meat_chicken"], "pattern": "snack_board"}
+{"session_id": "session_001174", "items": ["home_towels", "dairy_cheddar", "bev_orange", "pantry_pasta", "pantry_sugar", "snack_cereal"], "pattern": "independent"}
+{"session_id": "session_000685", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000059", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "veg_onion", "veg_spinach", "dairy_mozzarella", "frozen_pizza"], "pattern": "burger_meal"}
+{"session_id": "session_000734", "items": ["dairy_cream", "veg_onion", "fruit_banana", "bakery_pita"], "pattern": "independent"}
+{"session_id": "session_000047", "items": ["home_toothpaste", "home_toothbrush", "dairy_cottage", "frozen_pizza"], "pattern": "oral_care"}
+{"session_id": "session_000338", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_carrot", "meat_chicken", "bakery_baguette"], "pattern": "movie_night"}
+{"session_id": "session_000619", "items": ["home_toothpaste", "home_toothbrush", "fruit_lemon", "home_towels"], "pattern": "oral_care"}
+{"session_id": "session_000953", "items": ["fruit_banana", "bev_orange", "bakery_rolls", "snack_chocolate"], "pattern": "independent"}
+{"session_id": "session_000545", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "snack_nuts", "home_toothpaste"], "pattern": "pasta_night"}
+{"session_id": "session_000348", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_chocolate", "bakery_bagel"], "pattern": "burger_meal"}
+{"session_id": "session_000144", "items": ["snack_cereal", "snack_chocolate", "bev_water"], "pattern": "independent"}
+{"session_id": "session_000054", "items": ["pantry_sauce", "dairy_mozzarella", "frozen_pizza"], "pattern": "pasta_night"}
+{"session_id": "session_000735", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000948", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_orange", "meat_sausage", "bev_water", "meat_chicken"], "pattern": "toast_breakfast"}
+{"session_id": "session_000438", "items": ["home_toothpaste", "bakery_croissant", "dairy_eggs", "bev_orange", "meat_patties", "veg_onion", "bakery_tortilla"], "pattern": "independent"}
+{"session_id": "session_001143", "items": ["home_toothbrush", "snack_chocolate", "bakery_croissant", "bakery_buns"], "pattern": "independent"}
+{"session_id": "session_001198", "items": ["fruit_apple", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_000549", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "dairy_mozzarella", "fruit_lemon", "home_detergent", "meat_patties"], "pattern": "snack_board"}
+{"session_id": "session_000265", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "dairy_cream", "home_detergent"], "pattern": "pasta_night"}
+{"session_id": "session_000044", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "snack_jam", "dairy_butter", "meat_patties"], "pattern": "snack_board"}
+{"session_id": "session_000120", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000212", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bev_juice", "dairy_cream", "dairy_butter"], "pattern": "burger_meal"}
+{"session_id": "session_001005", "items": ["bakery_bread", "dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_001079", "items": ["pantry_sugar", "bakery_croissant", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000556", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_000334", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_rolls", "meat_turkey"], "pattern": "lentil_dinner"}
+{"session_id": "session_000989", "items": ["home_detergent", "veg_pepper", "dairy_eggs", "veg_carrot", "bev_coffee", "pantry_pasta"], "pattern": "independent"}
+{"session_id": "session_000754", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "snack_crackers", "home_toothpaste"], "pattern": "coffee_morning"}
+{"session_id": "session_000180", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "dairy_yogurt"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000850", "items": ["snack_chips", "fruit_grapes", "fruit_apple", "snack_cereal", "fruit_berries", "meat_patties", "fruit_banana"], "pattern": "independent"}
+{"session_id": "session_000466", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_cheddar", "veg_onion", "pantry_sugar"], "pattern": "movie_night"}
+{"session_id": "session_000206", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_nuts", "pantry_spices", "bakery_rolls"], "pattern": "movie_night"}
+{"session_id": "session_000234", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_spinach", "bakery_pita"], "pattern": "pasta_night"}
+{"session_id": "session_000072", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "home_toothpaste", "dairy_mozzarella", "snack_crackers"], "pattern": "salad_lunch"}
+{"session_id": "session_000730", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_tortilla", "home_detergent", "bev_coffee"], "pattern": "toast_breakfast"}
+{"session_id": "session_001100", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "pantry_spices"], "pattern": "pasta_night"}
+{"session_id": "session_000802", "items": ["bakery_bread", "dairy_butter", "snack_jam", "veg_tomato", "dairy_milk"], "pattern": "toast_breakfast"}
+{"session_id": "session_001073", "items": ["bakery_bread", "dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000616", "items": ["bakery_bread", "dairy_butter", "snack_jam", "meat_patties"], "pattern": "toast_breakfast"}
+{"session_id": "session_000491", "items": ["bev_orange", "bev_juice"], "pattern": "independent"}
+{"session_id": "session_000277", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_buns", "meat_chicken", "veg_onion", "meat_turkey"], "pattern": "salad_lunch"}
+{"session_id": "session_000697", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "meat_patties", "bakery_baguette", "dairy_cottage", "dairy_butter"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000920", "items": ["bev_coffee", "pantry_rice", "home_toothbrush", "fruit_apple", "snack_jam", "dairy_milk", "bev_juice", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_001165", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_water", "bev_soda"], "pattern": "toast_breakfast"}
+{"session_id": "session_000017", "items": ["dairy_milk", "meat_sausage", "veg_carrot", "bakery_baguette", "meat_lentils"], "pattern": "unusual"}
+{"session_id": "session_000217", "items": ["home_toothbrush", "fruit_berries", "bakery_croissant", "snack_cereal"], "pattern": "independent"}
+{"session_id": "session_000504", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000639", "items": ["dairy_butter", "pantry_sauce", "veg_potato", "veg_onion", "dairy_cream", "bakery_tortilla"], "pattern": "independent"}
+{"session_id": "session_000407", "items": ["frozen_pizza", "dairy_milk", "bakery_tortilla", "dairy_mozzarella", "pantry_spices"], "pattern": "independent"}
+{"session_id": "session_000055", "items": ["bakery_bagel", "dairy_eggs", "dairy_cream"], "pattern": "unusual"}
+{"session_id": "session_000305", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_berries", "veg_potato"], "pattern": "lentil_dinner"}
+{"session_id": "session_000998", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000756", "items": ["bakery_rolls", "bakery_bagel"], "pattern": "independent"}
+{"session_id": "session_000425", "items": ["dairy_yogurt", "pantry_spices", "meat_lentils", "bakery_rolls", "snack_cereal", "snack_chocolate", "home_towels", "fruit_banana"], "pattern": "independent"}
+{"session_id": "session_000543", "items": ["fruit_lemon", "pantry_sauce", "meat_tofu"], "pattern": "independent"}
+{"session_id": "session_000153", "items": ["snack_cereal", "dairy_eggs", "meat_turkey", "bakery_croissant"], "pattern": "independent"}
+{"session_id": "session_000205", "items": ["fruit_grapes", "fruit_apple", "veg_carrot"], "pattern": "unusual"}
+{"session_id": "session_000306", "items": ["snack_chips", "bev_soda", "snack_chocolate", "frozen_peas", "fruit_berries"], "pattern": "movie_night"}
+{"session_id": "session_000720", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "dairy_mozzarella"], "pattern": "lentil_dinner"}
+{"session_id": "session_001041", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000573", "items": ["bakery_buns", "meat_patties", "meat_turkey", "dairy_butter", "veg_pepper"], "pattern": "burger_meal"}
+{"session_id": "session_000337", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "home_towels", "dairy_cream", "bakery_tortilla", "bev_juice"], "pattern": "salad_lunch"}
+{"session_id": "session_001147", "items": ["veg_potato", "veg_tomato", "meat_sausage", "snack_jam", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_000097", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000690", "items": ["snack_chips", "bev_soda", "snack_chocolate", "home_detergent", "bev_tea", "dairy_mozzarella", "bakery_baguette"], "pattern": "movie_night"}
+{"session_id": "session_001171", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "frozen_peas", "dairy_cheddar"], "pattern": "salad_lunch"}
+{"session_id": "session_000455", "items": ["snack_chips", "home_towels", "fruit_banana", "frozen_pizza"], "pattern": "independent"}
+{"session_id": "session_000286", "items": ["snack_crackers", "pantry_sugar", "bev_water", "veg_onion", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_000921", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_001166", "items": ["bakery_bread", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000888", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bev_coffee", "pantry_pasta", "bakery_bagel"], "pattern": "movie_night"}
+{"session_id": "session_001180", "items": ["pantry_sauce", "dairy_mozzarella", "veg_onion", "home_detergent", "dairy_cottage"], "pattern": "pasta_night"}
+{"session_id": "session_001110", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "meat_sausage", "bev_orange", "fruit_banana"], "pattern": "pasta_night"}
+{"session_id": "session_000005", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "snack_jam", "home_detergent", "bev_soda", "fruit_banana"], "pattern": "salad_lunch"}
+{"session_id": "session_000893", "items": ["frozen_peas", "fruit_apple", "home_towels"], "pattern": "independent"}
+{"session_id": "session_000709", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bakery_baguette"], "pattern": "pasta_night"}
+{"session_id": "session_000113", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_butter"], "pattern": "movie_night"}
+{"session_id": "session_000056", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_water", "bev_coffee", "veg_carrot"], "pattern": "toast_breakfast"}
+{"session_id": "session_000342", "items": ["bakery_bread", "dairy_butter", "snack_jam", "dairy_milk", "dairy_cottage", "bakery_rolls"], "pattern": "toast_breakfast"}
+{"session_id": "session_000970", "items": ["bev_water", "bakery_baguette", "fruit_lemon"], "pattern": "unusual"}
+{"session_id": "session_000544", "items": ["pantry_sauce", "bev_soda", "veg_pepper", "dairy_eggs", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_000788", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "fruit_avocado"], "pattern": "pasta_night"}
+{"session_id": "session_000371", "items": ["dairy_milk", "fruit_banana", "snack_jam"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000424", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_water", "dairy_eggs", "fruit_grapes"], "pattern": "toast_breakfast"}
+{"session_id": "session_001132", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "fruit_banana", "meat_turkey"], "pattern": "pasta_night"}
+{"session_id": "session_000950", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "frozen_pizza", "veg_spinach", "bakery_buns"], "pattern": "pasta_night"}
+{"session_id": "session_000377", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "home_detergent"], "pattern": "pasta_night"}
+{"session_id": "session_000365", "items": ["snack_jam", "veg_spinach", "pantry_rice", "fruit_apple", "meat_lentils", "home_toothpaste", "bakery_rolls"], "pattern": "independent"}
+{"session_id": "session_000045", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000698", "items": ["bakery_bread", "veg_spinach"], "pattern": "independent"}
+{"session_id": "session_000623", "items": ["fruit_berries", "veg_tomato", "bakery_bread", "bev_tea"], "pattern": "independent"}
+{"session_id": "session_000186", "items": ["home_toothbrush", "bakery_rolls"], "pattern": "unusual"}
+{"session_id": "session_001063", "items": ["fruit_berries", "bakery_buns", "bev_water", "pantry_rice", "fruit_banana", "bakery_croissant", "bev_coffee", "bakery_baguette"], "pattern": "independent"}
+{"session_id": "session_000067", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "snack_cereal"], "pattern": "snack_board"}
+{"session_id": "session_001072", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_carrot", "bakery_buns"], "pattern": "pasta_night"}
+{"session_id": "session_000860", "items": ["snack_jam", "frozen_pizza", "bev_orange", "home_toothbrush"], "pattern": "unusual"}
+{"session_id": "session_000330", "items": ["bakery_buns", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000558", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bev_juice", "dairy_milk"], "pattern": "burger_meal"}
+{"session_id": "session_001034", "items": ["snack_cereal", "fruit_banana", "fruit_lemon", "dairy_cream"], "pattern": "cereal_breakfast"}
+{"session_id": "session_001033", "items": ["snack_chips", "bev_soda", "snack_chocolate", "pantry_sauce", "meat_chicken", "dairy_cottage", "fruit_apple"], "pattern": "movie_night"}
+{"session_id": "session_000873", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_rolls", "snack_crackers"], "pattern": "movie_night"}
+{"session_id": "session_000136", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "pantry_rice", "pantry_sugar"], "pattern": "salad_lunch"}
+{"session_id": "session_000146", "items": ["snack_nuts", "home_detergent", "home_toothbrush", "bev_tea"], "pattern": "independent"}
+{"session_id": "session_000369", "items": ["bakery_bread", "dairy_butter", "snack_jam", "dairy_cheddar", "meat_chicken"], "pattern": "toast_breakfast"}
+{"session_id": "session_000818", "items": ["bakery_bagel", "pantry_sugar", "dairy_cottage", "bakery_rolls", "dairy_mozzarella", "meat_lentils"], "pattern": "independent"}
+{"session_id": "session_000436", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_nuts", "fruit_banana", "veg_onion"], "pattern": "movie_night"}
+{"session_id": "session_000294", "items": ["snack_crackers", "snack_jam", "veg_potato", "bakery_pita", "pantry_rice", "veg_onion"], "pattern": "independent"}
+{"session_id": "session_000197", "items": ["dairy_mozzarella", "meat_lentils"], "pattern": "independent"}
+{"session_id": "session_000350", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "dairy_cream", "fruit_berries", "snack_chocolate"], "pattern": "pasta_night"}
+{"session_id": "session_000717", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "meat_turkey", "dairy_cheddar"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000945", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "veg_spinach", "meat_lentils", "meat_chicken"], "pattern": "burger_meal"}
+{"session_id": "session_000672", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_001116", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "bev_coffee", "snack_cereal"], "pattern": "snack_board"}
+{"session_id": "session_000608", "items": ["pantry_pasta", "pantry_sauce"], "pattern": "pasta_night"}
+{"session_id": "session_000817", "items": ["dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000695", "items": ["bakery_tortilla", "bakery_croissant", "snack_chocolate"], "pattern": "unusual"}
+{"session_id": "session_001131", "items": ["bakery_bread", "dairy_butter", "snack_jam", "meat_turkey", "veg_onion", "veg_spinach", "home_toothpaste"], "pattern": "toast_breakfast"}
+{"session_id": "session_000587", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "home_toothpaste", "meat_chicken"], "pattern": "lentil_dinner"}
+{"session_id": "session_001003", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "pantry_rice", "snack_chocolate"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000264", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "meat_patties"], "pattern": "lentil_dinner"}
+{"session_id": "session_000138", "items": ["meat_patties", "dairy_butter", "frozen_pizza"], "pattern": "independent"}
+{"session_id": "session_000116", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "veg_onion", "dairy_cream", "frozen_pizza"], "pattern": "salad_lunch"}
+{"session_id": "session_000951", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000687", "items": ["home_toothpaste", "home_toothbrush", "bakery_bread", "bev_juice", "veg_tomato", "meat_tofu", "dairy_milk"], "pattern": "oral_care"}
+{"session_id": "session_000603", "items": ["snack_cereal", "dairy_mozzarella"], "pattern": "independent"}
+{"session_id": "session_000262", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000061", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "fruit_berries"], "pattern": "snack_board"}
+{"session_id": "session_001195", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bev_coffee", "meat_lentils", "snack_cereal", "meat_tofu"], "pattern": "pasta_night"}
+{"session_id": "session_000203", "items": ["fruit_avocado", "snack_chips", "dairy_cream", "veg_onion", "home_toothpaste", "bakery_pita", "veg_spinach", "fruit_berries"], "pattern": "independent"}
+{"session_id": "session_000495", "items": ["bakery_bread", "dairy_butter", "snack_jam", "meat_tofu"], "pattern": "toast_breakfast"}
+{"session_id": "session_000985", "items": ["dairy_eggs", "pantry_sugar", "home_toothpaste", "meat_tofu", "veg_onion", "dairy_mozzarella"], "pattern": "independent"}
+{"session_id": "session_000566", "items": ["dairy_cheddar", "bev_tea", "snack_crackers", "frozen_pizza", "dairy_cottage", "bakery_rolls", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000127", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "veg_spinach", "dairy_butter"], "pattern": "snack_board"}
+{"session_id": "session_000996", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_tortilla"], "pattern": "lentil_dinner"}
+{"session_id": "session_000757", "items": ["pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_001058", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_detergent", "frozen_pizza"], "pattern": "toast_breakfast"}
+{"session_id": "session_000444", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_yogurt"], "pattern": "movie_night"}
+{"session_id": "session_000399", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "pantry_rice", "frozen_pizza"], "pattern": "burger_meal"}
+{"session_id": "session_000764", "items": ["snack_cereal", "dairy_cheddar", "snack_chocolate", "home_toothpaste"], "pattern": "unusual"}
+{"session_id": "session_000902", "items": ["home_toothpaste", "bakery_pita"], "pattern": "independent"}
+{"session_id": "session_000248", "items": ["fruit_berries", "meat_patties", "bakery_bread", "bakery_pita", "fruit_avocado"], "pattern": "independent"}
+{"session_id": "session_001167", "items": ["veg_tomato", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_000593", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "fruit_berries"], "pattern": "pasta_night"}
+{"session_id": "session_001158", "items": ["fruit_lemon", "meat_turkey", "fruit_banana", "snack_chips", "veg_pepper"], "pattern": "unusual"}
+{"session_id": "session_000242", "items": ["bakery_croissant", "frozen_pizza", "fruit_grapes", "frozen_peas", "bakery_buns"], "pattern": "unusual"}
+{"session_id": "session_000632", "items": ["meat_tofu", "veg_carrot", "fruit_berries", "bakery_bread", "pantry_spices"], "pattern": "independent"}
+{"session_id": "session_000161", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "bakery_baguette", "meat_turkey", "frozen_peas"], "pattern": "coffee_morning"}
+{"session_id": "session_000637", "items": ["home_toothpaste", "home_toothbrush", "fruit_avocado", "veg_carrot", "fruit_lemon", "snack_chips"], "pattern": "oral_care"}
+{"session_id": "session_000070", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "fruit_berries", "fruit_banana"], "pattern": "burger_meal"}
+{"session_id": "session_000887", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_tea", "veg_tomato", "veg_pepper"], "pattern": "toast_breakfast"}
+{"session_id": "session_000625", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "meat_chicken", "bev_juice", "dairy_cream", "bakery_baguette"], "pattern": "lentil_dinner"}
+{"session_id": "session_000008", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_spinach", "dairy_cottage", "meat_turkey", "veg_onion"], "pattern": "pasta_night"}
+{"session_id": "session_000108", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "snack_jam", "fruit_berries", "snack_crackers", "bev_orange"], "pattern": "snack_board"}
+{"session_id": "session_001108", "items": ["snack_nuts", "bakery_bread", "meat_patties", "home_toothbrush", "veg_potato"], "pattern": "unusual"}
+{"session_id": "session_000533", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000813", "items": ["snack_crackers", "dairy_mozzarella", "home_towels", "bakery_croissant", "pantry_rice", "meat_lentils", "fruit_banana", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_000461", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000100", "items": ["bev_juice", "pantry_pasta", "bev_coffee", "bev_water"], "pattern": "unusual"}
+{"session_id": "session_001047", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "dairy_cheddar", "bev_tea", "bev_juice", "veg_tomato"], "pattern": "lentil_dinner"}
+{"session_id": "session_000193", "items": ["fruit_lemon", "bakery_croissant", "bev_coffee", "home_toothbrush"], "pattern": "independent"}
+{"session_id": "session_000877", "items": ["snack_chips", "bev_soda", "snack_chocolate", "home_detergent", "veg_pepper", "veg_spinach"], "pattern": "movie_night"}
+{"session_id": "session_000101", "items": ["bev_water", "fruit_berries", "bakery_baguette", "bakery_pita", "meat_turkey", "dairy_milk", "veg_potato"], "pattern": "independent"}
+{"session_id": "session_000804", "items": ["bakery_tortilla", "veg_onion", "bakery_rolls", "snack_chips", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000620", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bakery_bread"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000240", "items": ["snack_jam", "snack_cereal"], "pattern": "independent"}
+{"session_id": "session_000783", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_grapes", "frozen_peas", "dairy_cottage"], "pattern": "lentil_dinner"}
+{"session_id": "session_000181", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "home_toothbrush", "bev_orange", "dairy_butter", "snack_jam"], "pattern": "pasta_night"}
+{"session_id": "session_000663", "items": ["frozen_pizza", "bakery_buns", "fruit_grapes", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000502", "items": ["snack_cereal", "dairy_eggs", "fruit_apple", "bakery_tortilla", "fruit_lemon"], "pattern": "unusual"}
+{"session_id": "session_000519", "items": ["home_toothpaste", "home_toothbrush", "snack_crackers", "bakery_bread", "pantry_sauce", "bakery_rolls", "bev_water"], "pattern": "oral_care"}
+{"session_id": "session_000447", "items": ["meat_lentils", "bakery_bread", "dairy_cream"], "pattern": "unusual"}
+{"session_id": "session_000011", "items": ["bakery_bagel", "meat_turkey", "snack_crackers", "veg_onion", "veg_tomato", "bakery_croissant"], "pattern": "independent"}
+{"session_id": "session_000947", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "fruit_lemon", "dairy_cream"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000965", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_pita", "veg_onion", "dairy_milk"], "pattern": "salad_lunch"}
+{"session_id": "session_001010", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "dairy_butter", "bakery_bread", "snack_chips", "snack_chocolate"], "pattern": "coffee_morning"}
+{"session_id": "session_000564", "items": ["veg_spinach", "veg_tomato", "frozen_pizza", "dairy_mozzarella", "home_detergent", "meat_sausage"], "pattern": "salad_lunch"}
+{"session_id": "session_000910", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000043", "items": ["snack_chips", "dairy_milk"], "pattern": "unusual"}
+{"session_id": "session_000714", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_000476", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "dairy_cheddar", "bakery_pita", "fruit_berries"], "pattern": "pasta_night"}
+{"session_id": "session_001004", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000320", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "veg_potato", "bakery_tortilla", "fruit_lemon", "frozen_pizza"], "pattern": "lentil_dinner"}
+{"session_id": "session_000791", "items": ["dairy_cheddar", "bakery_rolls", "meat_sausage", "home_toothbrush", "dairy_eggs", "pantry_sauce", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000905", "items": ["dairy_eggs", "bev_juice", "snack_chips", "snack_nuts", "pantry_spices", "fruit_avocado", "dairy_milk", "meat_turkey"], "pattern": "independent"}
+{"session_id": "session_000760", "items": ["pantry_pasta", "dairy_mozzarella", "bakery_buns", "dairy_cottage", "veg_potato", "bev_soda"], "pattern": "pasta_night"}
+{"session_id": "session_000142", "items": ["dairy_eggs", "dairy_cottage", "dairy_butter", "snack_crackers"], "pattern": "independent"}
+{"session_id": "session_000095", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_bread"], "pattern": "movie_night"}
+{"session_id": "session_000852", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000010", "items": ["pantry_sugar", "veg_pepper", "dairy_yogurt", "bev_orange", "fruit_apple", "fruit_grapes"], "pattern": "independent"}
+{"session_id": "session_000295", "items": ["bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000708", "items": ["meat_lentils", "fruit_lemon", "home_towels", "meat_chicken", "bakery_bread", "veg_carrot", "veg_onion", "pantry_spices"], "pattern": "independent"}
+{"session_id": "session_000617", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_chips", "home_towels"], "pattern": "burger_meal"}
+{"session_id": "session_000332", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000134", "items": ["bakery_bread", "snack_jam", "fruit_berries", "veg_spinach", "dairy_cheddar", "pantry_spices", "pantry_sauce"], "pattern": "toast_breakfast"}
+{"session_id": "session_000537", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "dairy_mozzarella"], "pattern": "coffee_morning"}
+{"session_id": "session_000956", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_baguette"], "pattern": "salad_lunch"}
+{"session_id": "session_000173", "items": ["meat_sausage", "pantry_sugar", "snack_chocolate", "veg_carrot", "bakery_rolls"], "pattern": "independent"}
+{"session_id": "session_000003", "items": ["snack_chips", "bev_soda", "snack_chocolate", "meat_chicken", "fruit_apple", "snack_cereal"], "pattern": "movie_night"}
+{"session_id": "session_000803", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "home_detergent", "bev_soda"], "pattern": "burger_meal"}
+{"session_id": "session_000885", "items": ["veg_pepper", "meat_turkey", "snack_crackers", "bev_coffee"], "pattern": "independent"}
+{"session_id": "session_000884", "items": ["bakery_bread", "dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000823", "items": ["bakery_tortilla", "veg_potato", "bev_juice", "bakery_pita", "snack_jam", "snack_cereal"], "pattern": "independent"}
+{"session_id": "session_000099", "items": ["meat_tofu", "fruit_grapes", "veg_pepper", "snack_nuts", "pantry_sauce", "dairy_eggs", "fruit_berries", "snack_cereal"], "pattern": "independent"}
+{"session_id": "session_000551", "items": ["veg_tomato", "bev_soda"], "pattern": "independent"}
+{"session_id": "session_000431", "items": ["frozen_pizza", "frozen_peas", "veg_onion", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000700", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_cottage"], "pattern": "movie_night"}
+{"session_id": "session_000129", "items": ["pantry_sauce", "snack_chocolate", "meat_turkey"], "pattern": "independent"}
+{"session_id": "session_000391", "items": ["meat_chicken", "bakery_croissant", "dairy_cheddar", "bakery_buns"], "pattern": "unusual"}
+{"session_id": "session_001075", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "pantry_rice", "bev_water", "fruit_apple", "home_toothpaste"], "pattern": "pasta_night"}
+{"session_id": "session_000053", "items": ["fruit_berries", "meat_patties"], "pattern": "unusual"}
+{"session_id": "session_000037", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "bakery_pita", "dairy_mozzarella"], "pattern": "snack_board"}
+{"session_id": "session_001111", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000378", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bev_water"], "pattern": "burger_meal"}
+{"session_id": "session_000497", "items": ["home_toothpaste", "home_toothbrush", "bev_tea", "snack_crackers", "pantry_sauce"], "pattern": "oral_care"}
+{"session_id": "session_000661", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_berries", "snack_nuts", "meat_patties", "bakery_bagel"], "pattern": "lentil_dinner"}
+{"session_id": "session_001099", "items": ["fruit_avocado", "dairy_cottage", "snack_crackers", "home_detergent", "snack_jam", "fruit_banana"], "pattern": "independent"}
+{"session_id": "session_000360", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000458", "items": ["snack_chips", "bev_soda", "snack_chocolate", "pantry_sugar", "fruit_banana"], "pattern": "movie_night"}
+{"session_id": "session_000384", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_tortilla", "fruit_grapes", "home_detergent", "dairy_butter"], "pattern": "salad_lunch"}
+{"session_id": "session_000979", "items": ["snack_cereal", "dairy_yogurt"], "pattern": "independent"}
+{"session_id": "session_000252", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "fruit_avocado", "fruit_banana", "home_detergent", "bev_tea"], "pattern": "pasta_night"}
+{"session_id": "session_000006", "items": ["bakery_bread", "dairy_butter", "snack_jam", "pantry_sugar", "veg_carrot", "veg_tomato"], "pattern": "toast_breakfast"}
+{"session_id": "session_000278", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "veg_tomato", "bev_orange", "pantry_sugar", "meat_tofu"], "pattern": "burger_meal"}
+{"session_id": "session_001102", "items": ["bakery_croissant", "dairy_yogurt", "bakery_bread", "snack_nuts", "bev_water"], "pattern": "unusual"}
+{"session_id": "session_001182", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000165", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_001112", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_rolls", "bakery_bagel", "bev_soda"], "pattern": "salad_lunch"}
+{"session_id": "session_000474", "items": ["bakery_buns", "dairy_cheddar", "pantry_rice", "bakery_baguette"], "pattern": "burger_meal"}
+{"session_id": "session_000210", "items": ["pantry_rice", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000363", "items": ["meat_patties", "snack_crackers", "home_toothbrush"], "pattern": "independent"}
+{"session_id": "session_000429", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000200", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "meat_sausage", "bakery_bread", "pantry_sauce", "bev_orange"], "pattern": "coffee_morning"}
+{"session_id": "session_000346", "items": ["bakery_bagel", "veg_onion", "dairy_cottage", "dairy_yogurt"], "pattern": "unusual"}
+{"session_id": "session_000012", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "veg_carrot", "pantry_pasta", "snack_chips"], "pattern": "lentil_dinner"}
+{"session_id": "session_000959", "items": ["bev_soda", "snack_chocolate", "dairy_cheddar"], "pattern": "movie_night"}
+{"session_id": "session_001123", "items": ["bakery_rolls", "pantry_pasta"], "pattern": "independent"}
+{"session_id": "session_001085", "items": ["bev_coffee", "snack_chips", "fruit_grapes"], "pattern": "independent"}
+{"session_id": "session_000069", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "pantry_sugar", "pantry_spices", "meat_patties", "bakery_rolls"], "pattern": "pasta_night"}
+{"session_id": "session_000489", "items": ["pantry_spices", "bakery_pita"], "pattern": "independent"}
+{"session_id": "session_000450", "items": ["bakery_bagel", "dairy_yogurt", "home_toothpaste", "fruit_lemon", "bev_orange", "meat_chicken", "meat_lentils", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000781", "items": ["bev_coffee", "dairy_milk", "veg_spinach", "dairy_eggs", "snack_cereal", "frozen_pizza"], "pattern": "coffee_morning"}
+{"session_id": "session_001188", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "frozen_peas", "snack_cereal"], "pattern": "pasta_night"}
+{"session_id": "session_000527", "items": ["pantry_rice", "dairy_cottage", "meat_turkey", "bakery_buns", "pantry_sauce", "home_towels", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000323", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_001000", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "dairy_yogurt", "dairy_cottage"], "pattern": "burger_meal"}
+{"session_id": "session_001150", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_bagel", "fruit_grapes", "snack_chips"], "pattern": "salad_lunch"}
+{"session_id": "session_001019", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "veg_potato", "dairy_eggs"], "pattern": "lentil_dinner"}
+{"session_id": "session_000529", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_towels", "veg_carrot", "bev_juice", "pantry_spices"], "pattern": "toast_breakfast"}
+{"session_id": "session_000769", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "meat_turkey"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000131", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_nuts", "meat_chicken", "bev_tea"], "pattern": "burger_meal"}
+{"session_id": "session_000370", "items": ["snack_chocolate", "bev_coffee", "veg_onion", "fruit_grapes", "bakery_baguette", "dairy_butter", "fruit_banana", "bakery_buns"], "pattern": "independent"}
+{"session_id": "session_000664", "items": ["snack_chips", "bev_soda", "snack_chocolate", "meat_sausage", "bev_juice", "meat_turkey", "home_towels"], "pattern": "movie_night"}
+{"session_id": "session_000727", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "snack_chocolate", "veg_pepper", "veg_onion"], "pattern": "coffee_morning"}
+{"session_id": "session_000317", "items": ["pantry_spices", "dairy_cottage", "fruit_apple"], "pattern": "unusual"}
+{"session_id": "session_000347", "items": ["frozen_pizza", "bakery_rolls", "meat_sausage"], "pattern": "unusual"}
+{"session_id": "session_000829", "items": ["bakery_buns", "dairy_cheddar", "bakery_tortilla", "bev_orange", "snack_chips", "bev_juice"], "pattern": "burger_meal"}
+{"session_id": "session_000696", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bev_coffee"], "pattern": "salad_lunch"}
+{"session_id": "session_000174", "items": ["dairy_eggs", "frozen_peas", "snack_nuts", "meat_tofu"], "pattern": "independent"}
+{"session_id": "session_000257", "items": ["home_toothpaste", "home_toothbrush", "pantry_rice"], "pattern": "oral_care"}
+{"session_id": "session_000752", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_rolls", "bakery_bagel", "dairy_milk", "pantry_spices"], "pattern": "salad_lunch"}
+{"session_id": "session_001051", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_rolls", "bakery_pita"], "pattern": "burger_meal"}
+{"session_id": "session_000156", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000660", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000199", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "veg_tomato", "snack_jam", "dairy_yogurt"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000423", "items": ["bev_coffee", "bakery_croissant", "fruit_grapes", "meat_chicken"], "pattern": "unusual"}
+{"session_id": "session_001098", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "frozen_peas"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000847", "items": ["dairy_cheddar", "meat_lentils", "snack_chips", "veg_carrot", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000613", "items": ["bakery_bread", "dairy_butter", "snack_jam", "fruit_grapes", "bakery_tortilla", "veg_spinach"], "pattern": "toast_breakfast"}
+{"session_id": "session_000750", "items": ["dairy_milk", "pantry_sauce"], "pattern": "independent"}
+{"session_id": "session_001009", "items": ["home_toothpaste", "home_toothbrush", "bakery_tortilla", "bakery_baguette", "bev_juice", "dairy_yogurt"], "pattern": "oral_care"}
+{"session_id": "session_000359", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "fruit_lemon"], "pattern": "cereal_breakfast"}
+{"session_id": "session_001037", "items": ["bakery_tortilla", "bakery_baguette", "bakery_bread"], "pattern": "unusual"}
+{"session_id": "session_000440", "items": ["bakery_bagel", "home_toothbrush", "snack_jam", "home_detergent", "meat_lentils"], "pattern": "independent"}
+{"session_id": "session_000198", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_pepper", "snack_crackers", "home_towels"], "pattern": "movie_night"}
+{"session_id": "session_000058", "items": ["meat_lentils", "dairy_cream", "fruit_berries", "meat_turkey", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_000900", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "pantry_pasta", "home_toothpaste"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000942", "items": ["dairy_cottage", "bev_tea", "dairy_cheddar", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_000815", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "frozen_pizza", "fruit_berries", "pantry_pasta"], "pattern": "coffee_morning"}
+{"session_id": "session_001107", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000667", "items": ["veg_tomato", "bakery_bread", "dairy_mozzarella", "dairy_cream", "fruit_apple"], "pattern": "unusual"}
+{"session_id": "session_000386", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "veg_spinach", "meat_chicken", "pantry_rice"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000725", "items": ["pantry_rice", "pantry_spices", "snack_jam", "veg_spinach", "dairy_eggs", "bakery_bagel", "dairy_cheddar"], "pattern": "lentil_dinner"}
+{"session_id": "session_000000", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_bagel", "meat_turkey", "dairy_yogurt"], "pattern": "salad_lunch"}
+{"session_id": "session_000595", "items": ["veg_carrot", "fruit_avocado", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000432", "items": ["snack_crackers", "pantry_sugar"], "pattern": "unusual"}
+{"session_id": "session_001142", "items": ["home_toothpaste", "home_toothbrush", "snack_chips", "pantry_sauce", "pantry_pasta"], "pattern": "oral_care"}
+{"session_id": "session_000457", "items": ["meat_patties", "bev_water"], "pattern": "unusual"}
+{"session_id": "session_000615", "items": ["dairy_mozzarella", "pantry_sauce", "snack_jam", "fruit_apple", "veg_onion", "fruit_grapes"], "pattern": "independent"}
+{"session_id": "session_000772", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "meat_lentils", "meat_chicken", "home_towels"], "pattern": "pasta_night"}
+{"session_id": "session_000618", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000633", "items": ["veg_pepper", "snack_chocolate", "home_towels", "dairy_milk", "bakery_bread", "dairy_eggs"], "pattern": "independent"}
+{"session_id": "session_000794", "items": ["bev_coffee", "dairy_milk", "home_towels"], "pattern": "coffee_morning"}
+{"session_id": "session_000580", "items": ["veg_potato", "home_toothpaste", "bakery_rolls", "meat_turkey", "pantry_sauce", "fruit_avocado", "bev_juice"], "pattern": "independent"}
+{"session_id": "session_001084", "items": ["fruit_banana", "veg_spinach"], "pattern": "unusual"}
+{"session_id": "session_000496", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000930", "items": ["home_toothpaste", "home_toothbrush", "veg_spinach", "snack_cereal", "veg_carrot", "bev_juice", "meat_patties"], "pattern": "oral_care"}
+{"session_id": "session_000579", "items": ["dairy_butter", "bakery_croissant", "meat_tofu", "dairy_yogurt"], "pattern": "independent"}
+{"session_id": "session_000834", "items": ["meat_patties", "dairy_cheddar", "bev_orange", "pantry_pasta"], "pattern": "burger_meal"}
+{"session_id": "session_000506", "items": ["meat_tofu", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000707", "items": ["veg_tomato", "veg_carrot", "snack_jam"], "pattern": "independent"}
+{"session_id": "session_000316", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000110", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "meat_tofu", "pantry_rice"], "pattern": "burger_meal"}
+{"session_id": "session_000460", "items": ["snack_cereal", "fruit_banana", "bakery_pita", "snack_chips", "bev_tea", "fruit_lemon", "home_towels"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000015", "items": ["bev_coffee", "dairy_milk", "veg_carrot", "bev_soda", "bakery_rolls", "bakery_tortilla", "dairy_mozzarella"], "pattern": "coffee_morning"}
+{"session_id": "session_001043", "items": ["bev_coffee", "dairy_milk", "bev_water"], "pattern": "coffee_morning"}
+{"session_id": "session_000229", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000638", "items": ["bakery_bread", "dairy_butter", "snack_jam", "frozen_pizza"], "pattern": "toast_breakfast"}
+{"session_id": "session_001169", "items": ["snack_nuts", "fruit_lemon", "home_toothbrush", "bev_orange", "bev_water", "meat_tofu"], "pattern": "independent"}
+{"session_id": "session_000301", "items": ["dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000275", "items": ["bakery_bread", "bev_tea", "home_toothbrush"], "pattern": "independent"}
+{"session_id": "session_000075", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_buns"], "pattern": "movie_night"}
+{"session_id": "session_000991", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "snack_chips", "bakery_bread", "fruit_avocado"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000478", "items": ["bakery_bread", "dairy_butter", "bev_tea", "snack_chocolate"], "pattern": "toast_breakfast"}
+{"session_id": "session_000627", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_bread", "frozen_peas"], "pattern": "burger_meal"}
+{"session_id": "session_001118", "items": ["dairy_cheddar", "veg_onion", "meat_turkey", "dairy_butter", "snack_cereal"], "pattern": "unusual"}
+{"session_id": "session_000249", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "dairy_yogurt"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000909", "items": ["bakery_buns", "dairy_butter", "dairy_eggs", "bev_coffee"], "pattern": "independent"}
+{"session_id": "session_000472", "items": ["fruit_grapes", "bev_tea", "snack_jam", "bakery_pita", "home_towels", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_000553", "items": ["meat_chicken", "pantry_sugar"], "pattern": "independent"}
+{"session_id": "session_000557", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_water", "bev_soda", "snack_chips"], "pattern": "toast_breakfast"}
+{"session_id": "session_000521", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "dairy_cheddar", "home_toothbrush", "snack_nuts", "dairy_cottage"], "pattern": "salad_lunch"}
+{"session_id": "session_000925", "items": ["home_toothpaste", "home_toothbrush", "dairy_yogurt", "snack_chocolate", "snack_jam"], "pattern": "oral_care"}
+{"session_id": "session_000594", "items": ["bev_orange", "meat_chicken", "bakery_baguette", "dairy_yogurt"], "pattern": "independent"}
+{"session_id": "session_000077", "items": ["meat_patties", "dairy_cheddar", "snack_chips", "snack_crackers", "veg_onion"], "pattern": "burger_meal"}
+{"session_id": "session_000844", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "meat_sausage", "bev_juice", "bakery_rolls", "meat_turkey"], "pattern": "snack_board"}
+{"session_id": "session_000565", "items": ["veg_carrot", "veg_pepper", "fruit_grapes", "fruit_berries"], "pattern": "unusual"}
+{"session_id": "session_000297", "items": ["pantry_pasta", "pantry_sauce", "bakery_buns", "dairy_cottage", "dairy_butter"], "pattern": "pasta_night"}
+{"session_id": "session_001193", "items": ["bev_soda", "dairy_butter", "bakery_rolls"], "pattern": "unusual"}
+{"session_id": "session_000449", "items": ["bev_juice", "meat_chicken", "dairy_mozzarella"], "pattern": "independent"}
+{"session_id": "session_000683", "items": ["snack_chips", "bev_soda", "snack_chocolate", "fruit_grapes"], "pattern": "movie_night"}
+{"session_id": "session_001199", "items": ["meat_chicken", "meat_tofu"], "pattern": "independent"}
+{"session_id": "session_000584", "items": ["dairy_milk", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000604", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_pita"], "pattern": "lentil_dinner"}
+{"session_id": "session_001061", "items": ["meat_tofu", "bakery_baguette", "dairy_cheddar", "bakery_bread", "bakery_rolls", "fruit_banana"], "pattern": "independent"}
+{"session_id": "session_000816", "items": ["snack_chips", "meat_sausage"], "pattern": "unusual"}
+{"session_id": "session_000600", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "dairy_milk"], "pattern": "pasta_night"}
+{"session_id": "session_000831", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_001082", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_chocolate"], "pattern": "burger_meal"}
+{"session_id": "session_000880", "items": ["snack_chips", "fruit_lemon", "veg_spinach", "snack_cereal", "bakery_baguette", "veg_pepper", "dairy_cheddar", "frozen_peas"], "pattern": "independent"}
+{"session_id": "session_000351", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_toothbrush"], "pattern": "toast_breakfast"}
+{"session_id": "session_000964", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "veg_potato"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000903", "items": ["meat_chicken", "snack_crackers"], "pattern": "unusual"}
+{"session_id": "session_000485", "items": ["fruit_lemon", "home_toothpaste", "frozen_peas", "dairy_cottage", "pantry_rice"], "pattern": "independent"}
+{"session_id": "session_000421", "items": ["pantry_sugar", "frozen_peas", "frozen_pizza", "snack_chips", "veg_onion", "bakery_tortilla"], "pattern": "independent"}
+{"session_id": "session_001138", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bakery_bagel", "meat_lentils", "dairy_cheddar"], "pattern": "pasta_night"}
+{"session_id": "session_000849", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_pepper", "snack_crackers", "meat_lentils"], "pattern": "movie_night"}
+{"session_id": "session_000814", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_pepper", "bev_orange", "dairy_butter", "meat_turkey"], "pattern": "movie_night"}
+{"session_id": "session_000042", "items": ["meat_chicken", "fruit_berries", "bev_orange", "snack_chocolate", "fruit_lemon", "bakery_buns", "bakery_tortilla", "bakery_rolls"], "pattern": "independent"}
+{"session_id": "session_000713", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "frozen_peas", "home_detergent"], "pattern": "lentil_dinner"}
+{"session_id": "session_000912", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bev_juice", "snack_chocolate", "meat_patties", "fruit_berries"], "pattern": "lentil_dinner"}
+{"session_id": "session_000655", "items": ["veg_tomato", "veg_pepper", "bakery_pita", "bakery_baguette", "meat_turkey"], "pattern": "independent"}
+{"session_id": "session_000915", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "pantry_sugar"], "pattern": "salad_lunch"}
+{"session_id": "session_000954", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bakery_bagel", "veg_onion", "fruit_lemon"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000201", "items": ["veg_onion", "snack_jam"], "pattern": "independent"}
+{"session_id": "session_000585", "items": ["pantry_rice", "pantry_spices", "bev_coffee", "meat_lentils"], "pattern": "lentil_dinner"}
+{"session_id": "session_000147", "items": ["snack_jam", "bakery_baguette", "pantry_rice"], "pattern": "independent"}
+{"session_id": "session_000602", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_000869", "items": ["meat_lentils", "pantry_spices", "veg_onion", "dairy_butter"], "pattern": "lentil_dinner"}
+{"session_id": "session_000155", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "pantry_pasta", "snack_chips", "fruit_avocado", "dairy_butter"], "pattern": "coffee_morning"}
+{"session_id": "session_000064", "items": ["bakery_bread", "dairy_butter", "bev_soda", "meat_tofu", "veg_tomato"], "pattern": "toast_breakfast"}
+{"session_id": "session_000282", "items": ["bev_coffee", "dairy_milk", "dairy_cream"], "pattern": "coffee_morning"}
+{"session_id": "session_000711", "items": ["dairy_eggs", "home_toothpaste", "dairy_mozzarella", "bakery_bread", "dairy_yogurt", "dairy_butter", "dairy_cottage", "bev_orange"], "pattern": "independent"}
+{"session_id": "session_000933", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000328", "items": ["fruit_berries", "fruit_apple", "bev_juice", "home_toothpaste", "pantry_sauce", "bakery_bagel", "dairy_mozzarella"], "pattern": "independent"}
+{"session_id": "session_000870", "items": ["snack_nuts", "veg_tomato", "veg_onion", "meat_patties", "dairy_yogurt", "pantry_pasta", "bev_soda", "bev_juice"], "pattern": "independent"}
+{"session_id": "session_000087", "items": ["home_toothpaste", "home_toothbrush", "bakery_baguette", "dairy_butter", "dairy_milk", "dairy_yogurt", "bev_orange"], "pattern": "oral_care"}
+{"session_id": "session_000859", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000761", "items": ["home_toothpaste", "home_toothbrush", "bakery_buns", "meat_patties"], "pattern": "oral_care"}
+{"session_id": "session_000570", "items": ["snack_cereal", "fruit_lemon", "meat_patties", "pantry_sugar", "bev_water"], "pattern": "unusual"}
+{"session_id": "session_000288", "items": ["bakery_bread", "dairy_butter", "snack_jam", "dairy_yogurt"], "pattern": "toast_breakfast"}
+{"session_id": "session_000296", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bakery_rolls", "fruit_banana"], "pattern": "salad_lunch"}
+{"session_id": "session_000016", "items": ["meat_tofu", "veg_carrot", "bev_coffee", "fruit_avocado"], "pattern": "unusual"}
+{"session_id": "session_000641", "items": ["fruit_lemon", "bakery_croissant", "meat_sausage", "home_toothbrush", "frozen_pizza"], "pattern": "independent"}
+{"session_id": "session_000279", "items": ["home_toothpaste", "home_toothbrush", "frozen_pizza", "pantry_sugar", "bakery_pita", "pantry_pasta", "fruit_avocado"], "pattern": "oral_care"}
+{"session_id": "session_000677", "items": ["meat_chicken", "veg_pepper", "dairy_yogurt", "snack_chocolate", "frozen_peas", "dairy_cream"], "pattern": "independent"}
+{"session_id": "session_000789", "items": ["snack_chips", "meat_sausage", "bakery_bread"], "pattern": "unusual"}
+{"session_id": "session_000614", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "meat_lentils", "veg_pepper"], "pattern": "coffee_morning"}
+{"session_id": "session_000957", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "snack_cereal", "home_towels", "bakery_rolls"], "pattern": "pasta_night"}
+{"session_id": "session_000048", "items": ["bakery_buns", "dairy_cheddar", "bakery_rolls", "pantry_sauce"], "pattern": "burger_meal"}
+{"session_id": "session_000928", "items": ["dairy_cream", "home_toothpaste", "dairy_butter", "home_towels", "dairy_milk", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_001068", "items": ["bev_orange", "veg_potato", "fruit_banana", "snack_cereal", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000241", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "meat_chicken", "dairy_yogurt"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000514", "items": ["bakery_buns", "dairy_yogurt", "home_towels", "pantry_pasta", "bev_tea", "meat_turkey", "snack_chips", "pantry_sugar"], "pattern": "independent"}
+{"session_id": "session_001029", "items": ["bakery_bread", "dairy_butter", "snack_jam", "snack_nuts"], "pattern": "toast_breakfast"}
+{"session_id": "session_000190", "items": ["pantry_sugar", "frozen_pizza"], "pattern": "unusual"}
+{"session_id": "session_000522", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000512", "items": ["dairy_butter", "bakery_croissant", "dairy_yogurt", "fruit_berries"], "pattern": "independent"}
+{"session_id": "session_000162", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000819", "items": ["veg_spinach", "fruit_grapes", "bakery_pita", "meat_tofu", "dairy_mozzarella", "bev_water"], "pattern": "independent"}
+{"session_id": "session_001160", "items": ["snack_crackers", "meat_sausage", "bev_tea", "pantry_sugar", "fruit_banana", "bev_soda", "meat_chicken", "dairy_mozzarella"], "pattern": "independent"}
+{"session_id": "session_000178", "items": ["bakery_croissant", "dairy_cottage", "dairy_yogurt", "bakery_pita", "veg_pepper"], "pattern": "unusual"}
+{"session_id": "session_000395", "items": ["meat_tofu", "snack_nuts", "dairy_cream", "bev_coffee"], "pattern": "independent"}
+{"session_id": "session_000355", "items": ["bakery_bread", "dairy_butter", "snack_jam", "meat_chicken", "fruit_avocado"], "pattern": "toast_breakfast"}
+{"session_id": "session_000283", "items": ["dairy_eggs", "bev_soda", "meat_sausage", "home_toothbrush", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_000375", "items": ["bakery_buns", "dairy_cheddar", "fruit_berries", "pantry_sauce", "frozen_pizza", "veg_pepper"], "pattern": "burger_meal"}
+{"session_id": "session_000397", "items": ["pantry_pasta", "pantry_sauce"], "pattern": "pasta_night"}
+{"session_id": "session_000926", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "fruit_banana", "meat_lentils", "bev_water"], "pattern": "coffee_morning"}
+{"session_id": "session_000498", "items": ["home_toothpaste", "home_toothbrush", "frozen_peas", "fruit_grapes", "dairy_cheddar"], "pattern": "oral_care"}
+{"session_id": "session_000984", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "frozen_pizza", "home_towels", "meat_patties", "dairy_milk"], "pattern": "lentil_dinner"}
+{"session_id": "session_001141", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_000218", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "meat_turkey", "veg_carrot", "meat_lentils"], "pattern": "coffee_morning"}
+{"session_id": "session_001032", "items": ["fruit_apple", "meat_lentils", "bev_coffee", "snack_nuts", "meat_patties"], "pattern": "independent"}
+{"session_id": "session_000130", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000563", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_tortilla"], "pattern": "burger_meal"}
+{"session_id": "session_000135", "items": ["home_toothpaste", "home_toothbrush", "veg_spinach", "fruit_avocado", "snack_cereal", "frozen_pizza", "frozen_peas"], "pattern": "oral_care"}
+{"session_id": "session_000941", "items": ["dairy_eggs", "dairy_cottage"], "pattern": "independent"}
+{"session_id": "session_000994", "items": ["fruit_avocado", "bakery_baguette"], "pattern": "unusual"}
+{"session_id": "session_000642", "items": ["frozen_peas", "home_towels", "pantry_pasta", "bakery_rolls", "bev_soda", "pantry_spices", "fruit_berries"], "pattern": "independent"}
+{"session_id": "session_000268", "items": ["fruit_apple", "snack_cereal", "home_towels", "fruit_berries", "veg_carrot", "pantry_spices", "veg_spinach"], "pattern": "independent"}
+{"session_id": "session_000292", "items": ["bakery_bread", "dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000901", "items": ["fruit_banana", "meat_sausage"], "pattern": "independent"}
+{"session_id": "session_001154", "items": ["veg_spinach", "fruit_avocado", "veg_tomato"], "pattern": "salad_lunch"}
+{"session_id": "session_000481", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_croissant", "dairy_milk", "bakery_baguette", "fruit_lemon"], "pattern": "lentil_dinner"}
+{"session_id": "session_000969", "items": ["pantry_sauce", "dairy_mozzarella", "dairy_cottage", "frozen_pizza", "meat_lentils", "bev_coffee", "home_toothbrush"], "pattern": "pasta_night"}
+{"session_id": "session_000538", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000582", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_toothbrush", "fruit_apple", "pantry_pasta"], "pattern": "toast_breakfast"}
+{"session_id": "session_001076", "items": ["home_towels", "snack_nuts", "dairy_cream", "snack_cereal", "bev_water", "veg_onion", "snack_crackers", "bakery_baguette"], "pattern": "independent"}
+{"session_id": "session_000913", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "frozen_pizza", "bev_coffee", "bakery_pita"], "pattern": "pasta_night"}
+{"session_id": "session_001036", "items": ["bakery_bagel", "dairy_mozzarella", "pantry_sugar"], "pattern": "independent"}
+{"session_id": "session_000133", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "frozen_pizza"], "pattern": "lentil_dinner"}
+{"session_id": "session_000414", "items": ["frozen_peas", "home_toothbrush", "fruit_avocado"], "pattern": "unusual"}
+{"session_id": "session_000420", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "pantry_sauce", "meat_lentils", "bakery_bagel"], "pattern": "burger_meal"}
+{"session_id": "session_001176", "items": ["meat_lentils", "frozen_pizza", "bev_juice"], "pattern": "independent"}
+{"session_id": "session_000779", "items": ["pantry_sauce", "bev_tea", "snack_chocolate", "bev_water", "dairy_cottage", "snack_nuts", "pantry_rice", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_001001", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_tortilla", "dairy_milk"], "pattern": "toast_breakfast"}
+{"session_id": "session_000422", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "snack_nuts"], "pattern": "lentil_dinner"}
+{"session_id": "session_000419", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_bagel"], "pattern": "lentil_dinner"}
+{"session_id": "session_000559", "items": ["home_detergent", "dairy_eggs", "pantry_rice"], "pattern": "independent"}
+{"session_id": "session_000718", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "meat_chicken", "fruit_berries"], "pattern": "burger_meal"}
+{"session_id": "session_000019", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "dairy_mozzarella", "home_detergent", "bev_tea", "meat_tofu"], "pattern": "burger_meal"}
+{"session_id": "session_001130", "items": ["bakery_baguette", "meat_lentils", "fruit_apple", "home_towels", "veg_pepper"], "pattern": "independent"}
+{"session_id": "session_001090", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bev_coffee", "meat_tofu", "fruit_lemon"], "pattern": "cereal_breakfast"}
+{"session_id": "session_001104", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000839", "items": ["bev_tea", "pantry_sauce", "veg_spinach", "snack_chocolate", "bakery_bread"], "pattern": "unusual"}
+{"session_id": "session_000896", "items": ["snack_chips", "bev_soda", "snack_chocolate", "frozen_pizza", "dairy_milk", "bakery_bread"], "pattern": "movie_night"}
+{"session_id": "session_000362", "items": ["bev_orange", "bev_soda", "pantry_rice", "frozen_peas", "dairy_cottage"], "pattern": "independent"}
+{"session_id": "session_000631", "items": ["bakery_bread", "dairy_butter", "bakery_baguette", "frozen_pizza", "snack_jam", "fruit_berries", "frozen_peas"], "pattern": "toast_breakfast"}
+{"session_id": "session_000666", "items": ["snack_jam", "bev_juice", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_000598", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "pantry_pasta", "veg_pepper", "home_detergent", "snack_crackers"], "pattern": "lentil_dinner"}
+{"session_id": "session_000052", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_pepper", "bev_water", "snack_cereal", "veg_potato"], "pattern": "pasta_night"}
+{"session_id": "session_000487", "items": ["bev_coffee", "frozen_pizza", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_000272", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000560", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000702", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bev_orange", "fruit_apple"], "pattern": "salad_lunch"}
+{"session_id": "session_001056", "items": ["bakery_bread", "snack_jam", "meat_sausage", "home_toothpaste", "pantry_spices", "bakery_bagel"], "pattern": "toast_breakfast"}
+{"session_id": "session_000812", "items": ["dairy_butter", "bakery_croissant", "meat_chicken", "dairy_mozzarella", "fruit_banana", "pantry_rice"], "pattern": "independent"}
+{"session_id": "session_001078", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bakery_bagel", "pantry_spices", "snack_chips"], "pattern": "pasta_night"}
+{"session_id": "session_001042", "items": ["bakery_bread", "dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000245", "items": ["home_toothpaste", "home_toothbrush", "snack_cereal"], "pattern": "oral_care"}
+{"session_id": "session_000643", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "meat_turkey"], "pattern": "salad_lunch"}
+{"session_id": "session_001050", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_pita", "home_toothbrush"], "pattern": "movie_night"}
+{"session_id": "session_000462", "items": ["snack_chips", "bev_soda", "dairy_cheddar"], "pattern": "movie_night"}
+{"session_id": "session_000790", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_000459", "items": ["bev_juice", "pantry_pasta", "bakery_croissant", "bev_coffee", "bakery_pita"], "pattern": "independent"}
+{"session_id": "session_000988", "items": ["snack_chocolate", "home_towels", "meat_turkey", "meat_lentils", "snack_cereal"], "pattern": "unusual"}
+{"session_id": "session_000208", "items": ["bev_juice", "dairy_yogurt", "dairy_eggs", "pantry_sauce", "home_detergent"], "pattern": "unusual"}
+{"session_id": "session_001089", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000971", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_nuts", "fruit_apple", "bakery_pita", "snack_crackers"], "pattern": "movie_night"}
+{"session_id": "session_001015", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "dairy_cream", "meat_patties", "veg_spinach"], "pattern": "pasta_night"}
+{"session_id": "session_000290", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "dairy_cottage", "veg_potato", "bakery_croissant", "fruit_banana"], "pattern": "coffee_morning"}
+{"session_id": "session_000105", "items": ["bakery_bread", "meat_tofu", "dairy_milk", "dairy_cottage", "veg_pepper"], "pattern": "independent"}
+{"session_id": "session_000081", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_juice"], "pattern": "toast_breakfast"}
+{"session_id": "session_000830", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bev_coffee", "veg_potato", "bakery_baguette", "veg_carrot"], "pattern": "burger_meal"}
+{"session_id": "session_001129", "items": ["bev_orange", "veg_tomato", "fruit_berries"], "pattern": "unusual"}
+{"session_id": "session_000388", "items": ["snack_chocolate", "fruit_avocado", "pantry_rice", "pantry_sugar", "meat_tofu", "dairy_milk"], "pattern": "independent"}
+{"session_id": "session_000068", "items": ["bakery_bread", "dairy_butter", "snack_jam", "snack_crackers", "meat_patties", "bev_orange", "bev_coffee"], "pattern": "toast_breakfast"}
+{"session_id": "session_000430", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "snack_cereal", "bev_water"], "pattern": "snack_board"}
+{"session_id": "session_000906", "items": ["meat_patties", "meat_chicken", "home_toothbrush"], "pattern": "unusual"}
+{"session_id": "session_001121", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_bagel", "meat_lentils", "bev_water", "snack_cereal"], "pattern": "burger_meal"}
+{"session_id": "session_000678", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000621", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000090", "items": ["snack_cereal", "fruit_banana", "bakery_pita", "pantry_sauce"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000004", "items": ["dairy_yogurt", "snack_chocolate", "frozen_pizza", "home_detergent", "meat_turkey", "snack_cereal", "dairy_mozzarella", "snack_chips"], "pattern": "independent"}
+{"session_id": "session_000076", "items": ["bakery_rolls", "pantry_sauce", "dairy_cream"], "pattern": "independent"}
+{"session_id": "session_001045", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000150", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_tortilla", "veg_carrot"], "pattern": "burger_meal"}
+{"session_id": "session_001106", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_tomato", "pantry_sauce"], "pattern": "movie_night"}
+{"session_id": "session_000025", "items": ["home_toothpaste", "home_toothbrush", "pantry_sauce", "frozen_peas", "bev_coffee"], "pattern": "oral_care"}
+{"session_id": "session_000063", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "pantry_sauce", "veg_potato", "bakery_bagel", "meat_turkey"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000822", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "veg_spinach", "frozen_peas"], "pattern": "coffee_morning"}
+{"session_id": "session_001178", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "bev_soda", "pantry_spices"], "pattern": "coffee_morning"}
+{"session_id": "session_000591", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bev_soda", "meat_sausage", "meat_turkey", "bakery_baguette"], "pattern": "burger_meal"}
+{"session_id": "session_001124", "items": ["pantry_pasta", "dairy_mozzarella", "snack_cereal", "bakery_bagel", "bakery_pita", "veg_spinach", "snack_chips"], "pattern": "pasta_night"}
+{"session_id": "session_001088", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bev_tea"], "pattern": "toast_breakfast"}
+{"session_id": "session_000937", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_banana", "veg_carrot", "bev_tea"], "pattern": "lentil_dinner"}
+{"session_id": "session_000668", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "snack_jam", "dairy_cream"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000541", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_cereal", "frozen_peas", "bakery_rolls"], "pattern": "burger_meal"}
+{"session_id": "session_000586", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_pita"], "pattern": "movie_night"}
+{"session_id": "session_000392", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000876", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000669", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "fruit_apple", "veg_tomato"], "pattern": "pasta_night"}
+{"session_id": "session_000895", "items": ["dairy_milk", "fruit_banana", "meat_lentils"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000723", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_bagel", "frozen_pizza"], "pattern": "burger_meal"}
+{"session_id": "session_000773", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_detergent"], "pattern": "toast_breakfast"}
+{"session_id": "session_000539", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "meat_tofu", "home_toothpaste", "frozen_pizza", "dairy_cottage"], "pattern": "pasta_night"}
+{"session_id": "session_000267", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "meat_patties", "meat_chicken", "veg_carrot"], "pattern": "salad_lunch"}
+{"session_id": "session_000647", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "snack_cereal", "bev_tea", "bakery_bagel"], "pattern": "lentil_dinner"}
+{"session_id": "session_000442", "items": ["snack_chips", "bev_soda", "snack_chocolate", "home_towels", "bakery_bread", "bakery_buns"], "pattern": "movie_night"}
+{"session_id": "session_000862", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "veg_onion", "pantry_sauce", "dairy_yogurt", "snack_crackers"], "pattern": "coffee_morning"}
+{"session_id": "session_000981", "items": ["frozen_peas", "dairy_milk"], "pattern": "independent"}
+{"session_id": "session_000747", "items": ["home_toothpaste", "home_toothbrush", "snack_cereal"], "pattern": "oral_care"}
+{"session_id": "session_000576", "items": ["dairy_eggs", "dairy_cheddar", "veg_potato", "frozen_pizza", "meat_patties"], "pattern": "independent"}
+{"session_id": "session_000013", "items": ["home_toothpaste", "home_toothbrush", "meat_turkey", "dairy_mozzarella", "dairy_eggs"], "pattern": "oral_care"}
+{"session_id": "session_001127", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "dairy_cheddar"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000889", "items": ["bakery_baguette", "bev_water", "meat_tofu", "pantry_pasta", "home_towels"], "pattern": "independent"}
+{"session_id": "session_000121", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bev_water", "snack_chips"], "pattern": "pasta_night"}
+{"session_id": "session_000322", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_lemon", "bakery_baguette", "meat_turkey"], "pattern": "lentil_dinner"}
+{"session_id": "session_000766", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000515", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "home_towels"], "pattern": "coffee_morning"}
+{"session_id": "session_000480", "items": ["fruit_berries", "fruit_banana", "frozen_pizza"], "pattern": "independent"}
+{"session_id": "session_000652", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bev_coffee", "fruit_avocado", "snack_jam"], "pattern": "movie_night"}
+{"session_id": "session_000635", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_baguette", "home_detergent"], "pattern": "lentil_dinner"}
+{"session_id": "session_000094", "items": ["snack_chips", "bev_soda", "snack_chocolate", "meat_sausage"], "pattern": "movie_night"}
+{"session_id": "session_000590", "items": ["bakery_bread", "dairy_butter", "snack_jam", "meat_turkey"], "pattern": "toast_breakfast"}
+{"session_id": "session_000904", "items": ["dairy_cottage", "bakery_tortilla", "meat_patties"], "pattern": "unusual"}
+{"session_id": "session_000505", "items": ["veg_potato", "fruit_berries", "pantry_spices", "pantry_rice", "dairy_eggs", "veg_pepper", "snack_crackers", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_000569", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_tortilla", "pantry_sauce", "bakery_bread", "snack_nuts"], "pattern": "burger_meal"}
+{"session_id": "session_000434", "items": ["snack_chips", "bev_soda", "snack_chocolate", "meat_turkey", "pantry_pasta"], "pattern": "movie_night"}
+{"session_id": "session_001024", "items": ["bakery_bread", "bakery_rolls", "frozen_pizza", "bakery_croissant", "home_detergent", "pantry_sugar", "dairy_milk"], "pattern": "independent"}
+{"session_id": "session_001163", "items": ["bakery_rolls", "snack_crackers"], "pattern": "independent"}
+{"session_id": "session_000768", "items": ["home_toothpaste", "home_toothbrush", "snack_chips", "pantry_sugar", "veg_potato", "fruit_berries", "frozen_pizza"], "pattern": "oral_care"}
+{"session_id": "session_000629", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_eggs", "home_toothbrush", "veg_carrot"], "pattern": "movie_night"}
+{"session_id": "session_000878", "items": ["dairy_mozzarella", "bev_coffee", "bev_juice"], "pattern": "independent"}
+{"session_id": "session_001159", "items": ["dairy_milk", "fruit_banana", "fruit_lemon", "bakery_baguette", "meat_lentils", "dairy_eggs", "veg_carrot"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000648", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "dairy_cheddar"], "pattern": "lentil_dinner"}
+{"session_id": "session_000799", "items": ["dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000335", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_potato", "snack_cereal"], "pattern": "pasta_night"}
+{"session_id": "session_000656", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bakery_pita", "veg_onion"], "pattern": "pasta_night"}
+{"session_id": "session_000246", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "veg_carrot", "veg_onion", "snack_nuts", "snack_cereal"], "pattern": "burger_meal"}
+{"session_id": "session_000607", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "fruit_apple", "dairy_butter", "pantry_sauce"], "pattern": "coffee_morning"}
+{"session_id": "session_000001", "items": ["veg_potato", "fruit_apple", "frozen_peas", "bev_orange"], "pattern": "independent"}
+{"session_id": "session_000287", "items": ["home_toothpaste", "home_toothbrush", "home_towels", "dairy_butter", "meat_patties", "bev_coffee", "fruit_avocado"], "pattern": "oral_care"}
+{"session_id": "session_001109", "items": ["veg_potato", "bakery_baguette", "bev_coffee"], "pattern": "independent"}
+{"session_id": "session_001161", "items": ["snack_chips", "bev_tea", "meat_lentils", "fruit_grapes", "fruit_berries", "bev_orange", "meat_tofu", "frozen_peas"], "pattern": "independent"}
+{"session_id": "session_000356", "items": ["bev_water", "bakery_bread"], "pattern": "independent"}
+{"session_id": "session_000383", "items": ["home_towels", "pantry_sauce", "snack_chocolate", "fruit_banana"], "pattern": "independent"}
+{"session_id": "session_000222", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "home_detergent", "bev_tea", "fruit_apple"], "pattern": "pasta_night"}
+{"session_id": "session_000082", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "meat_sausage", "dairy_yogurt", "bev_tea"], "pattern": "burger_meal"}
+{"session_id": "session_000728", "items": ["bakery_bread", "dairy_butter", "snack_jam", "pantry_sugar", "snack_crackers"], "pattern": "toast_breakfast"}
+{"session_id": "session_000215", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_001151", "items": ["dairy_butter", "dairy_eggs", "home_towels", "snack_cereal", "snack_jam", "fruit_lemon", "dairy_cream", "veg_onion"], "pattern": "independent"}
+{"session_id": "session_000143", "items": ["fruit_avocado", "bakery_rolls"], "pattern": "unusual"}
+{"session_id": "session_000473", "items": ["dairy_milk", "fruit_banana", "pantry_spices"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000691", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_000057", "items": ["bakery_buns", "meat_patties", "fruit_apple", "bakery_bagel", "meat_lentils"], "pattern": "burger_meal"}
+{"session_id": "session_001081", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "dairy_yogurt", "bakery_tortilla"], "pattern": "coffee_morning"}
+{"session_id": "session_001026", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000209", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "bakery_tortilla", "pantry_pasta", "bakery_baguette", "meat_chicken"], "pattern": "coffee_morning"}
+{"session_id": "session_000968", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "bakery_tortilla", "bev_orange", "bakery_rolls", "veg_pepper"], "pattern": "lentil_dinner"}
+{"session_id": "session_000148", "items": ["snack_cereal", "fruit_banana", "bakery_baguette"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000881", "items": ["bev_coffee", "dairy_milk", "pantry_pasta", "home_towels", "fruit_berries", "frozen_peas", "fruit_apple"], "pattern": "coffee_morning"}
+{"session_id": "session_000601", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "snack_chips"], "pattern": "snack_board"}
+{"session_id": "session_000343", "items": ["home_toothpaste", "home_toothbrush", "frozen_pizza"], "pattern": "oral_care"}
+{"session_id": "session_000066", "items": ["meat_chicken", "dairy_cream", "veg_potato", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000092", "items": ["frozen_peas", "bakery_rolls", "dairy_cottage", "snack_chocolate", "pantry_rice"], "pattern": "independent"}
+{"session_id": "session_001065", "items": ["snack_chips", "bev_soda", "snack_chocolate", "home_toothpaste"], "pattern": "movie_night"}
+{"session_id": "session_000795", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_chips"], "pattern": "burger_meal"}
+{"session_id": "session_000775", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "home_towels"], "pattern": "pasta_night"}
+{"session_id": "session_000484", "items": ["bev_orange", "snack_cereal", "dairy_milk", "bakery_rolls", "frozen_pizza"], "pattern": "independent"}
+{"session_id": "session_000848", "items": ["fruit_lemon", "meat_tofu", "dairy_milk", "dairy_cream", "snack_cereal", "bakery_croissant", "dairy_cottage"], "pattern": "independent"}
+{"session_id": "session_001189", "items": ["pantry_pasta", "dairy_mozzarella", "home_toothbrush"], "pattern": "pasta_night"}
+{"session_id": "session_000561", "items": ["fruit_avocado", "veg_tomato", "meat_chicken", "home_towels", "veg_spinach", "veg_carrot"], "pattern": "salad_lunch"}
+{"session_id": "session_000961", "items": ["bev_water", "pantry_spices", "snack_crackers", "bev_soda"], "pattern": "unusual"}
+{"session_id": "session_000976", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_yogurt", "bakery_pita"], "pattern": "movie_night"}
+{"session_id": "session_000673", "items": ["snack_cereal", "home_detergent", "bev_water", "bev_tea", "home_toothbrush", "bakery_croissant", "veg_pepper", "pantry_rice"], "pattern": "independent"}
+{"session_id": "session_000258", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "fruit_banana", "dairy_cottage"], "pattern": "salad_lunch"}
+{"session_id": "session_000509", "items": ["bakery_bread", "dairy_butter", "snack_jam", "meat_patties"], "pattern": "toast_breakfast"}
+{"session_id": "session_001053", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_towels"], "pattern": "toast_breakfast"}
+{"session_id": "session_000247", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_baguette"], "pattern": "movie_night"}
+{"session_id": "session_000611", "items": ["bakery_bread", "dairy_butter", "snack_jam", "fruit_lemon", "dairy_cottage", "snack_cereal"], "pattern": "toast_breakfast"}
+{"session_id": "session_000626", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "fruit_apple", "veg_carrot"], "pattern": "snack_board"}
+{"session_id": "session_000738", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000592", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "pantry_pasta", "fruit_banana", "snack_cereal", "bev_soda"], "pattern": "snack_board"}
+{"session_id": "session_000251", "items": ["pantry_rice", "meat_lentils", "meat_patties", "dairy_cottage", "frozen_pizza"], "pattern": "lentil_dinner"}
+{"session_id": "session_000192", "items": ["bev_coffee", "pantry_pasta"], "pattern": "independent"}
+{"session_id": "session_000513", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000526", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000744", "items": ["bev_water", "fruit_avocado"], "pattern": "independent"}
+{"session_id": "session_000975", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_potato", "snack_jam"], "pattern": "movie_night"}
+{"session_id": "session_001133", "items": ["bakery_baguette", "dairy_cheddar", "veg_carrot", "snack_chips", "bakery_tortilla", "bakery_pita"], "pattern": "snack_board"}
+{"session_id": "session_000034", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_001191", "items": ["bev_water", "dairy_milk", "frozen_pizza", "snack_chips", "fruit_berries"], "pattern": "independent"}
+{"session_id": "session_000759", "items": ["home_toothpaste", "home_toothbrush", "pantry_pasta", "dairy_milk"], "pattern": "oral_care"}
+{"session_id": "session_000426", "items": ["fruit_avocado", "veg_pepper"], "pattern": "independent"}
+{"session_id": "session_000223", "items": ["snack_crackers", "frozen_pizza", "meat_patties"], "pattern": "independent"}
+{"session_id": "session_000141", "items": ["home_toothpaste", "home_toothbrush"], "pattern": "oral_care"}
+{"session_id": "session_000865", "items": ["dairy_cheddar", "fruit_avocado", "snack_cereal", "veg_spinach", "bakery_bread", "home_towels", "snack_nuts"], "pattern": "independent"}
+{"session_id": "session_000020", "items": ["bakery_bread", "dairy_butter", "snack_jam", "pantry_rice", "veg_carrot"], "pattern": "toast_breakfast"}
+{"session_id": "session_000237", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_cereal"], "pattern": "movie_night"}
+{"session_id": "session_000987", "items": ["pantry_spices", "bev_orange"], "pattern": "independent"}
+{"session_id": "session_000701", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_yogurt", "snack_cereal", "meat_chicken", "bakery_baguette"], "pattern": "movie_night"}
+{"session_id": "session_000562", "items": ["bev_coffee", "dairy_milk", "pantry_sugar"], "pattern": "coffee_morning"}
+{"session_id": "session_000634", "items": ["bev_tea", "bakery_baguette", "fruit_grapes", "snack_chocolate", "bakery_buns"], "pattern": "independent"}
+{"session_id": "session_000253", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_bagel", "pantry_spices"], "pattern": "toast_breakfast"}
+{"session_id": "session_000657", "items": ["bakery_bread", "dairy_butter", "bev_tea", "dairy_cheddar"], "pattern": "toast_breakfast"}
+{"session_id": "session_000393", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "home_towels"], "pattern": "snack_board"}
+{"session_id": "session_000390", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "meat_sausage", "bakery_rolls", "pantry_sugar", "veg_pepper"], "pattern": "lentil_dinner"}
+{"session_id": "session_000692", "items": ["dairy_mozzarella", "fruit_grapes", "fruit_apple", "home_towels"], "pattern": "unusual"}
+{"session_id": "session_000807", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "dairy_cheddar"], "pattern": "salad_lunch"}
+{"session_id": "session_000454", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "dairy_yogurt", "snack_chips", "meat_patties"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000166", "items": ["bakery_baguette", "dairy_cheddar", "bev_soda", "fruit_grapes", "snack_nuts"], "pattern": "snack_board"}
+{"session_id": "session_000074", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bev_water"], "pattern": "burger_meal"}
+{"session_id": "session_000225", "items": ["fruit_lemon", "meat_sausage", "bev_water"], "pattern": "independent"}
+{"session_id": "session_000018", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "bev_water"], "pattern": "coffee_morning"}
+{"session_id": "session_000510", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "snack_cereal", "dairy_cottage", "veg_pepper"], "pattern": "lentil_dinner"}
+{"session_id": "session_000402", "items": ["bev_coffee", "bakery_pita", "meat_sausage"], "pattern": "independent"}
+{"session_id": "session_000588", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_bread", "snack_jam", "meat_turkey"], "pattern": "movie_night"}
+{"session_id": "session_000492", "items": ["dairy_eggs", "bakery_buns", "home_detergent", "snack_jam"], "pattern": "independent"}
+{"session_id": "session_000977", "items": ["dairy_milk", "bev_coffee", "snack_crackers", "veg_potato", "dairy_butter", "home_detergent", "bakery_tortilla", "meat_chicken"], "pattern": "independent"}
+{"session_id": "session_000033", "items": ["snack_chips", "bev_soda", "fruit_lemon", "bev_juice", "bakery_baguette"], "pattern": "movie_night"}
+{"session_id": "session_001172", "items": ["bakery_pita", "meat_patties", "fruit_avocado", "snack_chocolate", "veg_tomato", "home_towels"], "pattern": "independent"}
+{"session_id": "session_001097", "items": ["bakery_baguette", "veg_tomato"], "pattern": "unusual"}
+{"session_id": "session_000796", "items": ["bev_coffee", "frozen_pizza", "bakery_tortilla", "pantry_sauce", "veg_pepper", "bev_water", "veg_potato", "bakery_rolls"], "pattern": "independent"}
+{"session_id": "session_000302", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "meat_lentils"], "pattern": "burger_meal"}
+{"session_id": "session_000183", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "veg_potato", "bakery_rolls"], "pattern": "coffee_morning"}
+{"session_id": "session_001071", "items": ["bev_coffee", "meat_turkey", "fruit_berries", "dairy_mozzarella", "fruit_lemon", "bev_soda", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000106", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000662", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "veg_tomato", "meat_turkey"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000213", "items": ["bakery_buns", "dairy_cheddar", "dairy_mozzarella", "pantry_spices", "bakery_pita", "veg_carrot", "bakery_baguette"], "pattern": "burger_meal"}
+{"session_id": "session_000624", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "home_towels", "bev_orange"], "pattern": "salad_lunch"}
+{"session_id": "session_000868", "items": ["snack_chips", "bev_soda", "pantry_rice", "fruit_banana"], "pattern": "movie_night"}
+{"session_id": "session_000531", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "fruit_banana", "snack_jam", "pantry_rice"], "pattern": "snack_board"}
+{"session_id": "session_000244", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_rolls", "fruit_banana", "dairy_cream", "dairy_cheddar"], "pattern": "toast_breakfast"}
+{"session_id": "session_000809", "items": ["dairy_cream", "home_toothpaste", "pantry_sauce", "snack_nuts"], "pattern": "independent"}
+{"session_id": "session_001086", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bakery_rolls"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000340", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "fruit_lemon", "snack_cereal"], "pattern": "salad_lunch"}
+{"session_id": "session_000786", "items": ["bakery_bread", "dairy_butter", "snack_jam", "fruit_banana", "bev_tea"], "pattern": "toast_breakfast"}
+{"session_id": "session_000944", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "snack_chips"], "pattern": "burger_meal"}
+{"session_id": "session_000416", "items": ["veg_spinach", "veg_tomato", "frozen_peas", "bev_soda", "fruit_lemon", "snack_jam", "fruit_grapes"], "pattern": "salad_lunch"}
+{"session_id": "session_000406", "items": ["bakery_buns", "meat_patties", "meat_sausage"], "pattern": "burger_meal"}
+{"session_id": "session_001014", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_berries", "home_towels", "bakery_baguette"], "pattern": "lentil_dinner"}
+{"session_id": "session_000088", "items": ["bakery_buns", "meat_patties"], "pattern": "burger_meal"}
+{"session_id": "session_000366", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bakery_buns", "bakery_croissant"], "pattern": "pasta_night"}
+{"session_id": "session_000524", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000243", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes"], "pattern": "snack_board"}
+{"session_id": "session_000318", "items": ["bakery_bread", "dairy_butter", "snack_jam", "dairy_mozzarella", "meat_patties"], "pattern": "toast_breakfast"}
+{"session_id": "session_000837", "items": ["frozen_peas", "meat_chicken", "veg_tomato", "pantry_sugar", "bakery_rolls"], "pattern": "independent"}
+{"session_id": "session_000031", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "snack_chocolate", "fruit_lemon"], "pattern": "lentil_dinner"}
+{"session_id": "session_000486", "items": ["dairy_milk", "frozen_peas", "home_toothbrush", "dairy_cottage"], "pattern": "independent"}
+{"session_id": "session_000276", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bakery_buns", "fruit_grapes"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000266", "items": ["snack_chips", "bev_soda", "snack_chocolate", "fruit_lemon", "meat_lentils", "veg_carrot"], "pattern": "movie_night"}
+{"session_id": "session_000821", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "bev_soda", "veg_onion", "bev_water", "pantry_sauce"], "pattern": "coffee_morning"}
+{"session_id": "session_000742", "items": ["bakery_bread", "dairy_butter", "snack_jam", "home_towels", "pantry_pasta", "bev_juice"], "pattern": "toast_breakfast"}
+{"session_id": "session_000665", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000281", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_eggs", "meat_tofu", "veg_spinach", "meat_chicken"], "pattern": "movie_night"}
+{"session_id": "session_000184", "items": ["meat_patties", "dairy_cheddar", "frozen_peas", "meat_turkey", "snack_jam", "meat_lentils"], "pattern": "burger_meal"}
+{"session_id": "session_000820", "items": ["snack_chips", "bev_soda", "snack_chocolate", "pantry_sugar"], "pattern": "movie_night"}
+{"session_id": "session_000309", "items": ["veg_spinach", "fruit_avocado", "snack_nuts", "dairy_butter", "home_detergent", "pantry_spices"], "pattern": "salad_lunch"}
+{"session_id": "session_001069", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_cereal", "frozen_pizza", "frozen_peas", "bakery_croissant"], "pattern": "movie_night"}
+{"session_id": "session_000404", "items": ["home_toothpaste", "home_toothbrush", "veg_tomato", "bakery_tortilla", "dairy_eggs", "fruit_banana", "pantry_sugar"], "pattern": "oral_care"}
+{"session_id": "session_000039", "items": ["bakery_buns", "pantry_rice", "dairy_cottage", "veg_spinach", "meat_tofu", "bev_coffee"], "pattern": "independent"}
+{"session_id": "session_000532", "items": ["bakery_pita", "bev_coffee", "veg_potato", "fruit_grapes"], "pattern": "independent"}
+{"session_id": "session_000630", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "meat_sausage", "bakery_bagel", "home_detergent", "meat_patties"], "pattern": "pasta_night"}
+{"session_id": "session_000571", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "frozen_pizza", "fruit_lemon", "snack_crackers", "bakery_bread"], "pattern": "pasta_night"}
+{"session_id": "session_000710", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_rolls", "dairy_cottage"], "pattern": "movie_night"}
+{"session_id": "session_000270", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_pita", "fruit_banana"], "pattern": "movie_night"}
+{"session_id": "session_001146", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "bev_orange", "meat_turkey", "fruit_berries"], "pattern": "pasta_night"}
+{"session_id": "session_000574", "items": ["bakery_baguette", "bev_juice", "bakery_rolls", "fruit_grapes", "veg_potato", "fruit_berries", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000861", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "home_toothbrush", "meat_lentils", "bev_juice"], "pattern": "coffee_morning"}
+{"session_id": "session_000464", "items": ["bev_juice", "dairy_milk", "bev_coffee", "bev_water", "pantry_rice", "bev_soda", "pantry_sugar"], "pattern": "independent"}
+{"session_id": "session_000636", "items": ["snack_chips", "bev_soda", "snack_chocolate", "dairy_cottage", "bakery_rolls", "fruit_berries", "snack_crackers"], "pattern": "movie_night"}
+{"session_id": "session_000882", "items": ["snack_crackers", "fruit_banana", "home_towels", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000845", "items": ["home_toothpaste", "home_toothbrush", "snack_nuts"], "pattern": "oral_care"}
+{"session_id": "session_000079", "items": ["bakery_bread", "dairy_butter", "snack_jam", "fruit_apple", "snack_cereal", "pantry_sugar", "bakery_buns"], "pattern": "toast_breakfast"}
+{"session_id": "session_001030", "items": ["snack_chips", "bakery_bread", "snack_jam", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_000104", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "meat_patties"], "pattern": "snack_board"}
+{"session_id": "session_001119", "items": ["meat_lentils", "pantry_spices", "bev_water", "dairy_cheddar", "frozen_peas", "fruit_apple"], "pattern": "lentil_dinner"}
+{"session_id": "session_000684", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_001115", "items": ["dairy_mozzarella", "snack_cereal", "fruit_berries", "veg_spinach", "frozen_peas", "bev_water", "meat_sausage", "fruit_apple"], "pattern": "independent"}
+{"session_id": "session_001117", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "bev_soda", "pantry_rice"], "pattern": "salad_lunch"}
+{"session_id": "session_000997", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_bagel"], "pattern": "toast_breakfast"}
+{"session_id": "session_000303", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "home_toothpaste"], "pattern": "lentil_dinner"}
+{"session_id": "session_000493", "items": ["fruit_grapes", "pantry_spices", "pantry_sugar"], "pattern": "independent"}
+{"session_id": "session_000448", "items": ["bev_soda", "dairy_yogurt", "pantry_sugar", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_000080", "items": ["bev_water", "bakery_rolls"], "pattern": "independent"}
+{"session_id": "session_000897", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_tortilla"], "pattern": "toast_breakfast"}
+{"session_id": "session_000681", "items": ["snack_chips", "bev_soda", "snack_chocolate", "bakery_baguette", "home_towels", "dairy_milk"], "pattern": "movie_night"}
+{"session_id": "session_000109", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000089", "items": ["bakery_baguette", "dairy_cheddar", "fruit_grapes", "dairy_mozzarella", "home_toothbrush", "meat_tofu", "bev_coffee"], "pattern": "snack_board"}
+{"session_id": "session_000437", "items": ["snack_chips", "bev_soda", "snack_chocolate", "veg_spinach", "bakery_baguette"], "pattern": "movie_night"}
+{"session_id": "session_000871", "items": ["bakery_croissant", "fruit_apple", "dairy_butter", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_001157", "items": ["fruit_grapes", "snack_chocolate", "bakery_buns", "bev_soda", "frozen_pizza"], "pattern": "unusual"}
+{"session_id": "session_000115", "items": ["dairy_eggs", "bev_juice", "meat_patties", "bakery_pita", "veg_carrot"], "pattern": "unusual"}
+{"session_id": "session_000307", "items": ["bakery_buns", "meat_patties", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000167", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "snack_cereal", "dairy_butter", "pantry_sugar", "fruit_grapes"], "pattern": "salad_lunch"}
+{"session_id": "session_000763", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella"], "pattern": "pasta_night"}
+{"session_id": "session_000289", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "home_towels"], "pattern": "pasta_night"}
+{"session_id": "session_000220", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "meat_sausage"], "pattern": "pasta_night"}
+{"session_id": "session_000908", "items": ["snack_chips", "bev_soda", "snack_chocolate", "meat_tofu", "fruit_berries", "snack_crackers", "veg_carrot"], "pattern": "movie_night"}
+{"session_id": "session_000482", "items": ["snack_crackers", "bev_juice", "veg_tomato", "pantry_sugar", "dairy_mozzarella", "bakery_bagel", "veg_carrot"], "pattern": "independent"}
+{"session_id": "session_000528", "items": ["bakery_bread", "dairy_butter", "snack_jam", "bakery_pita", "meat_patties", "home_toothpaste"], "pattern": "toast_breakfast"}
+{"session_id": "session_000477", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "fruit_apple", "veg_onion"], "pattern": "cereal_breakfast"}
+{"session_id": "session_001031", "items": ["pantry_rice", "meat_lentils", "pantry_spices"], "pattern": "lentil_dinner"}
+{"session_id": "session_000233", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "pantry_sugar", "bev_soda", "veg_pepper"], "pattern": "pasta_night"}
+{"session_id": "session_000269", "items": ["pantry_rice", "bakery_bagel", "fruit_apple", "veg_potato"], "pattern": "independent"}
+{"session_id": "session_000103", "items": ["snack_chips", "bev_soda", "snack_chocolate", "home_toothpaste", "bev_coffee", "home_towels"], "pattern": "movie_night"}
+{"session_id": "session_000160", "items": ["bakery_buns", "dairy_cheddar"], "pattern": "burger_meal"}
+{"session_id": "session_000946", "items": ["bev_coffee", "dairy_milk", "pantry_sugar", "fruit_apple", "fruit_banana"], "pattern": "coffee_morning"}
+{"session_id": "session_000778", "items": ["snack_chips", "bev_soda", "snack_chocolate", "snack_crackers"], "pattern": "movie_night"}
+{"session_id": "session_000326", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "fruit_apple"], "pattern": "pasta_night"}
+{"session_id": "session_000132", "items": ["pantry_pasta", "pantry_sauce", "dairy_mozzarella", "veg_potato", "home_towels"], "pattern": "pasta_night"}
+{"session_id": "session_000731", "items": ["dairy_cream", "veg_pepper", "dairy_cheddar", "fruit_lemon", "meat_tofu", "snack_cereal"], "pattern": "independent"}
+{"session_id": "session_000452", "items": ["bakery_bread", "dairy_butter", "snack_jam"], "pattern": "toast_breakfast"}
+{"session_id": "session_000114", "items": ["bakery_bread", "dairy_butter", "snack_jam", "snack_crackers", "dairy_eggs", "bakery_bagel"], "pattern": "toast_breakfast"}
+{"session_id": "session_000771", "items": ["bev_orange", "bakery_rolls", "pantry_sugar", "snack_chocolate", "home_toothbrush", "bev_juice", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_000833", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_grapes"], "pattern": "lentil_dinner"}
+{"session_id": "session_000949", "items": ["bev_water", "fruit_grapes", "bev_orange", "fruit_lemon"], "pattern": "independent"}
+{"session_id": "session_000298", "items": ["bakery_bread", "dairy_butter", "snack_jam", "veg_onion", "pantry_pasta"], "pattern": "toast_breakfast"}
+{"session_id": "session_000256", "items": ["veg_onion", "meat_turkey", "meat_tofu", "snack_chocolate", "pantry_sugar", "dairy_butter"], "pattern": "independent"}
+{"session_id": "session_001067", "items": ["dairy_milk", "dairy_butter", "bakery_bread"], "pattern": "independent"}
+{"session_id": "session_000381", "items": ["meat_lentils", "home_detergent"], "pattern": "independent"}
+{"session_id": "session_000396", "items": ["veg_potato", "bakery_pita", "veg_onion", "dairy_mozzarella", "fruit_grapes", "fruit_lemon", "fruit_apple", "snack_crackers"], "pattern": "independent"}
+{"session_id": "session_000891", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "fruit_berries"], "pattern": "lentil_dinner"}
+{"session_id": "session_000368", "items": ["dairy_milk", "bakery_tortilla", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_000403", "items": ["pantry_rice", "meat_lentils", "pantry_spices", "dairy_milk", "meat_tofu", "fruit_apple", "pantry_sauce"], "pattern": "lentil_dinner"}
+{"session_id": "session_000214", "items": ["snack_chips", "bev_soda", "snack_chocolate"], "pattern": "movie_night"}
+{"session_id": "session_000939", "items": ["snack_cereal", "fruit_banana", "dairy_yogurt", "fruit_avocado", "meat_patties"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000339", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "bakery_buns"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000367", "items": ["snack_cereal", "dairy_milk", "fruit_banana", "snack_nuts", "meat_lentils", "veg_spinach"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000745", "items": ["veg_spinach", "fruit_avocado", "veg_tomato", "snack_chocolate", "meat_sausage", "bev_juice"], "pattern": "salad_lunch"}
+{"session_id": "session_000547", "items": ["snack_cereal", "dairy_milk", "fruit_banana"], "pattern": "cereal_breakfast"}
+{"session_id": "session_000315", "items": ["bev_tea", "dairy_milk", "snack_nuts", "home_toothpaste", "bakery_pita", "veg_potato", "bakery_bread", "dairy_cheddar"], "pattern": "independent"}
+{"session_id": "session_000857", "items": ["pantry_rice", "meat_lentils", "bakery_croissant", "pantry_pasta", "bakery_buns"], "pattern": "lentil_dinner"}
+{"session_id": "session_001091", "items": ["bakery_baguette", "fruit_grapes", "pantry_sugar", "dairy_milk", "pantry_spices", "pantry_pasta"], "pattern": "snack_board"}
+{"session_id": "session_001126", "items": ["bakery_buns", "meat_patties", "dairy_cheddar", "bakery_bagel"], "pattern": "burger_meal"}
