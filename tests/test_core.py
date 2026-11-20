@@ -131,6 +131,8 @@ def test_ngram_smoothing_handles_unseen_contexts_and_empty_prefix():
     model = NGramModel(5, [2, 3, 4], order=3, alpha=0.5).fit([[2, 3, 4]])
     start_probabilities = model.predict_proba([])
     assert sum(start_probabilities.values()) == pytest.approx(1.0)
+    unknown_context = model.predict_proba([1])
+    assert sum(unknown_context.values()) == pytest.approx(1.0)
     probabilities = model.predict_proba([4, 2])
     assert all(probability > 0 for probability in probabilities.values())
     assert sum(probabilities.values()) == pytest.approx(1.0)
@@ -151,6 +153,6 @@ def test_ngram_rejects_invalid_configuration_and_input():
         NGramModel(4, [2, 3], alpha=0)
     model = NGramModel(4, [2, 3]).fit([[2, 3]])
     with pytest.raises(ValueError):
-        model.predict_proba([1])
+        model.predict_proba([0])
     with pytest.raises(ValueError):
         model.predict([2], top_k=0)

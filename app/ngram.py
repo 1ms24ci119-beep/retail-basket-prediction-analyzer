@@ -57,8 +57,8 @@ class NGramModel:
         if not self.fitted:
             raise RuntimeError("fit the model before requesting predictions")
         values = [int(item) for item in prefix]
-        if any(item not in self.product_ids for item in values):
-            raise ValueError("prefix may contain only product token ids")
+        if any(item not in self.product_ids and item != 1 for item in values):
+            raise ValueError("prefix may contain only product or UNK token ids")
         available = self.order - 1 if not values else min(len(values), self.order - 1)
         context = tuple(values[-available:]) if values else (BOS,) * available
         distributions = []
