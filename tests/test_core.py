@@ -120,6 +120,13 @@ def test_ngram_distribution_is_normalized_and_top_item_follows_context():
     assert model.predict([2, 3], top_k=2)[0][0] == 4
 
 
+def test_unigram_additive_smoothing_matches_the_count_formula():
+    model = NGramModel(5, [2, 3, 4], order=1, alpha=0.5).fit([[2, 2, 3]])
+    probabilities = model.predict_proba([])
+    assert probabilities[2] == pytest.approx((2 + 0.5) / (3 + 0.5 * 3))
+    assert probabilities[3] == pytest.approx((1 + 0.5) / (3 + 0.5 * 3))
+
+
 def test_ngram_smoothing_handles_unseen_contexts_and_empty_prefix():
     model = NGramModel(5, [2, 3, 4], order=3, alpha=0.5).fit([[2, 3, 4]])
     start_probabilities = model.predict_proba([])
